@@ -79,7 +79,35 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         
         self.store.newFaq( name="testfaq3", author="Arild", contents="Test" )
         self.assertEquals( 3, self.store.faqCount() )
+    
+    def testFindInFaqContents( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test is this" )
+        self.store.newFaq( name="testfaq2", author="Arild", contents="Test is that" )
+        self.store.newFaq( name="testfaq3", author="Arild", contents="Testing" )
         
+        results = self.store.findInFaqs( "Test" )
+        self.assertEquals( 3, len(results) )
+        self.assertTrue( "testfaq" in results )
+        self.assertTrue( "testfaq2" in results )
+        self.assertTrue( "testfaq3" in results )
+        
+        # make sure it works case insensitive
+        results = self.store.findInFaqs( "test" )
+        self.assertEquals( 3, len(results) )
+        
+        results = self.store.findInFaqs( "is" )
+        self.assertEquals( 2, len(results) )
+        
+        results = self.store.findInFaqs( "ing" )
+        self.assertEquals( 1, len(results) )
+        self.assertTrue( "testfaq3" in results )    
+    
+    def testCanonical( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test is this" )
+        self.store.createAlias( "testfaq", "link" )
+        
+        self.assertEquals( self.store.getCanonicalName( "testfaq" ), "testfaq" )
+        self.assertEquals( self.store.getCanonicalName( "link" ), "testfaq" )       
         
 
 if __name__=="__main__":

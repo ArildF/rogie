@@ -60,7 +60,7 @@ class SqliteFaqStore:
         """Retrieve a FAQ"""
         cur = self.__conn.cursor()
         
-        canonicalName = self._getCanonicalName( name )        
+        canonicalName = self.getCanonicalName( name )        
         
         # now the real faq
         cur.execute( """SELECT Author, Contents, Version, Created 
@@ -82,7 +82,7 @@ class SqliteFaqStore:
     
     def createAlias( self, target, alias ):
         """Creates an alias for an existing FAQ"""
-        canonicalName = self._getCanonicalName( target )
+        canonicalName = self.getCanonicalName( target )
         
         # Make sure the alias doesn't already exist
         oldFaq = None
@@ -103,7 +103,7 @@ class SqliteFaqStore:
         """Deletes a faq"""
         
         # first get the canonical name, in case we need to delete the original 
-        canonicalName = self._getCanonicalName( name )
+        canonicalName = self.getCanonicalName( name )
         
         # delete the alias
         cur = self.__conn.cursor()
@@ -120,7 +120,7 @@ class SqliteFaqStore:
         """modifies an existing faq"""
         cur = self.__conn.cursor()
         
-        canonicalName = self._getCanonicalName( name )
+        canonicalName = self.getCanonicalName( name )
         
         # generate the insertion string and varargs dynamically
         fields = [ "%s", "%s", "%s" ] # state, created
@@ -175,11 +175,20 @@ class SqliteFaqStore:
             raise FaqStoreError( "Unexpected error" )
         
         return row[0]
+    
+    def findInFaqs( self, searchString ):
+        cur = self.__conn.cursor()
+        cur.execute( """SELECT FaqVersions.Name 
+                            FROM FaqVersions, LatestVersion   
+                            WHERE FaqVersions.Id = LatestVersion.Id
+                                AND FaqVersions.Contents LIKE %s""", 
+                    "%" + searchString + "%" )
         
+        return [ row[0] for row in cur.fetchall() ]
         
             
     
-    def _getCanonicalName( self, alias ):
+    def getCanonicalName( self, alias ):
         # find the canonical name
         cur = self.__conn.cursor()
         cur.execute( "SELECT CanonicalName FROM FaqAliases WHERE Alias=%s", alias )

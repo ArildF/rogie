@@ -245,12 +245,20 @@ class FaqCommand( Command.Command ):
 
     def apropos( self, sock, words ):
         """starts a search prosess for a keyword"""
-        apropos = Apropos.Apropos( words, self, sock )
-
-
-        #run it in a separate thread
-        apropos.start()
-
+        searchString = words[0]
+        names = self.store.findInFaqs( searchString )
+        if self.isPm:
+            msg = ", ".join( names )
+        else:
+            msg = ", ".join( names[:80] )
+            if len( names ) > 80:
+                msg += " -- Search truncated. Be more specific or perform search in PM --"
+        msg += "\n%d results found" % len( names )
+        
+        self.sendMessage( sock, msg )
+        
+        
+        
     def getOwner( self, sock, words ):
         """shows who is the owner of a faq"""
         faqName = words[ 0 ]
@@ -279,6 +287,20 @@ class FaqCommand( Command.Command ):
           raise Command.CommandError( "Error renaming faq " + oldname + self.verControl.getError())
             
         self.sendMessage( sock, "New name is " + newname )
+    
+    def canonical( self, sock, words ):
+        """Gets the canonical name of a FAQ"""
+        faqname = words[0]
+        
+        canonicalName = self.store.getCanonicalName( faqname )
+        msg = ""
+        if canonicalName != faqname:
+            msg = "%s is a link to %s" % (faqname, canonicalName)
+        else:
+            msg = "%s is the canonical name" % canonicalName
+        
+        self.sendMessage( sock, msg )
+            
           
     def faqStats( self, sock, words ):
         """counts the number of faqs in database per owner"""
@@ -394,6 +416,7 @@ AK="aclkey"
 COMMANDS = { "add" : { M : FaqCommand.makeEntry, A : 1, AK : Acl.ADDFAQ } ,
              "delete" : { M : FaqCommand.deleteFaq, A : 0, AK : Acl.DELETEFAQ },
              "change" : { M : FaqCommand.changeFaq, A : 0 , AK : Acl.CHANGEFAQ },
+             "canonical" : { M : FaqCommand.canonical, A : 0, AK : Acl.GETOWNER },
              "append" : { M : FaqCommand.appendFaq, A : 0, AK : Acl.APPENDFAQ },
              "list" : { M : FaqCommand.listFaqs, A : 1, AK : Acl.LISTFAQ },
              "link" : { M : FaqCommand.linkFaq, A : 1, AK : Acl.ADDFAQ },
