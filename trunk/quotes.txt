@@ -637,6 +637,7 @@ When I was a kid, I used to pray every night for a new bicycle. Then I realized 
 Scientists have shown that the moon is moving away at a tiny yet measurable distance from the earth every year. If you do the math, you can calculate that 85 million years ago the moon was orbiting the earth at a distance of about 35 feet from the earth's surface. This would explain the death of the dinosaurs. The tallest ones, anyway.
 Deja Moo: The feeling that you've heard this bull before.
 Life is sexually transmitted.
+In fact, I'll go even further and claim that using C++ as an implementation language right off-the-bat for many applications (yes, that does include games) violates the first and second rules of premature optimisation.	Sabreman
 
 
 
