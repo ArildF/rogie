@@ -56,6 +56,8 @@ class Command:
         except IndexError:
             self.sendMessage( sock, "Syntax error: Arguments missing" )
         except:
+            self.sendMessage( "Unexpected exception, check console" )
+            print "Exception thrown:"
             print sys.exc_info()
 
     def doExecute( self, sock, words ):
