@@ -1,7 +1,7 @@
 import pickle
 import Config
 import os.path
-import Command
+#import Command
 
 CURRENT_VERSION = "0.3"
 
@@ -26,6 +26,7 @@ def loadFaq( faq ):
     global faqdir, faqext
     
     faqfile = faqdir + faq + faqext
+    #print faqfile
     if not os.path.exists( faqfile ):
         raise FaqError( "Faq does not exist" )
 
@@ -67,6 +68,9 @@ class Faq:
     
     def setFaq( self, faq ):
         self.__faq = faq
+    
+    def isProxy( self ):
+        return False
 
 
 # used as a link to an actual faq
@@ -89,6 +93,12 @@ class FaqProxy:
     def setAuthor( self, author ):
         self.__ensureLoaded()
         self.target.setAuthor( author )
+        
+    def isProxy( self ):
+        return True
+    
+    def getTarget( self ):
+        return self.__targetName
         
     def __getstate__( self ):
         # we are being pickled - pickle the proxied object
