@@ -29,6 +29,7 @@ import VerControl
 import Apropos
 import util
 import Faq
+from SqliteFaqStore import SqliteFaqStore, FaqStoreError
 
 
 
@@ -43,11 +44,9 @@ class FaqCommand( Command.Command ):
         self.commands = COMMANDS
 
         config = Config.getConfig()
-        self.faqDir = config.getString( "faq", "faqdir" )
-        self.faqExt = config.getString( "faq", "faqext" )
-        Faq.setFaqDir( self.faqDir )
-        Faq.setFaqExt( self.faqExt )
-
+        faqdb = config.getString( "faq", "faqdb" )
+        self.store = SqliteFaqStore( faqdb )
+        
         # create the factory for doing version control operations
         self.verControl = VerControl.createVCObject(config.getString( "faq", "versionControl" ))
  
@@ -60,7 +59,7 @@ class FaqCommand( Command.Command ):
                 self.doCommand( sock, words[ 1: ] )
             else:
                 self.readFaq( sock, words[ 1: ] )
-        except Faq.FaqError, err:
+        except FaqStoreError, err:
             raise Command.CommandError( err.msg )
             
 
@@ -90,15 +89,16 @@ class FaqCommand( Command.Command ):
             faqName = faqName[:-1]
             qfaq = 1
 
+        faq = None
         try:
-            faq = Faq.loadFaq( faqName )
-        except Faq.FaqError, err:
+            faq = self.store.getFaqByName( faqName )
+        except FaqStoreError, err:
             if not qfaq:
                 raise err 
             else:
                 return
         
-        entry = faq.getFaq()
+        entry = faq.contents
 
         #do we want to pm this to someone?
         if  redirectionTarget:
@@ -113,22 +113,6 @@ class FaqCommand( Command.Command ):
         self.isPm = pm
 
         self.sendMessage( sock, entry )
-
-        # load the faq Use Count file from disk into map
-
-        faqUseCount = self.loadFaqUseCount()
-        #Add the faqUseCount map so we can keep track of how much it's used
-        if faqUseCount.has_key(faqName):
-            faqUseCount[faqName] = faqUseCount[faqName] + 1
-        else:
-            faqUseCount[faqName] = 1
-
-        useCountFile = self.faqDir + "FaqUseCount.txt"
-        file = open( useCountFile, "w" )
-        pickle.dump( faqUseCount, file )
-        file.close()
-
-        
 
     def substitute( self, entry, words ):
         #substitute %s in the string with any words following the faq name
@@ -149,19 +133,7 @@ class FaqCommand( Command.Command ):
         entry = string.join( words[ 1: ] )     
 
         #version, owner, read acl, write acl, entry
-        faq = Faq.Faq( self.nick, entry )
-        
-        faqfile = self.faqDir + faqName + self.faqExt
-
-        #check if it already exists
-        if os.path.exists( faqfile ):
-            raise Command.CommandError( "Faq already exists. Use -change to overwrite" )
-  
-        Faq.writeFaq( faqName, faq )
-
-        # add to version control
-        if not (self.verControl.add(faqfile)):
-            raise Command.CommandError( "Error adding faq " + faqName + self.verControl.getError())
+        self.store.newFaq( name = faqName, author = self.nick, contents = entry )
             
         self.sendMessage( sock, "Faq " + faqName + " added" )
     
@@ -169,19 +141,7 @@ class FaqCommand( Command.Command ):
         linkName = words[1]
         targetName = words[0]
         
-        # check that the target exists
-        targetFile = self.faqDir + targetName + self.faqExt
-        if not os.path.exists( targetFile ):
-            raise Command.CommandError( "The target does not exist" )
-        
-        # check that there is no faq with the same name as the link
-        linkFile = self.faqDir + linkName + self.faqExt
-        if os.path.exists( linkFile ):
-            raise Command.CommandError( "There is already a faq with the same name as the link" )
-        
-        # generate a proxy and write it
-        proxy = Faq.FaqProxy( targetName )
-        Faq.writeFaq( linkName, proxy )
+        self.store.createAlias( targetName, linkName )
         
         self.sendMessage( sock, linkName + " now points to " + targetName )
         
@@ -202,23 +162,12 @@ class FaqCommand( Command.Command ):
     def changeFaq( self, sock, words ):
         faqName = words[ 0 ]
 
-        faqfile = self.faqDir + faqName + self.faqExt
-
-        #does it exist?
-        if not os.path.exists( faqfile ):
-            raise Command.CommandError( "Faq does not exist. Use -add" )
-
-        #load to see
-
-
         #only if owner or general change rights
         if self.isOwnerOrAdmin( faqName, Acl.CHANGEFAQ ):
 
             entry = string.join( words[ 1: ] )
-            faq = Faq.loadFaq( faqName )
-            faq.setFaq( entry )
-            
-            Faq.writeFaq( faqName, faq )
+            dic = { "contents" : entry }
+            self.store.modifyFaq( faqName, dic )
 
             self.sendMessage( sock, "Faq updated" )
 
@@ -229,30 +178,16 @@ class FaqCommand( Command.Command ):
         """appends content to an existing faq"""
         faqName = words[ 0 ]
 
-        faq = Faq.loadFaq( faqName )
+        
         if self.isOwnerOrAdmin( faqName, Acl.APPENDFAQ ):
+            faq = self.store.getFaqByName( faqName )
 
             newentry = string.join( words[ 1: ] )
-            faq.setFaq( faq.getFaq() + " " + newentry )
-            Faq.writeFaq( faqName, faq )
-
+            dic = { "contents" : faq.contents + " " + newentry }
+            self.store.modifyFaq( faqName, dic )
             self.sendMessage( sock, "New entry appended" )
         else:
             raise Command.PermissionError( "Only owner or user with append privileges can append to a faq" )
-
-
-    def commitFaq( self, sock, words ):
-        faq = words[ 0 ]
-        faqfile = self.faqDir + faq + self.faqExt
-        #can only delete if owner or has general delete rights
-        if not self.isOwnerOrAdmin( faq, Acl.DELETEFAQ ):
-            raise Command.PermissionError( "Only owner or user with commit privileges can commit an faq" )
-
-        # add to version control with delete
-        if(self.verControl.commit(faqfile)):
-            self.sendMessage( sock, faq + " committed" )
-        else:
-            self.sendMessage( sock, "Version control error commiting faq " + faq) 
 
     def listFaqs( self, sock, words ):
         """lists all faqs currently in database"""
@@ -286,9 +221,8 @@ class FaqCommand( Command.Command ):
 
     def countFaqs( self, sock, words ):
         """counts the number of faqs in database"""
-
-        files = os.listdir( self.faqDir )
-        outString = "There are currently %d faqs in the database" % len( files )
+        count = self.store.faqCount()
+        outString = "There are currently %d faqs in the database" % count
 
         self.sendMessage( sock, outString )
 
@@ -302,10 +236,8 @@ class FaqCommand( Command.Command ):
         #only owner or user with chown rights can change owner
 
         if self.isOwnerOrAdmin( faqName, Acl.CHANGEOWNER ):
-            faq = Faq.loadFaq( faqName )
-            faq.setAuthor( newOwner )
-
-            Faq.writeFaq( faqName, faq )
+            faq = self.store.getFaqByName( faqName )
+            self.store.modifyFaq( faqName, {"author" : newOwner} )
 
             self.sendMessage( sock, newOwner + " now owns " + faqName )
         else:
@@ -323,9 +255,9 @@ class FaqCommand( Command.Command ):
         """shows who is the owner of a faq"""
         faqName = words[ 0 ]
 
-        faq = Faq.loadFaq( faqName )
+        faq = self.store.getFaqByName( faqName )
 
-        msg = "Faq " + faqName + " is owned by " + faq.getAuthor()
+        msg = "Faq " + faqName + " is owned by " + faq.author
         self.sendMessage( sock, msg )
 
     def rename( self, sock, words ):
@@ -447,8 +379,8 @@ class FaqCommand( Command.Command ):
     
     def isOwnerOrAdmin( self, faqName, permission ):
         """returns true if the user is an owner of the faq or has permission for the action"""
-        faq = Faq.loadFaq( faqName )
-        owner = faq.getAuthor()
+        faq = self.store.getFaqByName( faqName )
+        owner = faq.author
 
         return self.nick == owner or self.room.getAcl().hasPermission( self.nick, permission )
 
@@ -477,7 +409,6 @@ COMMANDS = { "add" : { M : FaqCommand.makeEntry, A : 1, AK : Acl.ADDFAQ } ,
              "count" : { M : FaqCommand.countFaqs, A : 1, AK : Acl.COUNTFAQS },
              "usestats" : { M : FaqCommand.faqUseStats, A : 1, AK : Acl.FAQUSESTATS  },
              "topten" : { M : FaqCommand.topTenFaqs, A : 1, AK : Acl.TOPTENFAQS },
-             "commit" : { M : FaqCommand.commitFaq, A : 1, AK : Acl.COMMITFAQ }
           }
 
 
