@@ -45,6 +45,8 @@ class FaqCommand( Command.Command ):
 
         config = Config.getConfig()
         faqdb = config.getString( "faq", "faqdb" )
+        self.faqDir = config.getString( "faq", "faqdir" )   
+        self.faqExt = config.getString( "faq", "faqext" )   
         self.store = SqliteFaqStore( faqdb )
         self.__version = None
         
