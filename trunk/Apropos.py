@@ -113,7 +113,7 @@ class Apropos( threading.Thread ):
         faq = pickle.load( faqfile )
         faqfile.close()
     
-        contents = faq[ ENTRY ]
+        contents = faq.getFaq()
         contents = contents.lower()
         
         return self.wordsInString(self.keywords, contents , matchListSoFar)
