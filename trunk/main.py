@@ -75,12 +75,18 @@ if __name__ == "__main__":
             print "Logging in"
             login = protocol.login( nick, passwd )
             login.send( sock )
-           
+            
+            header = protocol.getHeader( sock, events, room )
+            packet = header.receive()
+            packet.receive()
+            challenge = packet.dispatch()           
             
             #login: logins to yahoo
-            challenge = None
-            login = protocol.getLoginPacket( nick, passwd, challenge )
+            login = protocol.getLoginPacket( nick, passwd, challenge )            
             login.send( sock )   
+            packet = header.receive()
+            packet.receive()
+            packet.dispatch()
             print "Logged in"        
             
             print "Joining room ", chatRoom

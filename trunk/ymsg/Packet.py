@@ -2,11 +2,19 @@
 #created 30.04.2002 by Arild Fines
 
 import struct
-import password
 import Display
 import Room
 import urllib
 import login
+import codecs
+
+from CLR.System.Reflection import Assembly
+
+a = Assembly.LoadWithPartialName( "yahoocrypt" )
+if a == None:
+	raise "Could not load yahoocrypt"
+from CLR.Yahoo.Crypt import Encryptor
+password = Encryptor.GetEncryptedStrings
 
 INITLOGIN = "\x57"
 LOGIN = "\x54"
@@ -30,7 +38,7 @@ class Packet:
         """Sends the packet"""
 
         #build the packet header
-        packet = "YMSG" + "\x09\x00\x00\x00" 
+        packet = "YMSG" + "\x00\x0C\x00\x00" 
 
         payload = self.getPayload()
         length = len( payload )
@@ -74,11 +82,14 @@ class LoginPacket(Packet):
         self.packetId = LOGIN
         
     def getPayload( self ):
-        hash = password.authStrings( self.challenge, self.nick, self.passwd )
+        print self.challenge
+        hash = password( self.passwd, self.challenge )
 
-        packet = "0" + DELIM1 + self.nick + DELIM1 + "6" + DELIM1 + hash[ 0 ] + DELIM1 + "96" + \
-            DELIM1 + hash[ 1 ] + DELIM1 + "2" + DELIM1 + "1" + DELIM1 + "1" + DELIM1 + \
+        packet = "0" + DELIM1 + self.nick + DELIM1 + "6" + DELIM1 + codecs.charmap_encode(hash[ 0 ])[0] + DELIM1 + "96" + \
+            DELIM1 + codecs.charmap_encode(hash[ 1 ])[0] + DELIM1 + "2" + DELIM1 + "1" + DELIM1 + "1" + DELIM1 + \
             self.nick + DELIM1
+		
+        printPacket( packet )
         
         return packet
 
