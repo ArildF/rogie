@@ -1396,7 +1396,7 @@ class Tokenizer:
             text = numeric_entity_re.sub(numeric_entity_replacer, text)
 
             # Normalize case.
-            text = text.lower()
+            #text = text.lower()
 
             if options["Tokenizer", "replace_nonascii_chars"]:
                 # Replace high-bit chars and control chars with '?'.
