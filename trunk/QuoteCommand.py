@@ -19,7 +19,8 @@ class QuoteCommand( Command.Command ):
             command = words[ 1 ]
         else:
             command = ""
-        if command == '-':
+            
+        if command[0] == '-':
                 self.doCommand( sock, words[1:] )
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
