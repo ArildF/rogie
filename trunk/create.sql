@@ -20,3 +20,12 @@ CREATE TABLE LatestVersion
     Name Text Primary Key COLLATE NOCASE,
     Id Int
 );
+
+CREATE TABLE Quotes
+(
+    Id Integer Primary Key,
+    Contents Text COLLATE NOCASE,
+    Author Text COLLATE NOCASE,
+    Created TimeStamp Not Null,
+    AddingUser Text COLLATE NOCASE    
+);

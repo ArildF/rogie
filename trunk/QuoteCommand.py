@@ -4,15 +4,23 @@
 import Command
 import Acl
 import Quote
+import SqliteQuoteStore
+import Config
 
 class QuoteCommand( Command.Command ):
     """a command that displays a quote"""
 
     def __init__( self, theNick, theRoom, theCommand, isPm = 0 ):
         Command.Command.__init__( self, theNick, theRoom, theCommand, isPm )
-        self.commands = { "reload" : { "method" : QuoteCommand.reload, "acl" : 1, "aclkey" : Acl.RELOADQUOTE },
-                            "count" : { "method" : QuoteCommand.count, "acl" : 1, "aclkey" : Acl.RELOADQUOTE },
-                            "usedcount" : { "method" : QuoteCommand.usedCount, "acl" : 1, "aclkey" : Acl.RELOADQUOTE }}
+        self.commands = { "count" : { "method" : QuoteCommand.count, "acl" : 1, "aclkey" : Acl.QUOTE },
+                          "number" : { "method" : QuoteCommand.byNumber, "acl" : 1, "aclkey" : Acl.QUOTE },
+                          "findbyauthor" : { "method" : QuoteCommand.byAuthor, "acl" : 1, "aclkey" : Acl.QUOTE },
+                          "find" : { "method" : QuoteCommand.find, "acl" : 1, "aclkey" : Acl.QUOTE }, 
+                          "add" : { "method" : QuoteCommand.add, "acl" : 1, "aclkey" : Acl.RELOADQUOTE } 
+                            }
+        config = Config.getConfig()
+        quoteDb = config.getString( "quotes", "quotefile" )
+        self.store = SqliteQuoteStore.SqliteQuoteStore( quoteDb )
         
     def doExecute( self, sock, words ):
         """parses the command"""
@@ -22,23 +30,68 @@ class QuoteCommand( Command.Command ):
                 self.doCommand( sock, words[1:] )
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
-                self.room.getQuote().display( sock )
-            
-
-    def reload( self, sock, words ):
-        """restarts the quote thread, so recent additions to the quotethread are loaded"""
-        self.room.startQuoteThread( sock )
-        self.sendMessage( sock, "Quote file reloaded" )
+                quote = self.store.getRandomQuote()
+                msg = self.__formatQuote( quote )                
+                self.sendMessage( sock, msg )
     
     def count( self, sock, words ):
         """returns a total count of the quotes in the db"""
-        self.sendMessage( sock, "Total number of quotes: %s" % 
-            self.room.getQuote().getCount() )
+        self.sendMessage( sock, "Total number of quotes: %d" % 
+            self.store.quoteCount() )
     
-    def usedCount( self, sock, words ):
-        """the number of quotes in the used list"""
-        self.sendMessage( sock, "Number of quotes in the used list: %s" %
-            self.room.getQuote().getUsedCount() )
+    def byNumber( self, sock, words ):
+        """Returns a specific quote"""
+        num = 0
+        try:
+            num = int( words[0] )
+        except ValueError:
+            raise Command.CommandError( "Argument must be numeric" )
+        quote = self.store.getQuoteByNumber( num )
+        msg = self.__formatQuote( quote )
+        self.sendMessage( sock, msg )
+    
+    def byAuthor( self, sock, words ):
+        """Searches for quotes by a specific author"""
+        author = words[0]
+        quotes = self.store.getQuotesByAuthor( author )
+        
+        self.__displayQuotes( sock, quotes )
+    
+    def find( self, sock, words ):
+        """Searches for a substring"""
+        searchString = words[0]
+        quotes = self.store.findQuotes( searchString )
+        
+        self.__displayQuotes( sock, quotes ) 
+    
+    def add( self, sock, words ):
+        """Adds a quote"""
+        contents = words[0]
+        author = words[1]
+        self.store.newQuote( contents, author, addingUser = self.nick )
+    
+    
+    def __displayQuotes( self, sock, quotes ):
+        
+        def shortQuote( quote ):
+            return '%d(%s): "%s"' % (quote.id,  quote.author, quote.contents[:9])
+        
+        trunc = False
+        if len(quotes) > 30 and not self.isPm:
+            trunc = True
+            quotes = quotes[0:30]
+        
+        msg = ", ".join( [ shortQuote(q) for q in quotes ] )
+        self.sendMessage( sock, msg )
+        
+        if trunc:
+            self.sendMessage( sock, "Search truncated, be more specific" )
+    
+    
+    def __formatQuote( self, quote ):
+        msg = '"%s" -- %s' % (quote.contents, quote.author and quote.author or "Anonymous")
+        return msg
+        
     
     
     

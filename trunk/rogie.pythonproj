@@ -252,6 +252,12 @@
                  ProjRelPath="T" />
             <file name="SqliteImport.py"
                  ProjRelPath="T" />
+            <file name="SqliteQuoteStore.py"
+                 ProjRelPath="T" />
+            <file name="SqliteQuoteStoreTest.py"
+                 ProjRelPath="T" />
+            <file name="SqliteQuoteImport.py"
+                 ProjRelPath="T" />
         </files>
     </pythonproj>
 </VisualStudioProject>
