@@ -46,6 +46,7 @@ class FaqCommand( Command.Command ):
         config = Config.getConfig()
         faqdb = config.getString( "faq", "faqdb" )
         self.store = SqliteFaqStore( faqdb )
+        self.__version = None
         
         # create the factory for doing version control operations
         self.verControl = VerControl.createVCObject(config.getString( "faq", "versionControl" ))
@@ -90,8 +91,9 @@ class FaqCommand( Command.Command ):
             qfaq = 1
 
         faq = None
+        print self.__version
         try:
-            faq = self.store.getFaqByName( faqName )
+            faq = self.store.getFaqByName( faqName, version=self.__version )
         except FaqStoreError, err:
             if not qfaq:
                 raise err 
@@ -263,7 +265,7 @@ class FaqCommand( Command.Command ):
         """shows who is the owner of a faq"""
         faqName = words[ 0 ]
 
-        faq = self.store.getFaqByName( faqName )
+        faq = self.store.getFaqByName( faqName, self.__version )
 
         msg = "Faq " + faqName + " is owned by " + faq.author
         self.sendMessage( sock, msg )
@@ -300,6 +302,41 @@ class FaqCommand( Command.Command ):
             msg = "%s is the canonical name" % canonicalName
         
         self.sendMessage( sock, msg )
+    
+    def aliases( self, sock, words ):
+        """Gets the aliases for a FAQ"""
+        faqname = words[0]
+        
+        aliases = self.store.getAliases( faqname )
+        msg = ""
+        if len(aliases) == 1:
+            msg = "%s is the only alias for this faq" % faqname
+        else:
+            msg = ", ".join(aliases[:-1])
+            msg += " and %s are aliases for the same faq" % (aliases[-1])
+        
+        self.sendMessage( sock, msg )
+    
+    def versions( self, sock, words ):
+        """Gets the number of versions for a FAQ"""
+        faqname = words[0]
+        
+        numVersions = self.store.getNumberOfVersions( faqname )
+        plural = numVersions != 1 and "s" or ""
+        msg = "Faq %s has %d version%s" % (faqname, numVersions, plural)
+        
+        self.sendMessage( sock, msg )
+    
+    def version( self, sock, words ):
+        """Gets a specific version of a FAQ"""
+        try:
+            self.__version = int(words[0])
+        except ValueError:
+            raise Command.CommandError( "Version needs to be an integer" )
+        
+        self.doExecute( sock, words )
+            
+                                                        
             
           
     def faqStats( self, sock, words ):
@@ -425,6 +462,9 @@ COMMANDS = { "add" : { M : FaqCommand.makeEntry, A : 1, AK : Acl.ADDFAQ } ,
              "stats" : { M : FaqCommand.faqStats, A : 1, AK : Acl.FAQSTATS },
 
              "chown" : { M : FaqCommand.changeOwner, A : 0, AK : Acl.CHANGEOWNER  },
+             "aliases" : { M : FaqCommand.aliases, A: 0, AK : Acl.GETOWNER },
+             "versions" : { M : FaqCommand.versions, A: 0, AK : Acl.GETOWNER },
+             "version" : { M : FaqCommand.version, A: 0, AK : Acl.GETOWNER },
 
              "listcommands" : { M : FaqCommand.listCommands, A : 1, AK : Acl.FAQLISTCOMMANDS  },
              "owner" : { M : FaqCommand.getOwner, A : 1, AK : Acl.GETOWNER },

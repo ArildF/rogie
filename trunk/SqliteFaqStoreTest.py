@@ -107,7 +107,50 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         self.store.createAlias( "testfaq", "link" )
         
         self.assertEquals( self.store.getCanonicalName( "testfaq" ), "testfaq" )
-        self.assertEquals( self.store.getCanonicalName( "link" ), "testfaq" )       
+        self.assertEquals( self.store.getCanonicalName( "link" ), "testfaq" )  
+        
+    def testGetAliases( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test is this" )
+        self.store.createAlias( "testfaq", "link" )
+        
+        aliases = self.store.getAliases( "testfaq" )
+        self.assertEquals( 2, len(aliases) )
+        self.assertTrue( "testfaq" in aliases and "link" in aliases )
+        
+        aliases = self.store.getAliases( "link" )
+        self.assertEquals( 2, len(aliases) )
+        self.assertTrue( "testfaq" in aliases and "link" in aliases )
+    
+    def testGetNumberOfVersions( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
+        numVersions = self.store.getNumberOfVersions( "testfaq" )
+        self.assertEquals( 1, numVersions )
+        
+        self.store.modifyFaq( "testfaq", { "author" : "Moon child" } )
+        numVersions = self.store.getNumberOfVersions( "testfaq" )
+        self.assertEquals( 2, numVersions )
+        
+    def testGetOldVersions( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )        
+        self.store.modifyFaq( "testfaq", { "contents" : "Moon child" } )
+        
+        faq = self.store.getFaqByName( "testfaq", 1 )
+        self.assertEquals( "Test", faq.contents )
+        
+        faq = self.store.getFaqByName( "testfaq", 2 )
+        self.assertEquals( "Moon child", faq.contents )
+        
+        self.assertRaises( SqliteFaqStore.FaqStoreError, 
+                          self.store.getFaqByName, "testfaq", 3 )
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 
 if __name__=="__main__":

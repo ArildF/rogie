@@ -56,18 +56,27 @@ class SqliteFaqStore:
             self.__conn.rollback()
             raise
     
-    def getFaqByName( self, name ):
+    def getFaqByName( self, name, version=None ):
         """Retrieve a FAQ"""
         cur = self.__conn.cursor()
         
         canonicalName = self.getCanonicalName( name )        
         
         # now the real faq
-        cur.execute( """SELECT Author, Contents, Version, Created 
-                            FROM FaqVersions, LatestVersion 
-                            WHERE LatestVersion.Name=%s AND FaqVersions.Id = LatestVersion.Id""", 
-                     canonicalName )
+        if not version:
+            cur.execute( """SELECT Author, Contents, Version, Created 
+                                FROM FaqVersions, LatestVersion 
+                                WHERE LatestVersion.Name=%s AND FaqVersions.Id = LatestVersion.Id""", 
+                        canonicalName )
+        else:
+            cur.execute( """SELECT Author, Contents, Version, Created
+                                FROM FaqVersions 
+                                WHERE FaqVersions.Name=%s
+                                    AND FaqVersions.Version=%d""", canonicalName, version )
+            
         row = cur.fetchone()
+        if not row and version:
+            raise FaqStoreError( "Faq does not exist in that version" )
         
         class Faq:
             pass
@@ -197,6 +206,18 @@ class SqliteFaqStore:
             raise FaqStoreError( "FAQ %s not found" % alias )
             
         return row[0]
+    
+    def getAliases( self, name ):
+        canonicalName = self.getCanonicalName( name )
+        cur = self.__conn.cursor()
+        cur.execute( "SELECT Alias FROM FaqAliases WHERE CanonicalName=%s", canonicalName )
+        return [ row[0] for row in cur.fetchall() ]
+    
+    def getNumberOfVersions( self, name ):
+        canonicalName = self.getCanonicalName( name )
+        cur = self.__conn.cursor()
+        cur.execute( "SELECT COUNT(*) FROM FaqVersions WHERE Name=%s", canonicalName )
+        return cur.fetchone()[0]
         
         
         
