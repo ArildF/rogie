@@ -18,6 +18,16 @@ class SqliteQuoteStoreTest(unittest.TestCase):
                             "Douglas Adams", addingUser = "Arild" )
         self.assertEquals( 1, self.store.quoteCount() )
     
+    def testCreateNewQuoteWithNumberReturned( self ):
+        num = self.store.newQuote( "Space, is big. Really big",
+                            "Douglas Adams", addingUser = "Arild" )
+        self.assertEquals( 1, num )
+        
+        num = self.store.newQuote( "Hypocrisy is the Vaseline of social intercourse", 
+                            None, addingUser = "Arild" )
+        self.assertEquals( 2, num )
+        
+    
     def testRetrieveQuoteByNumber( self ):
         self.store.newQuote( "Space, is big. Really big",
                             "Douglas Adams", addingUser = "Arild" )

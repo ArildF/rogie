@@ -27,6 +27,7 @@ class SqliteQuoteStore:
                      VALUES (%s, %s, %s, %s)""", 
                     contents, author, DateTime.utc(), addingUser ) 
         self.__conn.commit()
+        return cur.lastrowid
     
     
     def quoteCount( self ):
