@@ -601,3 +601,5 @@ All religions are equally sublime to the ignorant, useful to the politician, and
 The Church is the handmaid of tyranny and the steady enemy of liberty.	Thomas Babington Macaulay
 The doctrine which, from the very first origin of religious dissensions, has been held by bigots of all sects, when condensed into a few words and
 Virginity is like like bubble... One prick and it's all gone.
+More computing sins are committed in the name of efficiency(without necessarily achieving it) than for any other single reason - including blind stupidity. William A. Wulf
+We follow two rules in the matter of optimization: Rule1. Don't do it. Rule 2(for experts only). Don't do it yet - that is, not until you have a perfectly clear and unoptimized solution.
