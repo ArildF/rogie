@@ -31,7 +31,7 @@ class QuoteCommand( Command.Command ):
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
                 quote = self.store.getRandomQuote()
-                msg = self.__formatQuote( quote )                
+                msg = formatQuote( quote )                
                 self.sendMessage( sock, msg )
     
     def count( self, sock, words ):
@@ -47,7 +47,7 @@ class QuoteCommand( Command.Command ):
         except ValueError:
             raise Command.CommandError( "Argument must be numeric" )
         quote = self.store.getQuoteByNumber( num )
-        msg = self.__formatQuote( quote )
+        msg = formatQuote( quote )
         self.sendMessage( sock, msg )
     
     def byAuthor( self, sock, words ):
@@ -88,9 +88,9 @@ class QuoteCommand( Command.Command ):
             self.sendMessage( sock, "Search truncated, be more specific" )
     
     
-    def __formatQuote( self, quote ):
-        msg = '"%s" -- %s' % (quote.contents, quote.author and quote.author or "Anonymous")
-        return msg
+def formatQuote( quote ):
+    msg = '"%s" -- %s' % (quote.contents, quote.author and quote.author or "Anonymous")
+    return msg
         
     
     

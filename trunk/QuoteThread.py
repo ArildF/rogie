@@ -7,6 +7,9 @@ import time
 import random
 import Quote
 import Config
+import SqliteQuoteStore
+import QuoteCommand
+import Protocol
 
 
 class QuoteThread( threading.Thread ):
@@ -26,11 +29,17 @@ class QuoteThread( threading.Thread ):
     def run( self ):
         sleepMax = Config.getConfig().getInt( "quotes", "sleep_max" )
         sleepMin = Config.getConfig().getInt( "quotes", "sleep_min" )
-        self.quote = Quote.Quote( self.room )
+        quoteDb = Config.getConfig().getString( "quotes", "quotefile" )
+        store = SqliteQuoteStore.SqliteQuoteStore( quoteDb )
+        
         while not self.finished:
             interval = random.randrange( sleepMin, sleepMax ) 
             time.sleep( interval * 60 )
+            
+            msg =  QuoteCommand.formatQuote( store.getRandomQuote() )
+            packet = Protocol.getProtocol().getSpeechPacket( self.room.getNick(), self.room.getRoomName(),
+                                      msg.strip() )
+            packet.send( self.sock )
            
-            self.quote.display( self.sock )
             
             
