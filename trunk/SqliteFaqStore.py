@@ -1,6 +1,7 @@
 # Created 07.03.2005 by Arild Fines
 
 import sqlite
+from mx import DateTime
 
 class FaqStoreError:
     def __init__( self, theMsg ):
@@ -34,8 +35,8 @@ class SqliteFaqStore:
         
         # create the faq entry itself
         try:
-            cur.execute ( "INSERT INTO FaqVersions (Name, Version, State, Contents, Author ) VALUES " +
-                        "(%s, %d, %d, %s, %s )", name, 1, STATE_NORMAL, contents, author  )
+            cur.execute ( "INSERT INTO FaqVersions (Name, Version, State, Contents, Author, Created) VALUES " +
+                        "(%s, %d, %d, %s, %s, %s )", name, 1, STATE_NORMAL, contents, author, DateTime.utc() )
             
             # and the primary alias
             cur.execute( "INSERT INTO FaqAliases (Alias, CanonicalName) VALUES(%s, %s)", 
@@ -52,10 +53,11 @@ class SqliteFaqStore:
         canonicalName = self._getCanonicalName( name )        
         
         # now the real faq
-        cur.execute( """SELECT Author, Contents, Version FROM FaqVersions WHERE Name=%s
+        cur.execute( """SELECT Author, Contents, Version, Created FROM FaqVersions WHERE Name=%s
                      AND Version=(SELECT MAX(Version) FROM FaqVersions WHERE Name=%s)""", 
                      canonicalName, canonicalName )
         row = cur.fetchone()
+        
         class Faq:
             pass
         
@@ -109,8 +111,8 @@ class SqliteFaqStore:
         canonicalName = self._getCanonicalName( name )
         
         # generate the insertion string and varargs dynamically
-        fields = [ ]
-        args = [ canonicalName ]        
+        fields = [ "%s", "%s" ] # state, created
+        args = [ canonicalName, STATE_NORMAL, DateTime.utc() ]        
         
         for field in ("name", "contents", "author"):
             if field in modifyDict.keys():
@@ -121,15 +123,16 @@ class SqliteFaqStore:
             
         args.append( canonicalName )
         
+        #print "Args: %s" % (", ".join( [str(s) for s in args ]))
         #print "Fields: %s" % ", ".join( fields )
         
         stmt = """INSERT INTO FaqVersions 
-                     (Version, State, Name, Contents, Author )                                          
+                     (Version, State, Created, Name, Contents, Author )                                          
                      SELECT 
                      (
                         SELECT MAX(Version) FROM FaqVersions WHERE Name=%%s
-                     ) + 1, %d, %s FROM FaqVersions WHERE Name=%%s""" % \
-                        ( STATE_NORMAL, ", ".join( fields ) )
+                     ) + 1, %s FROM FaqVersions WHERE Name=%%s""" % \
+                        ( ", ".join( fields ) )
 
         args = tuple(args)
         """print stmt 

@@ -10,6 +10,7 @@ CREATE TABLE FaqVersions
     Version Int,
     State Int,
     Contents Text,
-    Author Text,
+    Author Text Not Null,
+    Created TimeStamp Not Null,
     PRIMARY KEY( Name, Version )
 );

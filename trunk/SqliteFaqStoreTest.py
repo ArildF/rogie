@@ -55,10 +55,12 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         faq = self.store.getFaqByName( "testfaq" )
         self.assertEquals( faq.author, "Moon child" )
     
-    def testModifyFaqAuthorAndName( self ):
+    def testModifyFaqAuthorAndContents( self ):
         self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
         self.store.modifyFaq( "testfaq", { "author" : "Moon child", "contents" : "Not a test" } )
         faq = self.store.getFaqByName( "testfaq" )
+        #self.store.close()
+        #os.rename( "test.db", "test.bak.db" )
         self.assertEquals( faq.author, "Moon child" )
         self.assertEquals( faq.contents, "Not a test" )
         
