@@ -6,17 +6,17 @@ CREATE TABLE FaqAliases
 
 CREATE TABLE FaqVersions
 (
+    Id Integer Primary Key,
     Name Text,
     Version Int,
     State Int,
     Contents Text,
-    Author Text Not Null,
     Created TimeStamp Not Null,
-    PRIMARY KEY( Name, Version )
+    Author Text Not Null
 );
 
 CREATE TABLE LatestVersion
 (
     Name Text Primary Key,
-    Version Int
+    Id Int
 );

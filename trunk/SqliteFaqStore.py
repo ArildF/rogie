@@ -26,7 +26,7 @@ class SqliteFaqStore:
         
         # verify that the FAQ does not already exist
         cur = self.__conn.cursor()
-        cur.execute( "SELECT * FROM FaqVersions WHERE Name=%s", name )
+        cur.execute( "SELECT * FROM LatestVersion WHERE Name=%s", name )
         row = cur.fetchone()
         if row:
             raise FaqStoreError( "Faq %s already exists" % name )
@@ -41,14 +41,16 @@ class SqliteFaqStore:
         # create the faq entry itself
         try:
             cur.execute ( "INSERT INTO FaqVersions (Name, Version, State, Contents, Author, Created) VALUES " +
-                        "(%s, %d, %d, %s, %s, %s )", name, 1, STATE_NORMAL, contents, author, DateTime.utc() )
+                        "(%s, %d, %d, %s, %s, %s )", 
+                        name, 1, STATE_NORMAL, contents, author, DateTime.utc() )
+            id = cur.lastrowid
             
             # and the primary alias
             cur.execute( "INSERT INTO FaqAliases (Alias, CanonicalName) VALUES(%s, %s)", 
                         name, name )
             
             # and the latest version
-            cur.execute( "INSERT INTO LatestVersion (Name, Version) VALUES(%s, %s)", name, 1 )
+            cur.execute( "INSERT INTO LatestVersion (Name, Id) VALUES(%s, %d)", name, id )
             self.__conn.commit()
         except:
             self.__conn.rollback()
@@ -61,9 +63,10 @@ class SqliteFaqStore:
         canonicalName = self._getCanonicalName( name )        
         
         # now the real faq
-        cur.execute( """SELECT Author, Contents, Version, Created FROM FaqVersions WHERE Name=%s
-                     AND Version=(SELECT Version FROM LatestVersion WHERE Name=%s)""", 
-                     canonicalName, canonicalName )
+        cur.execute( """SELECT Author, Contents, Version, Created 
+                            FROM FaqVersions, LatestVersion 
+                            WHERE LatestVersion.Name=%s AND FaqVersions.Id = LatestVersion.Id""", 
+                     canonicalName )
         row = cur.fetchone()
         
         class Faq:
@@ -120,10 +123,10 @@ class SqliteFaqStore:
         canonicalName = self._getCanonicalName( name )
         
         # generate the insertion string and varargs dynamically
-        fields = [ "%s", "%s" ] # state, created
-        args = [ canonicalName, STATE_NORMAL, DateTime.utc() ]        
+        fields = [ "%s", "%s", "%s" ] # state, created
+        args = [ canonicalName, STATE_NORMAL, DateTime.utc(), canonicalName ]        
         
-        for field in ("name", "contents", "author"):
+        for field in ( "contents", "author"):
             if field in modifyDict.keys():
                 args.append( modifyDict[field] )
                 fields.append( "%s" )
@@ -131,36 +134,33 @@ class SqliteFaqStore:
                 fields.append( field )
             
         args.append( canonicalName )
-        args.append( canonicalName )
         
         #print "Args: %s" % (", ".join( [str(s) for s in args ]))
-        #print "Fields: %s" % ", ".join( fields )        
+        #print "Fields: %s" % ", ".join( fields )    """    
         
         stmt = """INSERT INTO FaqVersions 
                      (Version, State, Created, Name, Contents, Author )                                          
                      SELECT
-                        (SELECT LatestVersion.Version FROM LatestVersion WHERE LatestVersion.Name=%%s) + 1, 
+                        (SELECT MAX(Version) FROM FaqVersions WHERE FaqVersions.Name=%%s) + 1, 
                         %s 
-                     FROM FaqVersions WHERE Name=%%s AND Version=
-                        (SELECT LatestVersion.Version FROM LatestVersion WHERE LatestVersion.Name=%%s)""" % \
+                     FROM FaqVersions, LatestVersion 
+                        WHERE LatestVersion.Name=%%s AND LatestVersion.Id = FaqVersions.Id""" % \
                         ( ", ".join( fields ) )
 
         args = tuple(args)
-        """print stmt 
-        print args        
+        #print stmt 
+        #print args        
         
-        print
-        print"""
+        #print
+        #print
         
         try:        
             cur.execute( stmt, *args );
+            id = cur.lastrowid
             cur.execute( """UPDATE LatestVersion
-                            SET Version =
-                                (SELECT MAX(FaqVersions.Version) 
-                                    FROM FaqVersions 
-                                    WHERE FaqVersions.Name=%s)
+                            SET Id = %d
                             WHERE LatestVersion.Name=%s""",
-                        (canonicalName, canonicalName) )  
+                        (id, canonicalName) )  
         
             self.__conn.commit()
         except:
