@@ -62,10 +62,10 @@ def connect( username, password ):
     
     if response.status >= 400:
         print "Could not connect to server"
-        print errmsg
-        print errcode
+        #print errmsg
+        #print errcode
         
-        raise "Could not connect to server"
+        raise IOError( "Could not connect to server" )
         
 
     response.read()
