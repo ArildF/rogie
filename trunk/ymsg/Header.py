@@ -27,8 +27,11 @@ class Header( Packet.Packet ):
         lengthstring = struct.unpack( '>H', lengthstring )
         length = int( lengthstring[ 0 ] )
 
-        #what kind of packet is this?        
-        type = header[ 11 ]
+        #what kind of packet is this?
+        if len( header ) > 10:
+            type = header[ 11 ]
+        else:
+            type = "unknown" 
 
         #deal with the login ack packet as a special case, since it requires info from the header
         #print "Header: "
