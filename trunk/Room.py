@@ -8,6 +8,7 @@ import ConfigParser
 import string
 import Protocol
 import QuoteThread
+import time
 
 
 class Room:
@@ -25,6 +26,8 @@ class Room:
         """Join a room using the given socket"""
         login = Protocol.getProtocol().getInitJoinPacket( self.nick )
         login.send( sock )
+        
+        time.sleep( 2 )
 
         login = Protocol.getProtocol().getJoinPacket( self.nick, self.roomName )
         login.send( sock )

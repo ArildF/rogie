@@ -7,6 +7,7 @@ import SleepCommand
 import QuoteCommand
 import RefCommand
 import BayesCommand
+import re
 
 import string
 
@@ -25,3 +26,5 @@ def execute( sock, nick, room, line, ispm = 0 ):
             ctor = commands[ cmd ]
             command = ctor( nick, room, line, ispm )
             command.execute( sock )
+        elif re.match( "\S+\?$", words[ 0 ] ) != None and len(words) == 1:
+            FaqCommand.FaqCommand( nick, room, "faq %s" % words[0], ispm ).execute( sock )

@@ -24,7 +24,9 @@ class Inbound:
         timeThen = time.clock()
         while not self.room.isFinished():
             packet = header.receive()
+            #print "Received header"
             packet.receive()
+            #print "Received packet"
             packet.dispatch()
 
             #time to ping?

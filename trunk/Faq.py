@@ -1,6 +1,7 @@
 import pickle
 import Config
 import os.path
+import Command
 
 CURRENT_VERSION = "0.3"
 
@@ -110,7 +111,7 @@ class FaqProxy:
         
         faqfile = os.path.join( faqdir, self.__targetName ) + faqext
         if not os.path.exists( faqfile ):
-            raise self.__targetName + " " + faqfile #Error( "Faq does not exist: " + faqfile )
+            raise Command.CommandError( " " + faqfile  )
 
         #pickle in
         file = open( faqfile, "r" )

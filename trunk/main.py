@@ -27,8 +27,10 @@ if __name__ == "__main__":
     Config.loadConfig( "rogie.cfg" )
     config = Config.getConfig()
     
+    protocol = config.getString("login", "protocol")
+    
     #init the protocol we are going to use
-    Protocol.initProtocol( "ycht" )
+    Protocol.initProtocol( protocol )
     
     protocol = Protocol.getProtocol()   
     
@@ -43,6 +45,7 @@ if __name__ == "__main__":
 
     #create the socket
     sock = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
+    sock.settimeout( 120.0 )
     chatserver = config.getString( "login", "chatserver" )
     chatport = config.getInt( "login", "chatport" ) 
 
@@ -63,24 +66,35 @@ if __name__ == "__main__":
     while not room.isFinished():
         try:        
             #connect to the chat server
+            print "Connecting to %s:%s" %(chatserver, chatport)
             sock.connect( (chatserver, chatport) )
+            
+            print "Connected to %s:%s" %(chatserver, chatport)
 
             #login: gets the session ID and the challenge
+            print "Logging in"
             login = protocol.login( nick, passwd )
             login.send( sock )
+           
             
             #login: logins to yahoo
             challenge = None
             login = protocol.getLoginPacket( nick, passwd, challenge )
-            login.send( sock )            
+            login.send( sock )   
+            print "Logged in"        
             
+            print "Joining room ", chatRoom
             # join the room
             room.join( sock )
+            
+            print "Joined room ", chatRoom
 
             #one thread for displaying quotes
+            print "Starting quote thread"
             room.startQuoteThread( sock )
 
             #receive packets
+            print "Starting inbound"
             inbound = Inbound.Inbound( sock, room, events )
             inbound.run()            
 

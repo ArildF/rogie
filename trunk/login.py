@@ -60,6 +60,7 @@ def connect( username, password ):
     #get the server's reply
     response = h.getresponse()
     
+    
     if response.status >= 400:
         print "Could not connect to server"
         #print errmsg
@@ -68,7 +69,9 @@ def connect( username, password ):
         raise IOError( "Could not connect to server" )
         
 
-    response.read()
+    print response.read()
+    
+    print response.msg.headers
     
     cookies = response.msg.getallmatchingheaders("Set-Cookie")
     cookiestring = "; ".join( [ c[12:c.index(";")] for c in cookies ] )

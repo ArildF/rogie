@@ -146,18 +146,20 @@ class JoinAckPacket( AckPacket ):
         AckPacket.__init__( self, theSocket, theRoom, theLength )
 
     def dispatch( self ):
+        return
         #decode the packet
-        items = string.split( self.msg, DELIM )
+        """items = string.split( self.msg, DELIM )
 ##        print "Joincvbcvbcvbcvbvcbcvb: "
 ##        print items
         
         #print "JoinAck:" 
-        #Packet.printPacket( self.msg )
+        Packet.printPacket( self.msg )
         #print items
 
         #what kind of packet?
         if len( items ) < 16:
             #another user joined
+            print len(items)
             user = items[ 7 ]
             roomName = items[ 1 ] 
             self.room.userJoin( user )
@@ -170,7 +172,7 @@ class JoinAckPacket( AckPacket ):
 #                userList.append( self.nameStrip( item ) )
 
 #            self.room.setRoomInfo( roomName, roomDesc, userList )
-#            self.room.listUsers()
+#            self.room.listUsers()"""
 
     def nameStrip( self, name ):
         idx = string.find( name, "\x02" )

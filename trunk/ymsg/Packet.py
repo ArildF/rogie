@@ -6,13 +6,16 @@ import password
 import Display
 import Room
 import urllib
+import login
 
 INITLOGIN = "\x57"
 LOGIN = "\x54"
+CHAT2LOGIN="\x1e"
 INITJOIN="\x96"
 JOIN="\x98"
 SPEECH = "\xA8"
 PM = "\x06"
+CHAT2PM = "\x20"
 PING = "\xa1"
 #LEAVE = "\x9b"
 LEAVE = "\xa0"
@@ -22,6 +25,7 @@ SALT = "$1$_2S43d5f"
 
 class Packet:
     sessionid = "\x00\x00\x00\x00"
+    cookie = None
     def send( self, sock ):
         """Sends the packet"""
 
@@ -40,6 +44,7 @@ class Packet:
         
         length = len( packet )
 
+        #printPacket( packet )
         sent = sock.send( packet )
         if not sent == len( packet ):
             raise IOError, "Could not send packet"
@@ -77,6 +82,30 @@ class LoginPacket(Packet):
         
         return packet
 
+class Chat2LoginPacket(Packet):
+    def __init__( self, nick ):
+        self.nick = nick
+        self.cookie = Packet.cookie
+        self.packetId = CHAT2LOGIN
+       
+    def getPayload( self ):
+        packet = "0" + DELIM1 + self.nick + DELIM1 + "1" + DELIM1 + self.nick + \
+            DELIM1 + "6" + DELIM1 + self.cookie + DELIM1 + "2" + \
+            DELIM1 + self.nick + DELIM1
+        return packet
+
+class HandshakePacket( Packet ):
+    """Does the initial handshaking"""
+    
+    def __init__( self, username, password ):
+        self.username = username
+        self.password = password
+    
+    def send( self, sock ):
+        """overrides the Packet implementation of send"""
+        Packet.cookie = login.connect( self.username, self.password )
+ 
+
 class InitJoinPacket( Packet ):
     def __init__( self, username ):
         self.username = username
@@ -85,6 +114,8 @@ class InitJoinPacket( Packet ):
     def getPayload( self ):
         return "109" + DELIM1 + self.username + DELIM1 + "1" + DELIM1 + self.username + \
             DELIM1 + "6" +  DELIM1 + "abcde" + DELIM1
+ 
+
     
 
 class JoinPacket( Packet ):
@@ -97,6 +128,7 @@ class JoinPacket( Packet ):
         return "1" + DELIM1 + self.username + DELIM1 + "104" + DELIM1 + self.room + \
                DELIM1 + "129" + DELIM1 + "1600326593" + DELIM1 + "62" + DELIM1 + "2" + \
                DELIM1
+    
 
 class LeavePacket( Packet ):
     def __init__( self, username ):
@@ -138,6 +170,24 @@ class PmPacket( Packet ):
             DELIM1 + "97" + DELIM1 + "1" + DELIM1 + "63" + DELIM1 + ";0" + \
             DELIM1 + "64" + DELIM1 + "0" + DELIM1
 
+#yp.Add(0, currentUser).Add(5, target).Add(14, message);
+class Chat2PmPacket( Packet ):
+    def __init__( self, theOriginator, theDestination, theStatement ):
+        self.originator = theOriginator
+        self.destination = theDestination
+        self.statement = theStatement
+        self.packetId = CHAT2PM
+        
+    def send( self, sock ):
+        """override send to display the pm"""
+        Packet.send( self, sock )
+        Display.getDisplay().pmTo( self.destination, self.statement )
+
+    def getPayload( self ):
+        return "0" + DELIM1 + self.originator + DELIM1 + "5" + DELIM1 + \
+            self.destination + DELIM1 + "14" + DELIM1 + self.statement + \
+            DELIM1
+
 
 
 class PingPacket( Packet ):
@@ -149,6 +199,12 @@ class PingPacket( Packet ):
 
     def getPayload( self ):
         return "109" + DELIM1 + self.nick + DELIM1
+
+
+class NullPacket( Packet ):
+    """This class does absolutely nothing"""
+    def send( self, sock ):
+        pass
         
 
 def printPacket( packet ):

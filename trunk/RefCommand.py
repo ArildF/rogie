@@ -56,7 +56,7 @@ class RefCommand( Command.Command ):
             msg = "No handler registered for " + command
         except( ConfigParser.NoOptionError ):
             msg = "Handler for %s improperly configured." % command
-        except( httplib.HttpException ):
+        except( httplib.HTTPException ):
             msg = "Cannot connect to URL to verify"
             
         self.sendMessage( sock, msg )
@@ -77,8 +77,7 @@ class RefCommand( Command.Command ):
         self.sendMessage( sock, "No comprendo, señor" )
         
 
-    def lookupDotnet( self, words ):
-        """prints an url for a .NET class"""
+    """def lookupDotnet( self, words ):
         concat = "".join( words )
         if concat.count( "." ) == 0:
             return "system" + concat
@@ -89,7 +88,7 @@ class RefCommand( Command.Command ):
         return self.lookupDotnet( words )
 
     def lookupDotnetns( self, words ):
-        return self.lookupDotnet( words )
+        return self.lookupDotnet( words )"""
         
 
     def lookupJava( self, words ):

@@ -83,8 +83,21 @@ class FaqCommand( Command.Command ):
         faqName = words[ 0 ]
 
         pm = self.isPm
+        
+        qfaq = 0
+        
+        if faqName.endswith( "?" ):
+            faqName = faqName[:-1]
+            qfaq = 1
 
-        faq = Faq.loadFaq( faqName )
+        try:
+            faq = Faq.loadFaq( faqName )
+        except Faq.FaqError, err:
+            if not qfaq:
+                raise err 
+            else:
+                return
+        
         entry = faq.getFaq()
 
         #do we want to pm this to someone?
@@ -346,12 +359,16 @@ class FaqCommand( Command.Command ):
             if filename[ -4: ] == self.faqExt:
                 #get rid of .faq in filename to get faq name
                 faqname = filename[:-4]
-                contents = Faq.loadFaq( faqname )
-                owner = contents.getAuthor()
-                if ownerCount.has_key(owner):
-                   ownerCount[owner] = ownerCount[owner] + 1
-                else:
-                    ownerCount[owner] = 1
+                try:
+                    
+                    contents = Faq.loadFaq( faqname )
+                    owner = contents.getAuthor()
+                    if ownerCount.has_key(owner):
+                       ownerCount[owner] = ownerCount[owner] + 1
+                    else:
+                        ownerCount[owner] = 1
+                except:
+                    pass
         #in responst to rats complaints about being dinged by this command                    
         ratscount = ownerCount["couldnt_give_a_rats_ass"]
         del ownerCount["couldnt_give_a_rats_ass"]

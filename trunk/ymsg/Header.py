@@ -34,8 +34,6 @@ class Header( Packet.Packet ):
             type = "unknown" 
 
         #deal with the login ack packet as a special case, since it requires info from the header
-        #print "Header: "
-        #Packet.printPacket( header )
 
         if type == "W":
             sessionid = header[ 16 : 20 ]
@@ -48,11 +46,10 @@ class Header( Packet.Packet ):
             
         else:
             #default - do nothing
-            #print "Unknown packet type: "
-            Packet.printPacket( header )
+            print "Unknown packet type: %02x" % ord(type)
             packet = Ack.AckPacket( self.sock, None, length )
             
-        #Packet.printPacket( type )
+        #        Packet.printPacket( header )
         return packet
 
 PACKETTYPES = { "\x57" : Ack.LoginAckPacket,
