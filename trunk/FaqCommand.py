@@ -443,6 +443,7 @@ COMMANDS = { "add" : { M : FaqCommand.makeEntry, A : 1, AK : Acl.ADDFAQ } ,
              "list" : { M : FaqCommand.listFaqs, A : 1, AK : Acl.LISTFAQ },
              "rename" : { M : FaqCommand.rename, A : 0, AK : Acl.RENAMEFAQ },
              "find" : { M : FaqCommand.apropos, A : 1, AK : Acl.FINDFAQ },
+             "stats" : { M : FaqCommand.faqStats, A : 1, AK : Acl.FAQSTATS },
 
              "chown" : { M : FaqCommand.changeOwner, A : 0, AK : Acl.CHANGEOWNER  },
 

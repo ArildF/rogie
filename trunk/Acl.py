@@ -17,6 +17,7 @@ DELETEUSER = "admin_delete"
 GRANTPERMISSION = "admin_grant"
 REVOKEPERMISSION = "admin_revoke"
 FAQLISTCOMMANDS = "faq_listcommands"
+FAQSTATS = "faq_stats"
 ADMINLISTCOMMANDS = "admin_listcommands"
 GETOWNER = "faq_owner"
 CHANGEOWNER = "faq_chown"
@@ -61,6 +62,7 @@ ADMIN_ACL =  { ADDFAQ : 1, READFAQ : 1, LISTFAQ : 1,
                TOPTENFAQS : 1, SETREADONLY : 1,
                COMMITFAQ : 1, SETREADONLY : 1,
                SETREADWRITE : 1, GOTO : 1,
+               FAQSTATS : 1,
                GOOGLE : 1, SHUTDOWN : 1, FINDFAQ : 1, RELOADQUOTE : 1,
                API : 1 }
 
