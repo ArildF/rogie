@@ -12,7 +12,6 @@ class SqliteFaqStoreTest( unittest.TestCase ):
     def tearDown( self ):
         self.store.close()
         os.unlink( "test.db" )
-        
     
     def testStoreAndRetrieveNewFaq( self ):
         self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
@@ -44,6 +43,14 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         self.assertRaises( SqliteFaqStore.FaqStoreError, 
                           self.store.getFaqByName, "testfaq" )
     
+    def testDeleteFaqAndCreateNewWithSameName( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
+        self.store.deleteFaq( "testfaq" )
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
+        faq = self.store.getFaqByName( "testfaq" )
+        self.assertEqual( 3, faq.version )
+        
+   
     def testModifyFaqContents( self ):
         self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
         self.store.modifyFaq( "testfaq", { "contents" : "Not a test" } )
@@ -142,6 +149,24 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         
         self.assertRaises( SqliteFaqStore.FaqStoreError, 
                           self.store.getFaqByName, "testfaq", 3 )
+    
+    
+    def testRenameFaq( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" ) 
+        self.store.renameFaq( "testfaq", "renamedfaq" )
+        
+        self.assertRaises( SqliteFaqStore.FaqStoreError,
+                          self.store.getFaqByName, "testfaq" )
+        
+        faq = self.store.getFaqByName( "renamedfaq" )
+        self.assertEquals( "Test", faq.contents )
+        
+        self.store.newFaq( name="t", author="Arild", contents="test" )
+        self.assertRaises( SqliteFaqStore.FaqStoreError,
+                          self.store.renameFaq, "t", "renamedfaq" )
+        
+        self.assertRaises( SqliteFaqStore.FaqStoreError,
+                          self.store.renameFaq, "nonexistent", "blah" )
         
         
         

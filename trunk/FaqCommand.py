@@ -150,14 +150,11 @@ class FaqCommand( Command.Command ):
 
     def deleteFaq( self, sock, words ):
         faqName = words[ 0 ]
-        faqfile = self.faqDir + faqName + self.faqExt
         #can only delete if owner or has general delete rights
         if not self.isOwnerOrAdmin( faqName, Acl.DELETEFAQ ):
             raise Command.PermissionError( "Only owner or user with delete privileges can delete a faq" )
 
-        # add to version control with delete
-        if not (self.verControl.delete(faqfile)):
-            raise Command.CommandError( "Error deleting faq " + faqName + self.verControl.getError()) 
+        self.store.deleteFaq( faqName )
  
         self.sendMessage( sock, faqName + " deleted" )
     
@@ -278,15 +275,7 @@ class FaqCommand( Command.Command ):
         if not self.isOwnerOrAdmin( oldname, Acl.RENAMEFAQ ):
           raise Command.PermissionError( "Only owner or user with rename rights can rename a faq" )
         
-        oldFilePath = self.faqDir + oldname + self.faqExt
-        newFilePath = self.faqDir + newname + self.faqExt
-
-        if(os.path.exists(newFilePath)):
-           raise Command.CommandError( "Faq " + newname + " already exists.")
-                                       
-         # add to version control
-        if not (self.verControl.rename(oldFilePath, newFilePath)):
-          raise Command.CommandError( "Error renaming faq " + oldname + self.verControl.getError())
+        self.store.renameFaq( oldname, newname )
             
         self.sendMessage( sock, "New name is " + newname )
     

@@ -24,10 +24,31 @@ class SqliteFaqStore:
     def newFaq( self, name, author, contents ):
         """Create a new faq"""
         
-        # verify that the FAQ does not already exist
+        # first check if we have a deleted faq by that name
         cur = self.__conn.cursor()
-        cur.execute( "SELECT * FROM LatestVersion WHERE Name=%s", name )
+        cur.execute( """SELECT *
+                        FROM LatestVersion, FaqVersions 
+                        WHERE LatestVersion.Id = FaqVersions.Id 
+                            AND FaqVersions.State = %d
+                            AND FaqVersions.Name=%s""", STATE_DELETED, name )
         row = cur.fetchone()
+        if row:
+            # yes, just modify the existing one
+            self.modifyFaq( name, { "author" : author, 
+                                    "contents" : contents, 
+                                    "state" : STATE_NORMAL } )
+            # and add the alias
+            cur.execute( "INSERT INTO FaqAliases (Alias, CanonicalName) VALUES(%s, %s)", 
+                        name, name )
+            self.__conn.commit()
+            return
+        
+        # is there a non-deleted faq by that name?
+        cur.execute ( """   SELECT * 
+                            FROM LatestVersion, FaqVersions
+                            WHERE LatestVersion.Id = FaqVersions.Id
+                                AND FaqVersions.State <> %d
+                                AND FaqVersions.Name=%s""", STATE_DELETED, name )
         if row:
             raise FaqStoreError( "Faq %s already exists" % name )
         
@@ -120,23 +141,29 @@ class SqliteFaqStore:
         cur.execute( "DELETE FROM FaqAliases WHERE Alias=%s", name )
         if cur.rowcount == 0:
             raise FaqStoreError( "No faq by the name %s", name )
+        self.__conn.commit()
             
         # if there are remaining aliases to the faq, we're done
         cur.execute( "SELECT COUNT(*) FROM FaqAliases WHERE Alias=%s", name )
         if cur.fetchone()[0] > 0:
             return
+        
+        # if not, we can mark it as deleted
+        self.modifyFaq( name, { "state" : STATE_DELETED } )
+        
+        
     
     def modifyFaq( self, name, modifyDict ):
         """modifies an existing faq"""
         cur = self.__conn.cursor()
         
-        canonicalName = self.getCanonicalName( name )
+        canonicalName = self.getCanonicalName( name, checkCanonical = True, checkDeleted = True )
         
         # generate the insertion string and varargs dynamically
-        fields = [ "%s", "%s", "%s" ] # state, created
-        args = [ canonicalName, STATE_NORMAL, DateTime.utc(), canonicalName ]        
+        fields = [ "%s", "%s" ] 
+        args = [ canonicalName, DateTime.utc(), canonicalName ]        
         
-        for field in ( "contents", "author"):
+        for field in ( "contents", "author", "state" ):
             if field in modifyDict.keys():
                 args.append( modifyDict[field] )
                 fields.append( "%s" )
@@ -149,7 +176,7 @@ class SqliteFaqStore:
         #print "Fields: %s" % ", ".join( fields )    """    
         
         stmt = """INSERT INTO FaqVersions 
-                     (Version, State, Created, Name, Contents, Author )                                          
+                     (Version, Created, Name, Contents, Author, State )                                          
                      SELECT
                         (SELECT MAX(Version) FROM FaqVersions WHERE FaqVersions.Name=%%s) + 1, 
                         %s 
@@ -198,12 +225,26 @@ class SqliteFaqStore:
         
             
     
-    def getCanonicalName( self, alias ):
+    def getCanonicalName( self, alias, checkCanonical = False, checkDeleted = False ):
         # find the canonical name
         cur = self.__conn.cursor()
         cur.execute( "SELECT CanonicalName FROM FaqAliases WHERE Alias=%s", alias )
         row = cur.fetchone()
         if not row:
+            if checkCanonical:
+                cur.execute( """SELECT Name, State 
+                                FROM FaqVersions 
+                                WHERE 
+                                    Id IN
+                                        (SELECT Id FROM LatestVersion)
+                                    AND Name=%s""",
+                            alias )
+                row = cur.fetchone()
+                if not row or (not checkDeleted and row[1] == STATE_DELETED):
+                    raise FaqStoreError( "FAQ %s not found" % alias )
+                    
+                
+        if not row:                        
             raise FaqStoreError( "FAQ %s not found" % alias )
             
         return row[0]
@@ -219,6 +260,20 @@ class SqliteFaqStore:
         cur = self.__conn.cursor()
         cur.execute( "SELECT COUNT(*) FROM FaqVersions WHERE Name=%s", canonicalName )
         return cur.fetchone()[0]
+    
+    
+    def renameFaq( self, original, new ):
+        """Renames the alias of a faq"""
+        cur = self.__conn.cursor()
+        try:
+            cur.execute( "UPDATE FaqAliases SET Alias=%s WHERE Alias=%s", new, original )
+            self.__conn.commit()
+        except sqlite.IntegrityError:
+            raise FaqStoreError( "Alias %s already exists" % new )
+            
+        if not cur.rowcount:
+            raise FaqStoreError( "No faq named %s" % original )
+    
         
         
         
