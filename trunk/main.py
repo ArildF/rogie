@@ -88,8 +88,7 @@ if __name__ == "__main__":
             inbound = Inbound.Inbound( sock, room, display )
             inbound.run()            
 
-            #wait till the receive packets thread terminates
-            inbound.join()
+            
             
         except ( IOError, socket.error ):
             #an IOError or socket.error should be the result of a dc by Yahoo
