@@ -3,11 +3,13 @@
 #constitutes the main module of the Yahoo chat bot
 
 import socket
-import Display
+import Events
 import Room
 import time
 import Protocol
 import Inbound
+import Display
+import SpamFilter
 
 
 import sys
@@ -35,7 +37,9 @@ if __name__ == "__main__":
     nick = config.getString( "login", "username" )
     passwd = config.getString( "login", "password" )
 
-    display = Display.Display()
+    events = Events.getEvents()
+    events.addListener( Display.getDisplay() )
+    events.addListener( SpamFilter.getInstance() )
 
     #create the socket
     sock = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
@@ -50,9 +54,9 @@ if __name__ == "__main__":
     chatRoom = config.getString( "login", "chatroom" )
 
     if len( sys.argv ) > 1:
-        room = Room.Room( nick, sys.argv[ 1 ], display )
+        room = Room.Room( nick, sys.argv[ 1 ], events )
     else:
-        room = Room.Room( nick, chatRoom, display )
+        room = Room.Room( nick, chatRoom, events )
 
 
     #try to log on again if the bot is disconnected
@@ -77,7 +81,7 @@ if __name__ == "__main__":
             room.startQuoteThread( sock )
 
             #receive packets
-            inbound = Inbound.Inbound( sock, room, display )
+            inbound = Inbound.Inbound( sock, room, events )
             inbound.run()            
 
             

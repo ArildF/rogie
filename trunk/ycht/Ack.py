@@ -7,7 +7,7 @@ import string
 import dispatch
 import Acl
 import time
-import Display
+import Events
 import Packet
 
 class AckPacket( Packet.Packet ):
@@ -65,7 +65,7 @@ class SpeechAckPacket( SpeechAck ):
 
     def __init__( self, aSocket, theRoom, theLength ):
         self.sock = aSocket
-        self.display = Display.getDisplay()
+        self.events = Events.getEvents()
         self.length = theLength
         self.room = theRoom
 
@@ -81,7 +81,7 @@ class SpeechAckPacket( SpeechAck ):
             #strip off garbage
             line = self.stripLine( rawstatement )
             
-            self.display.userSpeech( nick, line )
+            self.events.userSpeech( nick, line )
             dispatch.execute( self.sock, nick, self.room, line )
 
     def getIsPm( self ):
@@ -96,7 +96,7 @@ class PmAckPacket( SpeechAck ):
 
     def __init__( self, aSocket, theRoom, theLength ):
         self.sock = aSocket
-        self.display = Display.getDisplay()
+        self.events = Events.getEvents()
         self.length = theLength
         self.room = theRoom
 
@@ -112,7 +112,7 @@ class PmAckPacket( SpeechAck ):
             #strip off garbage
             line = self.stripLine( rawstatement )
 
-            self.display.userPm( nick, line )
+            self.events.userPm( nick, line )
             dispatch.execute( self.sock, nick, self.room, line, 1 )
 
 
@@ -125,7 +125,7 @@ class JoinAckPacket( AckPacket ):
     """receives a room join event from yahoo"""
     def __init__( self, theSocket, theRoom, theLength ):
         self.sock = theSocket
-        self.display = Display.getDisplay()
+        self.events = Events.getEvents()
         self.room = theRoom
         self.length = theLength
 
@@ -143,7 +143,7 @@ class JoinAckPacket( AckPacket ):
 #            user = self.nameStrip( items[ 4 ] )
 
 #            self.room.userJoin( user )
-#            self.display.userJoin( roomName, user )
+#            self.events.userJoin( roomName, user )
 #        else:
 #            #getting a user list upon entry
 #            list = string.split( items[ 4 ], "\x01" )
@@ -163,7 +163,7 @@ class LeaveAckPacket( AckPacket ):
     """receives a room leave event from yahoo"""
     def __init__( self, theSocket, theRoom, theLength ):
         self.sock = theSocket
-        self.display = Display.getDisplay()
+        self.events = Events.getEvents()
         self.room = theRoom
         self.length = theLength
 
@@ -175,7 +175,7 @@ class LeaveAckPacket( AckPacket ):
         user = items[ 1 ]
 
         self.room.userLeave( user )
-        self.display.userLeave(roomName, user )
+        self.events.userLeave(roomName, user )
 
 
 

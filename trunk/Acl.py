@@ -40,6 +40,11 @@ GOOGLE = "google"
 SHUTDOWN = "shutdown"
 FINDFAQ = "faq_find"
 API="ref"
+TRAINSPAM="trainspam"
+TRAINHAM="trainham"
+HAMMER="hammer"
+SPAMMER="spammer"
+SPAMPROBABILITY="spamprobability"
 
 import os.path
 import pickle
@@ -64,7 +69,10 @@ ADMIN_ACL =  { ADDFAQ : 1, READFAQ : 1, LISTFAQ : 1,
                SETREADWRITE : 1, GOTO : 1,
                FAQSTATS : 1,
                GOOGLE : 1, SHUTDOWN : 1, FINDFAQ : 1, RELOADQUOTE : 1,
-               API : 1 }
+               API : 1,
+               TRAINSPAM : 1,
+               TRAINHAM : 1, HAMMER : 1, SPAMMER : 1,
+               SPAMPROBABILITY : 1 }
 
 
 DEF_ACL = { ADDFAQ : 0, READFAQ : 1, LISTFAQ : 1, ADDUSER : 0, APROPOS : 1 } 

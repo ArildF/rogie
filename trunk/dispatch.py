@@ -6,12 +6,14 @@ import AdminCommand
 import SleepCommand
 import QuoteCommand
 import RefCommand
+import BayesCommand
 
 import string
 
 commands = { "faq" : FaqCommand.FaqCommand, "admin" : AdminCommand.AdminCommand,
             "sleep_bot" : SleepCommand.SleepCommand,
-            "quote" : QuoteCommand.QuoteCommand, "ref" : RefCommand.RefCommand }
+            "quote" : QuoteCommand.QuoteCommand, "ref" : RefCommand.RefCommand,
+            "bayes" : BayesCommand.BayesCommand }
 #"google" : GoogleCommand.GoogleCommand, 
 
 def execute( sock, nick, room, line, ispm = 0 ):
