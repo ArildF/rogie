@@ -40,9 +40,9 @@ def connect( username, password ):
     loginServer = Config.getConfig().getString( "login", "loginserver" )
     #connect to the server and send the request string
     
-    h = httplib.HTTP( loginServer )
+    h = httplib.HTTPConnection( loginServer )
     content = ".src=bl&login=" + username + "&passwd=" + password + "&n=1"
-    h.putrequest( 'POST', '/config/ncclogin' )
+    h.putrequest( 'POST', '/config/login' )
     
     h.putheader( "HTTP/1.0", "" )
     h.putheader( "Content-length", "%d" % len( content ) )
@@ -58,46 +58,21 @@ def connect( username, password ):
     h.send( content )    
 
     #get the server's reply
-    errcode, errmsg, headers = h.getreply()
-
-    if errcode != 200:
+    response = h.getresponse()
+    
+    if response.status >= 400:
         print "Could not connect to server"
         print errmsg
         print errcode
         
+        raise "Could not connect to server"
+        
 
-    file = h.getfile()
-    file.close()
- 
-
-    #dig out the actual cookie
-    #we assume that the cookie we want is the first one sent
-    cookie = strip( headers.getrawheader( "Set-Cookie" ) )
-
-    #anything after the ; is not interesting    
-    if count( cookie, ";" ) > 0:
-        cookie = cookie[ :(index( cookie, ";" ) ) ]
-
-    #strip off the Y= part...grrrr!
-    cookie = cookie[ 2: ]
-
-
-    return cookie
-
-
-
-
+    response.read()
     
+    cookies = response.msg.getallmatchingheaders("Set-Cookie")
+    cookiestring = "; ".join( [ c[12:c.index(";")] for c in cookies ] )
     
+    print cookiestring
     
-    
-    
-	
-	
-	
-	
-	
-
-	
-	
-
+    return cookiestring

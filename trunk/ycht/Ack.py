@@ -4,15 +4,11 @@
 #contains classes for the packets received from yahoo
 
 import string
-import Command
+import dispatch
 import Acl
 import time
-
 import Display
-
-
-
-
+import Packet
 
 class AckPacket( Packet.Packet ):
 
@@ -75,7 +71,7 @@ class SpeechAckPacket( SpeechAck ):
 
     def dispatch( self ):
         #decode the packet
-        items = string.split( self.msg, self.DELIMITER2 )
+        items = string.split( self.msg, Packet.DELIMITER2 )
 
         if len( items ) > 2:
 
@@ -84,9 +80,9 @@ class SpeechAckPacket( SpeechAck ):
 
             #strip off garbage
             line = self.stripLine( rawstatement )
-
-            Command.execute( nick, self.room, line )
+            
             self.display.userSpeech( nick, line )
+            dispatch.execute( self.sock, nick, self.room, line )
 
     def getIsPm( self ):
         return 0
@@ -107,7 +103,7 @@ class PmAckPacket( SpeechAck ):
 
     def dispatch( self ):
         #decode the packet
-        items = string.split( self.msg, self.DELIMITER2 )
+        items = string.split( self.msg, Packet.DELIMITER2 )
 
         if len( items ) > 2:
             nick = items[ 0 ]
@@ -117,7 +113,7 @@ class PmAckPacket( SpeechAck ):
             line = self.stripLine( rawstatement )
 
             self.display.userPm( nick, line )
-            Command.execute( nick, self.room, line )
+            dispatch.execute( self.sock, nick, self.room, line, 1 )
 
 
 
@@ -173,7 +169,7 @@ class LeaveAckPacket( AckPacket ):
 
     def dispatch( self ):
         #decode the packet
-        items = string.split( self.msg, self.DELIMITER2 )
+        items = string.split( self.msg, Packet.DELIMITER2 )
 
         roomName = items[ 0 ]
         user = items[ 1 ]

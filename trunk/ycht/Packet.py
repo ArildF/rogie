@@ -5,6 +5,7 @@
 
 import struct
 import Display
+import login
 
 LOGIN_PACKET = "\x00\x00\x00\x01"
 JOIN_PACKET = "\x00\x00\x00\x11"
@@ -15,7 +16,9 @@ PM_PACKET = "\x00\x00\x00\x45"
 DELIMITER1 = "\x01"
 DELIMITER2 = "\xC0\x80"
 
+
 class Packet:
+    cookie = None
     def send( self, sock ):
         """Sends the packet"""
 
@@ -37,13 +40,13 @@ class Packet:
         
 
 class LoginPacket(Packet):
-    def __init__( self, theNick, theCookie ):
+    def __init__( self, theNick ):
         self.nick = theNick
-        self.cookie = theCookie
+        self.cookie = Packet.cookie
         self.packetId = LOGIN_PACKET
 
     def getPayload( self ):
-        return self.nick + DELIMITER1 + self.cookie
+        return self.nick + DELIMITER1 + Packet.cookie
 
 
 
@@ -95,6 +98,22 @@ class PingPacket( Packet ):
 
     def getPayload( self ):
         return ""
+
+class HandshakePacket( Packet ):
+    """Does the initial handshaking"""
+    
+    def __init__( self, username, password ):
+        self.username = username
+        self.password = password
+    
+    def send( self, sock ):
+        """overrides the Packet implementation of send"""
+        Packet.cookie = login.connect( self.username, self.password )
+
+class NullPacket( Packet ):
+    def send( self, sock ):
+        pass
+        
                                     
 
         

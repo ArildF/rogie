@@ -40,10 +40,10 @@ class Header( Packet.Packet ):
 
         return packet
 
-PACKETTYPES = { Packet.Packet.JOIN_PACKET : Ack.JoinAckPacket,
-                Packet.Packet.LEAVE_PACKET : Ack.LeaveAckPacket,
-                Packet.Packet.SPEECH_PACKET : Ack.SpeechAckPacket,
-                Packet.Packet.PM_PACKET: Ack.PmAckPacket
+PACKETTYPES = { Packet.JOIN_PACKET : Ack.JoinAckPacket,
+                Packet.LEAVE_PACKET : Ack.LeaveAckPacket,
+                Packet.SPEECH_PACKET : Ack.SpeechAckPacket,
+                Packet.PM_PACKET: Ack.PmAckPacket
               }
                 
 

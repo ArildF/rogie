@@ -26,7 +26,7 @@ if __name__ == "__main__":
     config = Config.getConfig()
     
     #init the protocol we are going to use
-    Protocol.initProtocol( "ymsg" )
+    Protocol.initProtocol( "ycht" )
     
     protocol = Protocol.getProtocol()   
     
@@ -62,23 +62,15 @@ if __name__ == "__main__":
             sock.connect( (chatserver, chatport) )
 
             #login: gets the session ID and the challenge
-            login = protocol.login( nick )
+            login = protocol.login( nick, passwd )
             login.send( sock )
-
-            header = protocol.getHeader( sock, display, room )
-            packet = header.receive()
-            packet.receive()
-            challenge = packet.dispatch()
-
+            
             #login: logins to yahoo
+            challenge = None
             login = protocol.getLoginPacket( nick, passwd, challenge )
-            login.send( sock )
+            login.send( sock )            
             
-            header = protocol.getHeader( sock, display, room )
-            packet = header.receive()
-            packet.receive()
-            packet.dispatch()
-            
+            # join the room
             room.join( sock )
 
             #one thread for displaying quotes
@@ -90,7 +82,8 @@ if __name__ == "__main__":
 
             
             
-        except ( IOError, socket.error ):
+        except ( IOError, socket.error ), reason:
+            print reason
             #an IOError or socket.error should be the result of a dc by Yahoo
             sock.close()
 

@@ -8,7 +8,7 @@ import Header
 
 class YmsgProtocol:
 	#connects to the yahoo chat server
-    def login( self, user ):
+    def login( self, user, passwd ):
         return Packet.InitLoginPacket( user )
 	
     def getLoginPacket( self, nick, cookie, password ):
