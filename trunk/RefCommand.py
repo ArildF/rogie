@@ -6,9 +6,8 @@ import Config
 import string
 import Acl
 import ConfigParser
-
-
-
+import urlparse
+import httplib
 
 class RefCommand( Command.Command ):
     config = None
@@ -41,11 +40,23 @@ class RefCommand( Command.Command ):
             trailing = self.getString( command, "trailing" )                 
             method = getattr( self, methodName, self.lookupDefault )
             msg = leading + method(words[ 2: ]) + trailing
+
+            #if we get here, msg should be an url
+            #test it for validity
+            (scheme, location, path, parameters, query, fragment) = urlparse.urlparse( msg )
+            
+            connection = httplib.HTTPConnection( location )
+            connection.request( "GET", path )
+            if connection.getresponse().status != 200:
+                msg = "item %s not found" % "".join( words[2:] )
+            
             
         except( ConfigParser.NoSectionError ):
             msg = "No handler registered for " + command
         except( ConfigParser.NoOptionError ):
             msg = "Handler for %s improperly configured." % command
+        except( httplib.HttpException ):
+            msg = "Cannot connect to URL to verify"
             
         self.sendMessage( sock, msg )
 
