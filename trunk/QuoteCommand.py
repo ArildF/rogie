@@ -10,7 +10,9 @@ class QuoteCommand( Command.Command ):
 
     def __init__( self, theNick, theRoom, theCommand, isPm = 0 ):
         Command.Command.__init__( self, theNick, theRoom, theCommand, isPm )
-        self.commands = { "reload" : { "method" : QuoteCommand.reload, "acl" : 1, "aclkey" : Acl.RELOADQUOTE } } 
+        self.commands = { "reload" : { "method" : QuoteCommand.reload, "acl" : 1, "aclkey" : Acl.RELOADQUOTE },
+                            "count" : { "method" : QuoteCommand.count, "acl" : 1, "aclkey" : Acl.RELOADQUOTE },
+                            "usedcount" : { "method" : QuoteCommand.usedCount, "acl" : 1, "aclkey" : Acl.RELOADQUOTE }}
         
     def doExecute( self, sock, words ):
         """parses the command"""
@@ -20,14 +22,23 @@ class QuoteCommand( Command.Command ):
                 self.doCommand( sock, words[1:] )
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
-                quote = Quote.Quote( self.room )
-                quote.display( sock )
+                self.room.getQuote().display( sock )
             
 
     def reload( self, sock, words ):
         """restarts the quote thread, so recent additions to the quotethread are loaded"""
         self.room.startQuoteThread( sock )
         self.sendMessage( sock, "Quote file reloaded" )
+    
+    def count( self, sock, words ):
+        """returns a total count of the quotes in the db"""
+        self.sendMessage( sock, "Total number of quotes: %s" % 
+            self.room.getQuote().getCount() )
+    
+    def usedCount( self, sock, words ):
+        """the number of quotes in the used list"""
+        self.sendMessage( sock, "Number of quotes in the used list: %s" %
+            self.room.getQuote().getUsedCount() )
     
     
     

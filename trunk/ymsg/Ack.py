@@ -120,7 +120,7 @@ class PmAckPacket( SpeechAck ):
         #Packet.printPacket( self.msg )
         #print items
 
-
+        rawstatement = ""
         if len( items ) > 5:
             nick = items[ 3 ]
             if ( items[ 0 ] == '5' ):

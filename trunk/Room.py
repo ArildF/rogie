@@ -58,6 +58,9 @@ class Room:
         self.quoteThread = QuoteThread.QuoteThread( self, sock )
         self.quoteThread.setDaemon( 1 )
         self.quoteThread.start()
+    
+    def getQuote( self ):
+        return self.quoteThread.getQuote()
 
     def listUsers( self ):
         """Lists all users"""

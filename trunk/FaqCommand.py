@@ -139,7 +139,7 @@ class FaqCommand( Command.Command ):
 
         # add to version control
         if not (self.verControl.add(faqfile)):
-            raise Command.CommandError( "Error adding faq " + faq + self.verControl.lastError())
+            raise Command.CommandError( "Error adding faq " + faq + self.verControl.getError())
             
         self.sendMessage( sock, "Faq " + faq + " added" )
 

@@ -21,7 +21,12 @@ class Quote:
         self.quotes = file.readlines()
         file.close()
         self.maxUsedQuotes = Config.getConfig().getInt( "quotes", "max_used_quotes" )
+    
+    def getUsedCount( self ):
+        return len( self.usedQuotes )
         
+    def getCount( self ):
+        return len( self.quotes )
 
     def display( self, sock ):
         """displays a random quote"""

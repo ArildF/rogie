@@ -18,16 +18,19 @@ class QuoteThread( threading.Thread ):
 
     def finish( self ):
         self.finished = 1
+        
+    def getQuote( self ):
+        return self.quote
 
 
     def run( self ):
         sleepMax = Config.getConfig().getInt( "quotes", "sleep_max" )
         sleepMin = Config.getConfig().getInt( "quotes", "sleep_min" )
-        quote = Quote.Quote( self.room )
+        self.quote = Quote.Quote( self.room )
         while not self.finished:
             interval = random.randrange( sleepMin, sleepMax ) 
             time.sleep( interval * 60 )
            
-            quote.display( self.sock )
+            self.quote.display( self.sock )
             
             

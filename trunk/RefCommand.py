@@ -47,8 +47,9 @@ class RefCommand( Command.Command ):
             
             connection = httplib.HTTPConnection( location )
             connection.request( "GET", path )
-            if connection.getresponse().status != 200:
-                msg = "item %s not found" % "".join( words[2:] )
+            
+            if connection.getresponse().status >= 400:
+                msg = "item %s not found @ %s" % ("".join( words[2:] ), msg )
             
             
         except( ConfigParser.NoSectionError ):
