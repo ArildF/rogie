@@ -25,6 +25,7 @@ import string
 import time
 import Config
 import Protocol
+import util
 
 class Command:
 
@@ -36,7 +37,7 @@ class Command:
         self.commands = []
 
     def execute( self, sock ):
-        words = string.split( self.cmd )
+        words = util.splitCommand( self.cmd )
         
         try:
             if not self.room.getAcl().userInAcl( self.nick ):

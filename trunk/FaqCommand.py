@@ -27,6 +27,7 @@ import threading
 import string
 import VerControl
 import Apropos
+import util
 
 
 class FaqCommand( Command.Command ):
@@ -60,11 +61,17 @@ class FaqCommand( Command.Command ):
         if not self.room.getAcl().hasPermission( self.nick, Acl.READFAQ ):
             raise Command.PermissionError( "" )
 
-        command = string.join( words )
-        words = string.split( command, "->" )
-        faqcommand = string.split( words[ 0 ] )
+        redirectionTarget = None
 
-        faq = faqcommand[ 0 ]
+        if "->" in words:
+            if words.index( "->" ) > (len(words)-1):
+                raise Command.CommandError( "Lacking redirection target" )
+            redirectionTarget = words[ words.index("->") + 1 ]
+            words = words[0 : words.index("->") ]            
+        
+            
+
+        faq = words[ 0 ]
 
         pm = self.isPm
 
@@ -72,14 +79,14 @@ class FaqCommand( Command.Command ):
         entry = contents[ ENTRY ]
 
         #do we want to pm this to someone?
-        if  len( words ) > 1:
+        if  redirectionTarget:
             #change the recipient
-            self.nick = string.strip( words[ 1 ] )
+            self.nick = string.strip( redirectionTarget )
             pm = 1
 
         #should we attempt substitution?
-        if len( faqcommand ) > 1:
-            entry = self.substitute( entry, faqcommand[ 1: ] )
+        if len( words ) > 1:
+            entry = self.substitute( entry, words[ 1: ] )
 
         self.isPm = pm
 
