@@ -18,10 +18,10 @@ maxsearchresults=60
 password = XXX
 chatroom = Programming:2
 loginserver = edit.tpe.yahoo.com
-chatport = 8001
-chatserver = jcs.chat.dcn.yahoo.com
-username = rogie_bott
-protocol = ycht
+chatport = 5050
+chatserver = scs.msg.yahoo.com
+username = test_rogie
+protocol = ymsg
 [quotes]
 quotefile = quotes.txt
 sleep_min = 8
