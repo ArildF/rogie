@@ -1,166 +1,253 @@
-"General"
-{
-}
-"Configurations"
-{
-    "Debug"
-    {
-    "LaunchArgs" = ""
-    "BuildCmdLine" = "main.py"
-    "BuildOutputs" = ""
-    "DebuggerName" = ""
-    "ScriptArgs" = ""
-    "RunInShell" = "T"
-    "ShowRedSquigglies" = "T"
-    "DontImplyImportSite" = "F"
-    "UnbufferedBinary" = "F"
-    "DisableClassBasedExceptions" = "F"
-    "Verbose" = "F"
-    "LaunchCmdLine" = "main.py"
-    }
-    "Release"
-    {
-    "LaunchArgs" = ""
-    "BuildCmdLine" = ""
-    "BuildOutputs" = ""
-    "DebuggerName" = ""
-    "ScriptArgs" = ""
-    "RunInShell" = "F"
-    "ShowRedSquigglies" = "T"
-    "DontImplyImportSite" = "F"
-    "UnbufferedBinary" = "F"
-    "DisableClassBasedExceptions" = "F"
-    "Verbose" = "F"
-    "LaunchCmdLine" = ""
-    }
-}
-"Files"
-{
-    "QuoteThread.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Room.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Uptime.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Acl.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "AdminCommand.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Command.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Config.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Display.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "FaqCommand.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "GoogleCommand.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "GoogleThread.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "main.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Quote.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg.txt"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Protocol.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\Ack.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\Header.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\Packet.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\YchtProtocol.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\login.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ycht\\__init__.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "QuoteCommand.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "SleepCommand.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\delim_ymsg.txt"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\Packet.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\password.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\YmsgProtocol.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\Header.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Inbound.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "ymsg\\Ack.py"
-    {
-    "ProjRelPath" = "T"
-    }
-    "dispatch.py"
-    {
-    "ProjRelPath" = "T"
-    }
-}
-"ProjStartupServices"
-{
-}
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioProject>
+    <pythonproj Version="1.2.1"
+         SccProjectName=""
+         SccLocalPath=""
+         SccAuxPath=""
+         SccProvider="">
+        <configurations>
+            <configuration name="Debug"
+                 LaunchArgs=""
+                 BuildCmdLine="P:\rogie\main.py"
+                 BuildOutputs=""
+                 DebuggerName=""
+                 ScriptArgs=""
+                 RunInShell="F"
+                 UseCGIEnvironment="F"
+                 DontImplyImportSite="F"
+                 UnbufferedBinary="F"
+                 Verbose="F"
+                 DebugRemotely="F"
+                 ListenerPort="9000"
+                 LaunchCmdLine="P:\rogie\main.py" />
+            <configuration name="Release"
+                 LaunchArgs=""
+                 BuildCmdLine=""
+                 BuildOutputs=""
+                 DebuggerName=""
+                 ScriptArgs=""
+                 RunInShell="F"
+                 UseCGIEnvironment="F"
+                 DontImplyImportSite="F"
+                 UnbufferedBinary="F"
+                 Verbose="F"
+                 DebugRemotely="F"
+                 ListenerPort="9000"
+                 LaunchCmdLine="" />
+        </configurations>
+        <files>
+            <file name="__init__.py"
+                 ProjRelPath="T" />
+            <file name="Acl.py"
+                 ProjRelPath="T" />
+            <file name="AdminCommand.py"
+                 ProjRelPath="T" />
+            <file name="Apropos.py"
+                 ProjRelPath="T" />
+            <file name="BayesCommand.py"
+                 ProjRelPath="T" />
+            <file name="Command.py"
+                 ProjRelPath="T" />
+            <file name="Config.py"
+                 ProjRelPath="T" />
+            <file name="convertfaqs.py"
+                 ProjRelPath="T" />
+            <file name="dispatch.py"
+                 ProjRelPath="T" />
+            <file name="Display.py"
+                 ProjRelPath="T" />
+            <file name="Events.py"
+                 ProjRelPath="T" />
+            <file name="Faq.py"
+                 ProjRelPath="T" />
+            <file name="FaqCommand.py"
+                 ProjRelPath="T" />
+            <file name="GoogleCommand.py"
+                 ProjRelPath="T" />
+            <file name="GoogleThread.py"
+                 ProjRelPath="T" />
+            <file name="Inbound.py"
+                 ProjRelPath="T" />
+            <file name="login.py"
+                 ProjRelPath="T" />
+            <file name="main.py"
+                 ProjRelPath="T" />
+            <file name="PermissionError.py"
+                 ProjRelPath="T" />
+            <file name="Protocol.py"
+                 ProjRelPath="T" />
+            <file name="Quote.py"
+                 ProjRelPath="T" />
+            <file name="QuoteCommand.py"
+                 ProjRelPath="T" />
+            <file name="QuoteThread.py"
+                 ProjRelPath="T" />
+            <file name="RefCommand.py"
+                 ProjRelPath="T" />
+            <file name="Room.py"
+                 ProjRelPath="T" />
+            <file name="SleepCommand.py"
+                 ProjRelPath="T" />
+            <file name="SpamFilter.py"
+                 ProjRelPath="T" />
+            <file name="splitCommandTest.py"
+                 ProjRelPath="T" />
+            <file name="Uptime.py"
+                 ProjRelPath="T" />
+            <file name="util.py"
+                 ProjRelPath="T" />
+            <file name="VerControl.py"
+                 ProjRelPath="T" />
+            <filter name="ymsg"
+                >
+                <file name="ymsg\Ack.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\Chat2Protocol.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\Header.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\Packet.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\password.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\YmsgProtocol.py"
+                     ProjRelPath="T" />
+                <file name="ymsg\__init__.py"
+                     ProjRelPath="T" />
+                <file name="passwordymsg12.py"
+                     ProjRelPath="T" />
+            </filter>
+            <filter name="pygoogle"
+                >
+                <file name="pygoogle\google.py"
+                     ProjRelPath="T" />
+                <file name="pygoogle\SOAP.py"
+                     ProjRelPath="T" />
+                <file name="pygoogle\__init__.py"
+                     ProjRelPath="T" />
+            </filter>
+            <file name="spambayes\__init__.py"
+                 ProjRelPath="T" />
+            <filter name="spambayes"
+                >
+                <filter name="resources"
+                    >
+                    <file name="spambayes\resources\classify_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\config_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\helmet_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\help_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\message_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\query_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\scanning__init__.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\status_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\train_gif.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\ui_html.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\ui_psp.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\resources\__init__.py"
+                         ProjRelPath="T" />
+                </filter>
+                <filter name="test"
+                    >
+                    <file name="spambayes\test\test_sb-server.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\test\test_smtpproxy.py"
+                         ProjRelPath="T" />
+                    <file name="spambayes\test\test_storage.py"
+                         ProjRelPath="T" />
+                </filter>
+                <file name="spambayes\cdb.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\cdb_classifier.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\chi2.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\classifier.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\compatheapq.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\compatsets.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Corpus.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\CostCounter.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\dbmstorage.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Dibbler.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\FileCorpus.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\hammie.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\hammiebulk.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Histogram.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\ImapUI.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\mboxutils.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\message.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\msgs.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\oe_mailbox.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\optimize.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Options.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\OptionsClass.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\ProxyUI.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\PyMeldLite.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\ServerUI.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\smtpproxy.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Stats.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\storage.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\TestDriver.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Tester.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\tokenizer.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\UserInterface.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\Version.py"
+                     ProjRelPath="T" />
+                <file name="spambayes\__init__.py"
+                     ProjRelPath="T" />
+            </filter>
+            <filter name="ycht"
+                >
+                <file name="ycht\Ack.py"
+                     ProjRelPath="T" />
+                <file name="ycht\Header.py"
+                     ProjRelPath="T" />
+                <file name="ycht\Packet.py"
+                     ProjRelPath="T" />
+                <file name="ycht\YchtProtocol.py"
+                     ProjRelPath="T" />
+                <file name="ycht\__init__.py"
+                     ProjRelPath="T" />
+            </filter>
+        </files>
+    </pythonproj>
+</VisualStudioProject>
