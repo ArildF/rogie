@@ -27,6 +27,7 @@ import Config
 import Protocol
 import util
 import sys
+import traceback
 
 class Command:
 
@@ -56,9 +57,9 @@ class Command:
         except IndexError:
             self.sendMessage( sock, "Syntax error: Arguments missing" )
         except:
-            self.sendMessage( "Unexpected exception, check console" )
+            self.sendMessage( sock, "Unexpected exception, check console" )
             print "Exception thrown:"
-            print sys.exc_info()
+            traceback.print_exc()
 
     def doExecute( self, sock, words ):
         pass
