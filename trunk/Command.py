@@ -26,6 +26,7 @@ import time
 import Config
 import Protocol
 import util
+import sys
 
 class Command:
 
@@ -54,6 +55,8 @@ class Command:
                 self.sendMessage( sock, err.msg )
         except IndexError:
             self.sendMessage( sock, "Syntax error: Arguments missing" )
+        except:
+            print sys.exc_info()
 
     def doExecute( self, sock, words ):
         pass
