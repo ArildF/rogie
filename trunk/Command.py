@@ -7,7 +7,7 @@
 
 
 
-MAX_PACKET_SIZE = 500
+MAX_PACKET_SIZE = 605
 
 
 
