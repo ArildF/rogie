@@ -28,6 +28,8 @@ class QuoteCommand( Command.Command ):
         if len( words ) > 1:
             if words[1][0] == '-':
                 self.doCommand( sock, words[1:] )
+            else:
+                self.byNumber( sock, words[1:] )
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
                 quote = self.store.getRandomQuote()
@@ -68,7 +70,9 @@ class QuoteCommand( Command.Command ):
         """Adds a quote"""
         contents = words[0]
         author = words[1]
-        self.store.newQuote( contents, author, addingUser = self.nick )
+        num = self.store.newQuote( contents, author, addingUser = self.nick )
+        
+        self.sendMessage( sock, "Quote %d added" % num )
     
     
     def __displayQuotes( self, sock, quotes ):
