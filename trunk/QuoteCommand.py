@@ -16,16 +16,13 @@ class QuoteCommand( Command.Command ):
         """parses the command"""
 
         if len( words ) > 1:
-            command = words[ 1 ]
-        else:
-            command = ""
-            
-        if command[0] == '-':
+            if words[1][0] == '-':
                 self.doCommand( sock, words[1:] )
         else:
             if self.room.getAcl().hasPermission( self.nick, Acl.QUOTE ):
                 quote = Quote.Quote( self.room )
                 quote.display( sock )
+            
 
     def reload( self, sock, words ):
         """restarts the quote thread, so recent additions to the quotethread are loaded"""
