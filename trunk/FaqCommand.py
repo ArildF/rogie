@@ -335,6 +335,15 @@ class FaqCommand( Command.Command ):
             raise Command.CommandError( "Version needs to be an integer" )
         
         self.doExecute( sock, words )
+        
+    def created( self, sock, words ):
+        """Gets the creation date of a specific version of a FAQ"""
+        print "Hi"
+        faqname = words[0]
+        faq = self.store.getFaqByName( faqname, version=self.__version )
+        
+        msg = "Faq %s was created %s" % (faq.name, faq.created) 
+        self.sendMessage( sock, msg )
             
                                                         
             
@@ -465,6 +474,8 @@ COMMANDS = { "add" : { M : FaqCommand.makeEntry, A : 1, AK : Acl.ADDFAQ } ,
              "aliases" : { M : FaqCommand.aliases, A: 0, AK : Acl.GETOWNER },
              "versions" : { M : FaqCommand.versions, A: 0, AK : Acl.GETOWNER },
              "version" : { M : FaqCommand.version, A: 0, AK : Acl.GETOWNER },
+             "created" : { M : FaqCommand.created, A: 0, AK : Acl.GETOWNER },
+             
 
              "listcommands" : { M : FaqCommand.listCommands, A : 1, AK : Acl.FAQLISTCOMMANDS  },
              "owner" : { M : FaqCommand.getOwner, A : 1, AK : Acl.GETOWNER },

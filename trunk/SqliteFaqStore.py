@@ -86,6 +86,7 @@ class SqliteFaqStore:
         f.author = row[0]
         f.contents = row[1]
         f.version = row[2]
+        f.created = row[3]
 
         return f
     
