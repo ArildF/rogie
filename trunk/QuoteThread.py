@@ -1,5 +1,6 @@
 #QuoteThread.py
 #Created 02.08.2001 by Arild Fines
+#added useless comment
 
 import threading
 import time
