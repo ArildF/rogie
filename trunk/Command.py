@@ -85,8 +85,8 @@ class Command:
             #attempting to write when we are in read only mode?
             readonly = Config.getConfig().getInt( "acl", "readonly" )
             
-            if readonly and write:
-                raise CommandError( "Cannot modify database while in read-only mode" )
+            #if readonly and write:
+            #    raise CommandError( "Cannot modify database while in read-only mode" )
             
             method( self, sock, words[ 1: ] )
         else:
