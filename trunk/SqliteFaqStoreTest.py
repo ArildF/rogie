@@ -69,8 +69,16 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
         self.store.modifyFaq( "testfaq", { "author" : "Moon child" } )
         self.store.modifyFaq( "testfaq", { "author" : "Baby" } )
+    
+    def testCountFaqs( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
+        self.assertEquals( 1, self.store.faqCount() )
         
+        self.store.newFaq( name="testfaq2", author="Arild", contents="Test" )
+        self.assertEquals( 2, self.store.faqCount() )
         
+        self.store.newFaq( name="testfaq3", author="Arild", contents="Test" )
+        self.assertEquals( 3, self.store.faqCount() )
         
         
 

@@ -6,6 +6,9 @@ from mx import DateTime
 class FaqStoreError:
     def __init__( self, theMsg ):
         self.msg = theMsg
+    
+    def __str__( self ):
+        return self.msg
 
 STATE_NORMAL = 0
 STATE_DELETED = 1
@@ -24,13 +27,15 @@ class SqliteFaqStore:
         # verify that the FAQ does not already exist
         cur = self.__conn.cursor()
         cur.execute( "SELECT * FROM FaqVersions WHERE Name=%s", name )
-        if cur.rowcount > 0:
+        row = cur.fetchone()
+        if row:
             raise FaqStoreError( "Faq %s already exists" % name )
         
         # verify that there is no alias by that name either
         cur.execute( "SELECT CanonicalName from FaqAliases WHERE Alias=%s", name )
-        if cur.rowcount > 0:
-            aliasName = cur.fetchone()[0]
+        row = cur.fetchone()
+        if row:
+            aliasName = row[0]
             raise FaqStoreError( "%s is already an alias for %s" % ( name, aliasName ) )
         
         # create the faq entry itself
@@ -161,6 +166,16 @@ class SqliteFaqStore:
         except:
             self.__conn.rollback()
             raise
+    
+    def faqCount( self ):
+        cur = self.__conn.cursor()
+        cur.execute( "SELECT COUNT(*) FROM LatestVersion" )
+        row = cur.fetchone()
+        if not row:
+            raise FaqStoreError( "Unexpected error" )
+        
+        return row[0]
+        
         
             
     
