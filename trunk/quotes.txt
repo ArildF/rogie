@@ -110,7 +110,7 @@ Computers in the future may weigh no more than 1.5 tons.	Popular Mechanics, fore
 This 'telephone' has too many shortcomings to be seriously considered as a means of communication.	Western Union internal memo, 1876.
 In the future, airplanes will be flown by a dog and a pilot. And the dog's job will be to make sure that if the pilot tries to touch any of the buttons, the dog bites him.	Scott Adams (author of Dilbert).
 Come to think of it, there are already a million monkeys on a million typewriters, and Usenet is nothing like Shakespeare.	Blair Houghton.
-First we thought the PC was a calculator. Then we found out how to turn numbers into letters with ASCII — and we thought it was a typewriter. Then we discovered graphics, and we thought it was a television. With the World Wide Web, we've realized it's a brochure.	Douglas Adams (1952-2001)
+First we thought the PC was a calculator. Then we found out how to turn numbers into letters with ASCII - and we thought it was a typewriter. Then we discovered graphics, and we thought it was a television. With the World Wide Web, we've realized it's a brochure.	Douglas Adams (1952-2001)
 Brilliance is typically the act of an individual, but incredible stupidity can usually be traced to an organization.	Jon Bentley.
 Sex without love is an empty experience, but, as empty experiences go, it's one of the best.	Woody Allen.
 Tell him I've been too fucking busy - or vice versa."     Dorothy Parker.
@@ -200,8 +200,7 @@ How can you have order in a state without religion? For, when one man is dying o
 An apology for the devil: it must be remembered that we have heard one side of the case. God has written all the books	Samuel Butler
 Today, Jesus' name is used to divide us, to make us intolerant, bigoted, hateful. There is nowhere Jesus could be born today were he would feel comfortable. Jesus is being betrayed by the people who claim to believe in him.	F. Forrester Church
 Pencil and paper /n./: an archaic information storage and transmission device that works by depositing smears of graphite on bleached wood pulp. More recent developments in paper-based technology include improved `write-once' update devices which use tiny rolling heads similar to mouse balls to deposit colored pigment. All these devices require an operator skilled at so-called 'handwriting' technique.	The Jargon File
-All programmers are optimists. Perhaps this modern sorcery especially attracts those who believe in happy endings and fairy godmothers. Perhaps the hundreds of nitty frustrations drive away all but those who habitually focus on the end goal.
-Perhaps it is merely that computers are young, programmers are younger, and the young are always optimists. But however the selection process works, the result is indisputable: 'This time it will surely run' or 'I just found the last bug'	Fred Brooks
+All programmers are optimists. Perhaps this modern sorcery especially attracts those who believe in happy endings and fairy godmothers. Perhaps the hundreds of nitty frustrations drive away all but those who habitually focus on the end goal. Perhaps it is merely that computers are young, programmers are younger, and the young are always optimists. But however the selection process works, the result is indisputable: 'This time it will surely run' or 'I just found the last bug'	Fred Brooks
 Einstein argued that there must be simplified explanations of nature, because God is not capricious or arbitrary. No such faith comforts the software engineer.	Fred Brooks
 Managing senior programmers is like herding cats	Dave Platt
 Artificial Intelligence: the art of making computers that behave like the ones in movies	Bill Bulko
@@ -213,8 +212,8 @@ I have yet to meet a C compiler that is more friendly and easier to use than eat
 Going from programming in Pascal to programming in C, is like learning to write in Morse code	J.P. Candusso.
 ... one of the main causes of the fall of the Roman Empire was that, lacking zero, they had no way to indicate successful termination of their C programs.	Robert Firth
 C is quirky, flawed, and an enormous success.	Dennis M Ritchie
-The C Programming Language — A language which combines the flexibility of assembly language with the power of assembly language
-The number of the beast — vi vi vi.
+The C Programming Language - A language which combines the flexibility of assembly language with the power of assembly language
+The number of the beast - vi vi vi.
 Fifty years of programming language research, and we end up with C++ ???	Richard A. O'Keefe
 Writing in C or C++ is like running a chain saw with all the safety guards removed	Bob Gray
 The evolution of languages: FORTRAN is a non-typed language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language	Ron Sercely
@@ -406,14 +405,14 @@ God's final message to Creation: Sorry for the inconvenience.	Douglas Adams
 I cannot conceive of a God who rewards and punishes his creatures, or has a will of the type of which we are conscious in ourselves. An individual who should survive his physical death is also beyond my comprehension, such notions are for the fears or absurd egoism of feeble souls.	Albert Einstein
 God does not play dice with the universe: He plays an ineffable game of His own devising, which might be compared, from the perspective of any of the other players,* to being involved in an obscure and complex version of poker in a pitch-dark room, with balcnk cards, for infinite stakes, with a Dealer who won't tell you the rules, and who smiles all the time.	Neil Gaiman/Terry Pratchett
 Lord, protect me from your followers!
-I have examined all the known superstitions of the word, and I do not find in our particular superstition of Christianity one redeeming feature. They are all alike founded on fables and mythology. Millions of innocent men, women and children, since the introduction of Christianity, have been burnt, tortured, fined and imprisoned. What has been the effect of this coercion? To make one half the world fools and the other half hypocrites; to support roguery and error all over the earth	Thomas Jefferson
+I have examined all the known superstitions of the word, and I do not find in our particular superstition of Christianity one redeeming feature. They are all alike founded on fables and mythology. Millions of innocent men, women and children, since the introduction of Christianity, have been burnt, tortured, fined and imprisoned. What has been the effect of this coercion? To make one half the world fools and the other half hypocrites; to support roguery and error all over the earth	Thomas 
 The knack of flying is learning how to throw yourself at the ground and miss.	Douglas Adams
 You barbarians! I'll sue the council for every penny it's got! I'l have you hung, drawn, and quartered! And whipped! And boiled...until...until...until you've had enough. And then I will do it again! And when I've finished I will take all the little bits, and I will JUMP on them! And I will carry on jumping on them until I get blisters, or I can think of anything even more unpleasant to do...	Arthur Dent
 It is known that there are an infinite number of worlds, simply because there is an infinite amount of space for them. However, not every one of them is inhabited. Therefore, there must be a finite number of inhabited worlds. Any finite number divided by infinity is as near to nothing as makes no odds, so the average population of all the planets in the Universe can be said to be zero. From this it follows that the population of the whole Universe is also zero, and that any people you may meet from time to time are merely the products of a deranged imagination.	The Guide
 God made me an atheist. Who are you to question his wisdom?
 I reverse the phrase of Voltaire, and say that if God really existed, it would be necessary to abolish him.	Michael Bakunin
 It is fashionable to wax apocalyptic about the threat to humanity posed by the AIDS virus, "mad cow" disease, and many others, but I think a case can be made that faith is one of the world's great evils, comparable to the smallpox virus but harder to eradicate.	Richard Dawkins
-This would be the best of all possible words if there were no [organized] religion in it	John Adams
+This would be the best of all possible worlds if there were no [organized] religion in it	John Adams
 I do not see how it is possible for an intelligent human being to conclude that the Song of Solomon is the work of God, and that the tragedy of Lear was the work of an uninspired man.	Robert Ingersoll
 We must question the story logic of having an all-knowing all-powerful God, who creates faulty Humans, and then blames them for his own mistakes.	Gene Roddenberry
 My spell-checker lacks the word 'creationism' in its dictionary, so each time that word is encountered, an alternative pops up at the bottom of my screen, 'cretinism'	E.T. Babinski
@@ -477,7 +476,7 @@ Atheism is the vice of a few intelligent people.	Voltaire
 Every sensible man, every honest man, must hold the Christian sect in horror. But what shall we substitute in it's place? you say. What? A ferocious animal has sucked the blood of my relatives. I tell you to rid yourselves of this beast, and you ask me what you shall put in it's place?	Voltaire
 If a man would follow, today, the teachings of the Old Testament, he would be a criminal. If he would follow strictly the teachings of the New, he would be insane.	Robert G Ingersoll
 The hands that help are better far than the lips that pray.	Robert G Ingersoll
-In this “sacred” book of family scandals we find filth, sex orgies, cannibalism, atrocities, sex perversions, incest, bloody violence unparalleled in any other chronicle in all the literature of the world. Fortunately, not one- third of the human family has ever heard of the Christian Bible; not one-tenth of the Christians have ever read it, and no two who have read it agree as to its meaning. Won’t you help get this book out of the hands of our children, out of decent homes, and out of hotel and motel rooms? 	Frank C Hughes
+In this "sacred" book of family scandals we find filth, sex orgies, cannibalism, atrocities, sex perversions, incest, bloody violence unparalleled in any other chronicle in all the literature of the world. Fortunately, not one- third of the human family has ever heard of the Christian Bible; not one-tenth of the Christians have ever read it, and no two who have read it agree as to its meaning. Won't you help get this book out of the hands of our children, out of decent homes, and out of hotel and motel rooms? 	Frank C Hughes
 If God lived on earth, people would break his windows.	Jewish proverb
 Christian: I'll pray for you. Atheist: Then I'll think for both of us.
 I think therefore I'm dangerous
@@ -536,7 +535,7 @@ Do not believe in anything simply because you have heard it. Do not believe in t
 The more I read about man and his maniacal ruthlessness and his murderous envious scatological soul, the more I realize that he will never change. Our stupidity is immortal, nothing will change it. The same mistakes, the same prejudices, the same injustice, the same lusts wheel endlessly around the parade ground of the centuries. Immutable and ineluctable. I wish I could believe in a god of some kind but I simply cannot	Richard Burton
 Belief like any other moving body follows the path of least resistance.	Samuel Butler
 Prayers are to men as dolls are to children. They are not without use and comfort, but it is not easy to take them seriously.	Samuel Butler
-I've begun worshipping the sun for a number of reasons. First of all, unlike some other gods I could mention, I can see the sun. It's there for me every day, and the things it brings me are quite apparent all the time: heat, light, food, a lovely day. There's no mystery, no one asks for money, I don’t have to dress up, and there's no boring pageantry. And interestingly enough, I have found that the prayers I offer to the sun and the prayers I formerly offered to 'God' are all answered at about the same 50% rate.	George Carlin
+I've begun worshipping the sun for a number of reasons. First of all, unlike some other gods I could mention, I can see the sun. It's there for me every day, and the things it brings me are quite apparent all the time: heat, light, food, a lovely day. There's no mystery, no one asks for money, I don't have to dress up, and there's no boring pageantry. And interestingly enough, I have found that the prayers I offer to the sun and the prayers I formerly offered to 'God' are all answered at about the same 50% rate.	George Carlin
 Ok, you win. You proved that your god it the best there ever was at hide'n'seek. Now, trot him out here so that we can give him his reward.	Dan Ceppa
 We were brought up to fear, to fear, to fear. To fear the nuns, to fear God, to fear the Devil. We were never taught to love or given any love. I suffered physical abuse, mental abuse, psychological abuse and spiritual abuse.	Maggie Chapman, survivor of church orphanage
 I would defend the liberty of concenting adult creationists to practice whatever intellectual perversions they like in the privacy of their own homes; but it is also necessary to protect the young and innocent.	Arthur C Clarke
@@ -578,7 +577,7 @@ If we are going to teach "creation science" as an alternative to evolution, then
 All religions have based morality on obedience, that is to say, on voluntary slavery. That is why they have always been more pernicious than any political organization. For the latter makes use of violence. the former - of the corruption of the will.	Alexander Herzen
 Take away hatred from some people, and you have men without faith.	Erich Hoffer
 To know a person's religion we need not listen to his profession of faith but must find his brand of intolerance.	Erich Hoffer
-All children are atheists - they have no idea of God. Baron d'Holbach
+All children are atheists - they have no idea of God. 	Baron d'Holbach
 Organized religion, being founded on superstition, is, perforce, not scientific. And all that which is not scientific - that is, truthful - must be bolstered up by force, fear and falsehood. Thus we always find slavery and organized religion going hand in hand.	Elbert Hubbard
 There is in every village a torch: the schoolmaster - and an extinguisher: the priest.	Victor Hugo
 Morality is always the product of terror; its chains and strait-waistcoats are fashioned by those who dare not trust others, because they dare not trust themselves, to walk in liberty.	Aldous Huxley
@@ -612,21 +611,21 @@ Beta: Software undergoes beta testing shortly before it's released. Beta is Lati
 Bad or missing mouse. Spank the cat? (Y/N)
 As a computer, I find your faith in technology amusing.
 Southern DOS: Y'all reckon? (Yep/Nope)
-1010011010 — The binary number of the Beast
-1332 — The number of two Beasts
+1010011010 - The binary number of the Beast
+1332 - The number of two Beasts
 Application has reported a 'Not My Fault' in module KRNL.EXE in line 0200:103F
 Students nowadays, complaining they only get 2MBs of disk space! In my day we were lucky if we had one file, and that was /dev/ null.
 He's not a real doctor, He's an integer doctor. (Wait for it. Wait fooooor it....)
 Students nowadays, complaining they only get 2MBs of disk space! In my day we were lucky if we had one file, and that was /dev/ null.
 If the Start Windows Restart when Windows starts check box is checked Windows Restart will start automatically every time Windows is started.	From an actual helpfile
-The Melissa Virus is named after a topless dancer… If you get it on your laptop, it demands you put $20 into the floppy drive.
+The Melissa Virus is named after a topless dancer... If you get it on your laptop, it demands you put $20 into the floppy drive.
 Bad command or file name! Go stand in the corner.
 A citizen of America will cross the ocean to fight for democracy, but won't cross the street to vote in a national election.	Bill Vaughan
 I think that all right-thinking people in this country are sick and tired of being told that ordinary, decent people are fed up in this country with being sick and tired. I'm certainly not! But I'm sick and tired of being told that I am!	Monty Python
-G: "If we do happen to step on a mine, Sir, what do we do?"EB: "Normal procedure, Lieutenant, is to jump 200 feet in the air and scatter oneself over a wide area."	Somewhere in No Man's Land, BA4
+G: "If we do happen to step on a mine, Sir, what do we do?" EB: "Normal procedure, Lieutenant, is to jump 200 feet in the air and scatter oneself over a wide area."	Somewhere in No Man's Land, BA4
 If we let people see that kind of thing, there would never again be any war.	Senior Pentagon official, explaining why the U.S. military censored footage showing Iraqi soldiers sliced in two by U.S. helicopter fire
 Facts are stupid things.	Ronald Reagan
-I have opinions of my own — strong opinions — but I don't always agree with them. 	George Bush 
+I have opinions of my own - strong opinions - but I don't always agree with them. 	George Bush 
 We have a criminal jury system which is superior to any in the world; and its efficiency is only marred by the difficulty of finding twelve men every day who don't know anything and can't read.	Mark Twain
 Wear short sleeves! Support your right to bare arms!
 Give a man a fish and he will eat for a day. Teach him how to fish, and he will sit in a boat and drink beer all day.
@@ -637,7 +636,536 @@ When I was a kid, I used to pray every night for a new bicycle. Then I realized 
 Scientists have shown that the moon is moving away at a tiny yet measurable distance from the earth every year. If you do the math, you can calculate that 85 million years ago the moon was orbiting the earth at a distance of about 35 feet from the earth's surface. This would explain the death of the dinosaurs. The tallest ones, anyway.
 Deja Moo: The feeling that you've heard this bull before.
 Life is sexually transmitted.
-In fact, I'll go even further and claim that using C++ as an implementation language right off-the-bat for many applications (yes, that does include games) violates the first and second rules of premature optimisation.	Sabreman
-
-
-
+The three chief virtues of a programmer are: Laziness, Impatience and Hubris	Larry Wall
+A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.	Douglas Adams
+Bypasses are devices that allow some people to dash from point A to point B very fast while other people dash from point B to point A very fast. People living at point C, being a point directly in between, are often given to wonder what's so great about point A that so many people from point B are so keen to get there and what's so great about point B that so many people from point A are so keen to get there. They often wish that people would just once and for all work out where the hell they wanted to be.	Douglas AdamsFor a moment, nothing happened.Then, after a second or so, nothing continued to happen.	Douglas Adams
+God puts an apple tree in the middle of the Garden of Eden and says, do what you like guys, oh, but don't eat the apple. Surprise surprise, they eat it and he leaps out from behind a bush shouting "Gotcha." It wouldn't have made any difference if they hadn't eaten it... because if you're dealing with somebody who has the sort of mentality which likes leaving hats on the pavement with bricks under them you know perfectly well they won't give up. They'll get you in the end.	Douglas Adams
+I don't believe it. Prove it to me and I still won't believe it.	Douglas Adams
+I think fish is nice, but then I think that rain is wet, so who am I to judge?	Douglas Adams
+If it looks like a duck, and quacks like a duck, we have at least to consider the possibility that we have a small aquatic bird of the family anatidae on our hands.	Douglas Adams
+INFINITE: Bigger than the biggest thing ever and then some. Much bigger than that, in fact, really amazingly immense, a totally stunning size, real "wow, that's big" time. Infinity is so big that by comparison, bigness itself looks really titchy. Gigantic multiplied by colossal multiplied by staggeringly huge is the sort of concept we're trying to get across here.	Douglas Adams
+Isn't it enough to see that a garden is beautiful without having to believe that there are fairies at the bottom of it too?	Douglas Adams
+It is a mistake to think you can solve any major problems just with potatoes.	Douglas Adams
+It is a well-known fact that those people who must want to rule people are, ipso facto, those least suited to do it... anyone who is capable of getting themselves made President should on no account be allowed to do the job.	Douglas Adams
+Life... is like a grapefruit. It's orange and squishy, and has a few pips in it, and some folks have half a one for breakfast.	Douglas Adams
+That young girl is one of the least benightedly unintelligent organic life forms it has been my profound lack of pleasure not to be able to avoid meeting.	Douglas Adams
+The difficulty with this conversation is that it's very different from most of the ones I've had of late. Which, as I explained, have mostly been with trees.	Douglas Adams
+The Guide is definitive. Reality is frequently inaccurate.	Douglas Adams
+The History of every major Galactic Civilization tends to pass through three distinct and recognizable phase, those of Survival, Inquiry and Sophistication, otherwise known as the How, Why and Where phases.For instance, the first phase is characterized by the question How can we eat? the second by the question Why do we eat? and the third by the question Where shall we have lunch?	Douglas Adams
+The impossible often has a kind of integrity which the merely improbable lacks.	Douglas Adams
+The major difference between a thing that might go wrong and a thing that cannot possibly go wrong is that when a thing that cannot possibly go wrong goes wrong it usually turns out to be impossible to get at and repair.	Douglas Adams
+This planet has - or rather had - a problem, which was this: most of the people living on it were unhappy for pretty much of the time. Many solutions were suggested for this problem, but most of these were largely concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't the small green pieces of paper that were unhappy.	Douglas Adams
+Time, we know, is relative. You can travel light years through the stars and back, and if you do it at the speed of light then, when you return, you may have aged mere seconds while your twin brother or sister will have aged twenty, thirty, forty or however many years it is, depending on how far you traveled.This will come to you as a profound shock, particularly if you didn't know you had a twin brother or sister.	Douglas Adams
+We demand rigidly defined areas of doubt and uncertainty!	Douglas Adams
+You live and learn. At any rate, you live.	Douglas Adams
+In our minds, love and lust are really separated. It's hard to find someone that can be kind and you can trust enough to leave your kids with, and isn't afraid to throw her man up against the wall and lick him from head to toe.	Tori Amos
+Some of the most wonderful people are the ones who don't fit into boxes.	Tori Amos
+Women must understand that simply attacking or hating men is just another form of disempowerment. A woman has to realize that when she makes a man crawl it doesn't give her power.	Tori Amos
+Violence is the last refuge of the incompetent.	Isaac Asimov
+Part of the inhumanity of the computer is that, once it is competently programmed and working smoothly, it is completely honest.	Isaac Asimov
+Life is pleasant. Death is peaceful. It's the transition that's troublesome.	Isaac Asimov
+Creationists make it sound as though a 'theory' is something you dreamt up after being drunk all night.	Isaac Asimov
+C++ is an example of one of those languages into which the standards committee threw the kitchen sink. Only the sink bounced around and landed with a clang	Courageous
+People are stupid. They believe what they want to believe, or what they fear is true.	First Wizard Zeddicus Zu'l Zorander (Wizard's First Rule by Terry Goodkind) 
+#define in C++ deserves an entire essay on its own to explore its rich possibilities for obfuscation.
+I'm not a religious man. In fact, I consider myself a completely recovered Catholic (I've been clean and sober for more than a decade and I never feel the need to go back for another hit off the body of Christ)	Chris Sells
+- To begin with, said the Cat, a dog's not mad. You grant that? I suppose so, said Alice. Well, then, - the Cat went on - you see, a dog growls when it's angry, and wags its tail when it's pleased. Now I growl when I'm pleased, and wag my tail when I'm angry. Therefore I'm mad.
+As someone who made a living training and consulting with C++ for about 13 years, let me be about the 10^8 person to say that C++ was completely unsuitable for component developement. As someone that has quite a bit of architectural experience under my belt, I believe that it's completely impossible to assemble a large team of ordinary developers (people dumber than Chris Sells) and keep them marching in a straight line without a trail of memory leaks, access violations, and late nights when using C++.	Mickey Williams
+If I haven't seen further, it is because I am standing in the footprints of giants.
+The GNU license and the software developed under it are legal cancers that grow and grow without direction or coherence and threaten to stunt real development work for years.	Aaron Patton
+All software design problems can be simplified by introducing an extra level of conceptual indirection.	Andrew Koenig
+To those of you who received honors, awards and distinctions, I say, well done. And to the C students, I say to you: you, too, can be president of the United States.	George Bush jr
+It takes 43 muscles to frown and 17 to smile, but it doesn't take any to just sit there with a dumb look on your face.
+If you find yourself struggling with loneliness, you're not alone. And yet you are alone. So very alone.
+If you never try anything new, you'll miss out on many of life's disappointments.
+No one can make you feel inferior without your consent, but you'd be a fool to withhold that from your superiors.
+Until you spread your wings, you'll have no idea how far you can walk.
+None of us is as dumb as all of us.
+As long as we have each other, we'll never run out of problems.
+The secret to success is knowing who to blame for your failures.
+The only consistent feature of all of your dissatisfying relationships is you.
+The downside of being better than everyone else is that people tend to assume you're pretentious.
+That which does not kill me postpones the inevitable.
+It's always darkest just before it goes pitch black.
+In the battle between you and the world, bet on the world.
+The harder you try, the dumber you'll look.
+Never underestimate the power of stupid people in large groups.
+The tallest blade of grass is the first to be cut by the lawnmover.
+For every winner, there are dozens of losers. Odds are you are one of them.
+Hard work often pays off after time, but laziness always pays off now.
+Quitters never win, winners never quit, but those who never win and never quit are idiots.
+A bad programmer can write Fortran in any language
+Don't be too proud of this technological terror you've created.	Darth Vader
+Hungarian Notation is the tactical nuclear weapon of source code obfuscation techniques	Roedy Green, How to write unmaintainable code
+Our users shall know fear and cower before our software! Ship it! Ship it and let them flee like the dogs they are!	The Klingon Programmer's Code of Honour
+Klingons do not debug. Our software does not coddle the weak.	The Klingon Programmer's Code of Honour
+Klingons do not "release" software. Klingon software escapes, leaving a bloody trail of design engineers and quality assurance people in its path.	The Klingon Programmer's Code of Honour
+I've never thought that C++ should figure implicitly or explicitly in the same sentence as "develop quickly".	Sabreman
+To question Hiroshima is to explode a precious myth we all grow up with in this country - that America is different from the other imperial powers of the world, that other nations may commit unspeakable acts, but not ours.
+And yet it is absolutely essential for our Political leaders to defend the bombing(of Hiroshima and Nagasaki) because if Americans can be induced to accept that then they can accept any war, any means, so long as the warmakers can supply a reason. And there are always plausible reasons delivered from on high as from Moses on the Mount.
+General Eisenhower, briefed by Secretary of War Henry Stimson on the imminent use of the bomb, told him that "Japan was already defeated and that dropping the bomb was completely unnecessary.
+Balrogs dream of wings. Balrogs pose in front of the mirror with wings. Alone in the night, wrapped in their wings of shadow, Balrogs remember wings. But no Balrog this side of the walls of Arda has ever been able to fly ...
+Note to Java people:  I am a Java person.  I program Java almost every day, and I was developing in Java just a couple of  hours ago.  An "enterprise" language that provides no way to forceably kill a thread that had gone amuck, that provides no way to get the free space left on the local drive, that provides tools that make the VB IDE look attractive even now, and that can't produce a GUI that is up to the standards that VB set years ago, is not "industrial strength."
+More and more of our imports come from overseas	George W Bush
+There is a lot of speculation and I guess there is going to continue to be a lot of speculation until the speculation ends	George W Bush
+What I am against is quotas. I am against hard quotas. Quotas, they basically delineate based upon whatever. However they delineate; quotas, I think, vulcanize society. So I don't know how that fits into what everybody else is saying - their relative positions - but that's my position. George W Bush
+Laura and I are proud to call John and Michelle Engler our friends. I know you're proud to call him governor. What a good man the Englers are.	George W Bush
+I know the human being and fish can coexist peacefully.	George W Bush
+The senator[John McCain] has got to understand if he's going to have - he can't have it both ways. He can't take the high horse and then claim the low road.	George W Bush
+The California crunch is really the result of not enough power to power the power of generating plants.	George W Bush
+The *avoidance* of delving beyond the scenes is what makes a superior programmer. A programmer should be able to read an interface specification, and then code to that specification without overly speculating about the behavior behind a given implementation of it. This skill comes into play not only in using an abstract programming language, but in constructing large software decomposed into cohesive, loosely-coupled blackboxes. If you write one module such that it is dependent on what is going on behind the scenes of another module, you have committed a programming mistake, no matter how clever your solution is or how many cycles it shaves off the execution.
+There's a special place in hell for K&R bracing people.	Chad Myers
+Warning in life.cpp (8): const Happiness is declared but never used.
+I'm quite aware of my own ignorance. It's people who aren't aware of theirs that worry me.	Sabreman 
+Historically speaking, the presences of wheels in Unix has never precluded their reinvention.	Larry Wall
+Python programmers are 10% more productive just because of the time they don't spend arguing about K&R indenting style versus others.
+People figure out clever ways to do C programming in any language	Mayer Goldberg
+The only genuine authority is the one whose assertions or commands every person in principle can test and with his own central psychic organ, the intellect, through free and critical activity make his own....	Jens Bjørneboe
+I know very well who Satan is: He is freedom. He is the uncontrolled, the incalculable, the antithesis of order and discipline, the antithesis of the legalism of outer space.... We know where a planet will be in twelve years, four months and nine days. But we don't know where a butterfly will have flown one minute hence. Therefore the butterfly is of Satan.	Jens Bjørneboe
+Laughter means distance. Where laughter is absent, madness begins. The moment one takes the world with complete seriousness one is potentially insane. The whole art of learning to live means holding fast to laughter; without laughter the world is a torture chamber, a dark place where dark things will happen to us, a horror show filled with bloody deeds of violence.	Jens Bjørneboe
+Take away the "immoral" criminal, and we'd be robbed of one of the lies we need in order to live: namely the belief that there is someone who is even more immoral than we are. We all need someone to despise and look down on as not having full value. This is another of our strong points of likeness with that same criminal: in prison there always develops a hierarchical type of society, where the safecracker and the gunman rank highest and the sexual offender lowest. The prison is a true copy of our own society.	Jens Bjørneboe
+1 - Always think for yourself. 2- Never believe anything older people tell you, for they always have something to hide. 3 - Be disobedient! You learn nothing from obedience. 4 - You shall ask! 5 - You shall be suspicious.	Jens Bjørneboe
+You cannot really appreciate Dilbert unless you've read it in the original Klingon
+Indentation?! - I will show you how to indent when I indent your skull!
+Klingon function calls do not have 'parameters' - they have 'arguments' - and they ALWAYS WIN THEM.
+Debugging? Klingons do not debug. Our software does not coddle the weak.
+I have challenged the entire quality assurance team to a Bat-Leth contest. They will not concern us again.
+By filing this bug report you have challenged the honor of my family.  Prepare to die!
+You question the worthiness of my code? I should kill you where you stand!
+I've looked at the source, and there are pieces that are good and pieces that are not ... My experience and some of my friends' experience is that Linux is quite unreliable. Microsoft is really unreliable but Linux is worse.	Ken Thompson, inventor of UNIX
+One uses religion to justify violence, and conversely, violence to enforce religion.
+The world is weird on top and wild at heart.	Lula, Wild at heart
+Go not unto the Usenet for advice, for you will be told both yea and nay (and quite a few things that just have nothing at all to do with the question).	Unknown
+Good code is achieved in spite of C++, not because of it.	Sabreman
+You can't convince anyone that your God is better because he is garbage collected!
+The three most dangerous things in the world are a programmer with a soldering iron, a hardware type with a program patch and a user with an idea.
+Insanity in individuals is something rare - but in groups, parties, nations and epochs, it is the rule.	Friedrich Nietzsche
+It's not the fall that kills you. It's the sudden stop at the end.	Douglas Adams
+The bible is probably the most genocidal book ever written.	Noam Chomsky
+The last words the world will ever hear are likely to be 'What does this button do?'
+It is hard enough to remember my opinions, without also remembering my reasons for them!	Friedrich Nietzsche
+Do you have blacks, too?	 Question posed by George Bush to Brazilian President Fernando Henrique Cardoso, with no hint of sarcasm or jest, Washington, D.C., Nov. 8, 2001
+ As a matter of fact, the people who love the children in Wisconsin are the people of Wisconsin. 	George Bush, Logan High School, LaCrosse, Wisconsin, May 8, 2002
+For every fatal shooting, there are roughly three nonfatal shootings. Folks, this is unacceptable in America, We're going to do something about it.	George Bush,  Philadelphia, Pennsylvania, May 14, 2001
+Border relations between Canada and Mexico have never been better. 	George Bush, Sept. 24, 2001
+The problem with the French is that they don't have a word for 'entrepreneur.' 	George Bush, July 10 2002
+But all in all, it's been a fabulous year for Laura and me. 	George Bush, 2001
+They misunderestimated me.	George Bush, Nov. 6, 2000
+If you think big enough, you'll never have to do it.	Reisner's Rule of Conceptual Inertia
+Is it just the case that you Yanks were late for the last 2 World Wars and are desperate not to miss out again by ensuring that you're there to start the next one?
+[Perl] combines all the worst aspects of C and Lisp: a billion different sublanguages in one monolithic executable. It combines the power of C with the readability of PostScript.	Jamie Zawinski
+King Crimson lives in different bodies at different times and the particular form which the group takes changes. When music appears, which only King Crimson can play then, sooner or later, King Crimson appears to play the music	Robert Fripp
+Women are from Venus, men have a penis
+You know the world is going crazy when the best rapper is a white guy, the best golfer is a black guy, France is accusing the US of arrogance and Germany doesn't want to go to war.
+If there is a creator, he gave us the gift of reason. Religion is an insult to that gift.
+Who knows for certain? Who shall here declare it? Whence was it born and whence came this creation? The gods were born after this world's creation. Then, who can know from whence it has arisen? None know whence creation has arisen and whether he has or has not produced it. He who surveys it in the highest heaven, he only knows, or happily, he may know not	The Rig-Veda
+My only hope is when those terrorists get to Heaven, they meet up with the kind of virgins we had in Catholic school: Sister Mike Ditka from Our Mother of Eternal Retribution.	Robin Williams
+Counter-terrorism experts say that Osama bin Laden may be hiding secret messages on pornographic websites. You know what that means ... Clinton could find this guy before Bush.	Jay Leno
+In California, 50 women protested the impending war with Iraq by lying on the ground naked and spelling out the word "peace." Right idea, wrong president.	Jay Leno
+President Bush has said that he does not need approval from the UN to wage war, and I'm thinking, well, hell, he didn't need the approval of the American voters to become president, either.	David Letterman
+The Pentagon still has not given a name to the Iraqi war. Somehow 'Operation Re-elect Bush' doesn't seem to be popular.	Jay Leno
+There Ought to be Limits to Freedom!	George Walker Bush
+Reality is not a democracy: just because a lot of people believe something is true, doesn't mean it is.
+Thank God for christians; they make atheism look good.
+Blessed are they who can laugh at themselves, for they shall never cease to be amused
+I'm glad the gun crazy lunatic and rabid capitalists have somewhere to call home. It keeps them out of Europe.
+God is real, unless declared integer.
+If God is perfect, why did He create discontinuous functions?
+...but when you come to Heritage USA, remember to bring your Bible and your VISA card - because the Bible is the Holy Truth, and God doesn't take American Express.
+There are no saints, only unrecognized villains.
+He's a born-again Christian. The trouble is, he suffered brain damage during rebirth.
+Why be born again, when you can just grow up?
+Blasphemy is a blast for me.
+What a f iend we have in Jesus!
+Explaining the unknown by means of the unobservable is always a perilous business
+Jesus -- The other white meat!
+The Pope has just declared that Jesus is now an infinitely long tube of white paste.
+The only mortals who ever entered Barad-dur and came back unharmed in body and soul were a pair of Iluvatar's Witnesses. Only days after their visit Sauron realized that the "Minas Tirith" he had bought from them was only a pamphlet.
+Trinity -- a three for one sale on deities.
+Archeologists near mount Sinai have discovered what is believed to be a missing page from the Bible and is believed to read 'To my darling Candy. All characters portrayed within this book are fictitous and any resemblance to persons living or dead is purely coincidental'.
+It seems odd that those who scoff at sun worshippers are apt to worship a vacuum.
+May theists be shaved with Ockham's Razor!
+Why does the Vatican have lightning rods?
+Have you forgotten about Jesus? Isn't it about time you did?
+Garbage In -- Gospel Out
+The mind of the fundamentalist is like the pupil of the eye: the more light you pour on it, the more it will contract.
+Jesus loves you all, and can't wait to control you like a small household pet
+You Go Yahweh - and I'll go Mine!
+Goofy and Mickey are going to burn in eternal Hellfire for sharing an insurance policy!. Details this Sunday at you local Southern Baptist Church.Witch burning and pot luck supper to follow the services.
+If, as they say, God spanked this town For being much too frisky, Why did He burn His churches down And save Hotaling's Whiskey?	Poem on 1906 San Francisco earthquake and fire, in which the city's largest whiskey distillery was left unscathed
+Belief in the supernatural reflects a failure of the imagination.	Edward Abbey
+The power of the priesthood lies in the submission to a creed. In their onslaughts on rebellion they have exhausted human torments; nor, in their lust for earthly dominion, have they felt remorse,but rather joy, when slaying Christ's enemies and their own
+Religions change; beer and wine remain
+This whole Christian theology thing is that god came down to experience life through his son. Well, how's he experiencing life if he doesn't get laid? Give me a break. And why would he not get laid, as he created the apparatus in the first place?	Tori Amos
+I got enough guilt to start my own religion
+Every man thinks God is on his side. The rich and powerful know he is.	Jean Anouilh
+There are ten church members by inheritance for every one by conviction
+A good rule for interpretation is: 'If the literal sense makes good sense, seek no other sense lest you come up with nonsense'
+To rebel against a powerful political, economic, religious, or social establishment is very dangerous and very few people do it, except, perhaps, as part of a mob. To rebel against the "scientific" establishment, however, is the easiest thing in the world, and anyone can do it and feel enormously brave, without risking as much as a hangnail. Thus, the vast majority, who believe in astrology and think that the planets have nothing better to do than form a code that will tell them whether tomorrow is a good day to close a business deal or not, become all the more excited and enthusiastic about the bilge when a group of astronomers denounces it.	Isaac Asimov
+...if I were not an atheist, I would believe in a God who would choose to save people on the basis of the totality of their lives and not the pattern of their words. I think he would prefer an honest and righteous atheist to a TV preacher whose every word is God, God, God, and whose every deed is foul, foul, foul.	Isaac Asimov
+...the Bible as we have it contains elements that are scientifically incorrect or even morally repugnant. No amount of "explaining away" can convince us that such passages are the product of Divine Wisdom.	Bernard J Bamberger
+Reason shapes the future, but superstition infects the present.	Iain M Banks
+There is no such thing as a god. If such a creature existed, belief would be rendered unnecessary, and the entire system of organized religion would collapse.	Ron Barrier
+Christianity is the enemy of liberty & civilization.	August Bebel
+Miracles happen to those who believe in them. Otherwise why does not the Virgin Mary appear to Lamaists, Mohammedans, or Hindus who have never heard of her.	Bernard Berenson
+If you love god, burn a church	Jello Biafra
+Saint: A dead sinner revised and edited.	Ambrose Bierce
+Evangelist, n. A bearer of good tidings, particularly (in a religious sense) such as assure us of our own salvation and the damnation of our neighbours.	Ambrose Bierce
+Christian, n.: One who believes that the New Testament is a divinely inspired book admirably suited to the spiritual needs of his neighbor. One who follows the teachings of Christ in so far as they are not inconsistent with a life of sin.	Ambrose Bierce
+Ocean: A body of water occupying 2/3 of a world made for man -- who has no gills.	Ambrose Bierce
+Heaven: A place where the wicked cease from troubling you with talk of their personal affairs, and the good listen with attention while you expound on yours.	Ambrose Bierce
+Babble about 'The wages of sin' serves to cover up 'the sin of wages'. We want rights, not rites -- sex, not sects. Only Eros and Eris belong in our pantheon. Surely the Nazarene necrophile has had his revenge by now. Remember, pain is just God's way of hurting you.	Bob Black
+Whenever I think of how religion started, I picture some frustrated old man making out a list of all the ways he could gain power, until he finally came up with the great solution of constant fear and guilt, then he leaped up and started planning a new wardrobe.	Steve Blake
+Religion is what keeps the poor from murdering the rich.	Napoleon Bonaparte
+I am surrounded by priests who repeat incessantly that their kingdom is not of this world, and yet they lay their hands on everything they can get.	Napoleon Bonaparte
+I cannot follow you Christians; for you try to crawl through your life upon your knees, while I stride through mine on my feet
+Everything that is doddering, squint-eyed, infamous, sullying and grotesque is contained for me in this single word: God 	Andre Breton
+Our culture is superior. Our culture is superior because our religion is Christianity and that is the truth that makes men free.	Pat Buchanan, presidential candidate
+Jesus Christ: A common exclamation indicating surprise, disgust, anger or bewilderment.
+Armies of Bible scholars and theologians have for centuries found respected employment devising artful explanations of the Bible often not really meaning what it says 	J.S. Bullion
+The idea that a good God would send people to a burning Hell is utterly damnable to me. The ravings of insanity! Superstition gone to seed! I don't want to have anything to do with such a God. No avenging Jewish God, no satanic devil, no fiery hell is of any interest to me	Luther Burbank
+The more I study religions the more I am convinced that man never worshipped anything but himself	Richard Francis Burton
+People in general are equally horrified at hearing the Christian religion doubted, and at seeing it practiced	Samuel Butler
+It's hard to be religious when certain people are never incinerated by bolts of lightning.	Calvin, Calvin & Hobbes
+Calvin: Do you believe in the devil? You know, a supreme evil being dedicated to the temptation, corruption, and destruction of man? Hobbes: I'm not sure that man needs the help.	Calvin & Hobbes
+There is not one verse in the Bible inhibiting slavery, but many regulating it. It is not then, we conclude, immoral.	Reverend Alexander Campbell
+U.S. Adults (Gallup): humans didn't evolve, 46 percent; evolution guided by God, 40; evolution occurred by itself, 10 percent	Free Inquiry, Fall 1994
+Our Father who art in heaven, and to the republic for which it stands, thy kingdom come, one nation indivisible as in heaven, give us this day as we forgive those who so proudly we hail. Crown thy good into temptation but deliver us from the twilight's last gleaming. Amen and Awomen.	George Carlin
+You will find men like him in all of the world's religions. They know that we represent reason and science, and, however confident they may be in their beliefs, they fear that we will overthrow their gods. Not necessarily through any deliberate act, but in a subtler fashion. Science can destroy a religion by ignoring it as well as by disproving its tenets. No one ever demonstrated, so far as I am aware, the nonexistance of Zeus or Thor, but they have few followers now.	Arthur C Clarke
+Sensible and responsible women do not want to vote. The relative positions to be assumed by man and woman in the working out of our civilization were assigned long ago by a higher intelligence than ours.	Grover Cleveland, 1905
+As "you can lead a horse to water, but you can't make one drink," so also, "You can drag a Christian to the truth, but you can't make one think.	Delmar Coughlin
+"I slept with Faith, and found a corpse in my arms on awaking; I drank and danced all night with Doubt, and found her a virgin in the morning.	Aleister Crowley, _The Book of Lies_
+There are no physicists in the hottest parts of hell, because the existence of a "hottest part" implies a temperature difference, and any marginally competent physicist would immediately use this to run a heat engine and make some other part of hell comfortably cool. This is obviously impossible.	Richard Davisson
+You've got a Methodist Coloring Book And you color really well But don't color outside the lines Or God will send you to hell	Dead Milkmen, "Methodist Coloring Book"
+When Yahweh your god has settled you in the land you're about to occupy, and driven out many infidels before you...you're to cut them down and exterminate them. You're to make no compromise with them or show them any mercy.	Deuteronomy 7:1
+If thinking freely for yourself is a sure ticket to hell, then the conversations in heaven must be awfully boring.	Dr Weirde
+The minority, the ruling class at present, has the schools and press, usually the Church as well, under its thumb. This enables it to organize and sway the emotions of the masses, and make its tool of them.	Albert Einstein
+Our literature is a substitute for religion, and so is our religion.	T.S. Eliot
+For that again, is what all manner of religion essentially is: childish dependency.	Albert Ellis
+In a sense, the religious person must hae no real views of his own and it is presumptuous of him, in fact, to have any. In regard to sex-love affairs, to marriage and family relations, to business, to politics, and to virtually everything else that is important in his life, he must try to discover what his god and his clergy would like him to do; and he must primarily do their bidding.	Albert Ellis
+When belief in a god dies, the god dies.	Harlan Ellison
+Number 3 pencils and quadrille pads	(Seymoure Cray (1925-1996) , when asked what CAD tools he used to design the Cray I; he also recommended using the back side of the pages so that the lines were not so dominant.)
+No man means all he says, and yet very few say all they mean, for words are slippery and thought is viscous.	Henry Brooks Adams
+My goal is simple. It is complete understanding of the universe, why it as it is and why it exists as all.	Stephen Hawking
+No one can make you feel inferior without your consent.	Eleanor Roosevelt
+None are so old as those who have outlived enthusiasm.	Henry David Thoreau (1817-1862)
+Nothing else in the world...not all the armies...is so powerful as an idea whose time has come.	Victor Hugo Nothing endures but change.	Heraclitus
+Nothing is comprehensible except by virtue of its edges.	Indian Proverb
+Nothing is particularly hard if you divide it into small jobs.	Henry Ford (1863-1947)
+No Sane man will dance.	Cicero (106-43 B.C.)
+My interest is in the future because I am going to spend the rest of my life there.	Charles F. Kettering
+My poor head is in such a whirl, my mind is all in bits.	Johann Wolfgang von Goethe (1749-1832)
+My way of joking is to tell the truth; it's the funniest joke in the world.	Anonymous
+Miscellaneous is always the largest category.	Joel Rosenberg - The Warrior Lives
+Moderation is a fatal thing. Nothing succeeds like excess.	Oscar Wilde (1854-1900)
+Modesty: the gentle art of enhancing your charm by pretending not to be aware of it.	Anonymous
+Money couldn't buy friends, but you get a better class of enemy.	Spike Milligan
+Most people are other people. Their thoughts are someone else's opinions, their lives a mimicry, their passions a quotation.	Oscar Wilde (1854-1900)
+Music is Love in search of a word.	Sidney Lanier
+Nearly all men can stand adversity, but if you want to test a man's character, give him power.	Abraham Lincoln (1809-1865)
+Never argue with a fool, people might not know the difference.	Anonymous
+Never interrupt your enemy when he is making a mistake.	Napoleon Bonaparte (1769-1821)
+All the people like us are we, And everyone else is They.	Rudyard Kipling (1865-1936)
+All truth passes through three stages. First, it is ridiculed. Second, it is violently opposed. Third, it is accepted as being self-evident.	Arthur Schopenhauer (1788-1860)
+Always be a first-rate version of yourself, instead of a second-rate version of somebody else.	Judy Garland
+A ship in harbor is safe, but that is not what ships are built for.	John A. Shedd
+Accomplishing the impossible means only that the boss will add it to your regular duties.	Doug Larson
+Action may not always bring happiness, but there is no happiness without action.	Benjamin Disraeli
+Aging seems to be the only available way to live a long life.	Daniel Francois Esprit Auber
+Any clod can have the facts; having opinions is an art.	Charles McCabe
+Any fool can criticize, condemn, and complain -- and most fools do.	Dale Carnegie
+"Bite the wax tadpole."	(Coca-Cola" as originally translated into Chinese)
+"Pepsi brings your ancestors back from the grave."	ad slogan "Pepsi Comes Alive" as originally translated into Chinese
+It takes a virile man to make a chicken pregnant."	Perdue chicken ad, as mistranslated in Mexico
+Love is the answer, but while you're waiting for the answer, sex raises some pretty good questions.	Woody Allen
+The big difference between sex for money and sex for free is that sex for money usually costs a lot less.	 Brendon Behan
+Sex is like bridge: If you don't have a good partner, you better have a good hand.	 Charles Pierce
+Don't worry about the world coming to an end today. It's already tomorrow in Australia.	Charles Schultz
+A Code of Honor: Never approach a friend's girlfriend or wife with mischief as your goal. There are just too many women in the world to justify that sort of dishonorable behavior. Unless she's really attractive.	Bruce Friedman
+Don't ever take a fence down until you know why it was put up.	Robert Frost (1874-1963)
+Don't trust anyone over 30 who used to say "Don't trust anyone over 30.	Anonymous
+For best results: wash in cold water separately, hang dry and iron with warm iron. For not so good results: drag behind car through puddles, blow-dry on roofrack. (Laundry instructions on a shirt made by HEET (Korea))
+If someone offers you a breath mint, accept it.	H. Jackson Brown, Jr. - Life's Little Treasure Book, on wisdom
+If you can't convince them, confuse them.	Harry S. Truman
+Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.	Mark Twain (1835-1910)
+Life consists not in holding good cards but in playing those you hold well. Josh Billings
+Never judge a book by its movie.	J. W. Eagan
+Never judge someone by who he's in love with; judge him by his friends.
+People fall in love with the most appalling people. Take a cool, appraising glance at his pals.	Cynthia Heimel
+Problems cannot be solved at the same level of awareness that created them.	Albert Einstein (1879-1955)
+'Think simple' as my old master used to say - meaning reduce the whole of its parts into the simplest terms, getting back to first principles.	Frank Lloyd Wright (1868-1959)
+Trust, but verify.	Ronald Reagan , Former U.S. President
+Whatever is begun in anger ends in shame.	Benjamin Franklin (1706-1790)
+Whatever you are, be a good one.	Abraham Lincoln (1809-1865)
+When in doubt, make a fool of yourself. There is a microscopically thin line between being brilliantly creative and acting like the most gigantic idiot on earth. So what the hell, leap.	Cynthia Heimel , "Lower Manhattan Survival Tactics" in Village Voice
+You can get more with a kind word and a gun than you can with a kind word alone.	Al Capone (1899-1947)
+One should judge a man mainly from his depravities. Virtues can be faked. Depravities are real."	 Klaus Kinski
+Argue for your limitations and they're yours.	 Jonathan Livingston Seagull
+Enough is an abundance to the wise.	Euripides.
+Only those who attempt the absurd...will achieve the impossible. I think...I think it's in my basement...Let me go upstairs and check.	Escher
+Only those who dare to fail greatly can ever achieve greatly.	Robert F. Kennedy
+Once conform, once do what others do because they do it, and a kind of lethargy steals over all the finer senses of the soul.	Michel de Montaigne
+Despite the high cost of living it remains a popular item.	Anonymous
+Doctors are the same as lawyers; the only difference is that lawyers merely rob you, whereas doctors rob you and kill you too.	Anton Chekhov
+Courage is not the absence of fear, but rather the judgment that something else is more important than fear.	Ambrose Redmoon
+Being powerful is like being a lady. If you have to tell people you are, you aren't.	Margaret Thatcher
+Believe me! The secret of reaping the greatest fruitfulness and the greatest enjoyment from life is to live dangerously!	Friedrich Nietzsche (1844-1900)
+Black holes are where God divided by zero.	Steven Wright
+Every woman adors a fascist, the boot in the face, the brute brute heart of a brute like you.	Sylvia Plath
+The bonds of wedlock are so heavy it takes two to carry them-sometimes three.	Alexandre Dumas
+Believe those who are seeking the truth; doubt those who find it.	Andre Gide
+Beauty without grace is the hook without the bait.	Ralph Waldo Emerson (1803-1882)
+Behind every successful man is a woman, behind her is his wife.	Groucho Marx (1895-1977)
+Being a hero is about the shortest-lived profession on earth.	Will Rogers (1879-1935)
+Anyone who isn't confused really doesn't understand the situation.	Edward R. Murrow
+Anyway, no drug, not even alcohol, causes the fundamental ills of society. If we're looking for the source of our troubles, we shouldn't test people ofor drugs, we should test them for stupidity, ignorance, greed and love of power.	P. J. O'Rourke
+As long as people will accept crap, it will be financially profitable to dispense it.	Dick Cavett
+Atention to health is life greatest hindrance.	Plato (427-347 B.C.)
+You have to be grateful for people like that, without them, christianity would be a lot more popular	(About Anita Bryant and her hard right bible belt ilk.)
+Communication with an engineer is only slightly more difficult than communication with the dead.	Lorren 'Rus' Stiles, Sr.
+Confusion now hath made his masterpiece!	William Shakespeare - Macbeth
+Disco is to music what Etch-A-Sketch is to art.	Anonymous
+Distrust any enterprise that requires new clothes.	Henry David Thoreau(1817-1862)
+Do not write so that you can be understood, write so that you cannot be misunderstood.	Epictetus
+Friends: People who know you well, but like you anyway.	Anonymous
+For every complex problem, there is a solution that is simple, neat, and wrong.	Henry Louis Mencken (1880-1956)
+Get your facts first and then you can distort them as much as you wish.	Mark Twain (1835-1910)
+Happiness is just an illusion caused by the temporary absence of reality.	Anonymous
+Glory is fleeting, but obscurity is forever.	Napoleon Bonaparte (1769-1821)
+Drama is life with the dull bits cut out.	Alfred Hitchcock
+Everyone is a genius at least once a year; a real genius has his original ideas closer together.	George Lichtenberg (1742-1799)
+Everything has been figured out, except how to live.	Jean-Paul Sartre (1905-1980)
+Examinations are formidable even to the best prepared, for the greatest fool may ask more than the wisest man can answer.	Charles Caleb Colton
+How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?	Arthur Conan Doyle, Sir - The Sign of Four
+Health nuts are going to feel stupid someday, lying in hospitals dying of nothing.	Redd Foxx
+Heav'n hath no rage like love to hatred turn'd, Nor Hell a fury, like a woman scorn'd.	William Congreve (1670-1729)
+History teaches us that men and nations behave wisely when they have exhausted all other alternatives.	Abba Eban (1915- )
+Human beings are perhaps never more frightening than when they are convinced beyond doubt that they are right.	Laurens van der Post
+I am indebted to the cat for a particular kind of honorable deceit, for a greater control over myself, for a characteristic aversion to brutal sounds and for the need to keep silent for long periods of time. Colette
+I am the emperor, and I want dumplings.	Ferdinand I (Distantly related to Mead)
+I think it would be a good idea.	Mahatma Gandhi (1869-1948) , when asked what he thought of Western civilization
+I strive to be brief, and I become obscure.	Horace
+I like the word 'indolence'. It makes my laziness seem classy.	Bern Williams
+I just bought a Mac to help me design the next Cray. (Seymoure Cray (1925-1996) , when was informed that Apple Inc. had recently bought a Cray supercomputer to help them design the next Mac.)
+In a cat's eyes, all things belong to cats.	English Proverb
+In answer to the question of why it happened, I offer the modest proposal that our Universe is simply one of those things which happen from time to time.	Edward P. Tryon
+In my opinion nothing occurs contrary to nature except the impossible, and that never occurs.	Galileo Galilei , in 1638
+If you want to make an apple pie from scratch, you must first create the universe.	Carl Sagan
+If you're going to do something tonight that you'll be sorry for tomorrow morning, sleep late.	Henny Youngman
+If a word in the dictionary were misspelled, how would we know?	Steven Wright
+It is one of the superstitions of the human mind to have imagined that virginity could be a virtue.	Voltaire (1694-1778)
+It is absurd to divide people into good or bad. People are either charming or tedious.	Oscar Wilde (1854-1900)
+It is better to have loft and lost than to never have loft at all.	Groucho Marx (1895-1977)
+It is impossible to defeat an ignorant man in argument.	William G. McAdoo
+It's a kind of spiritual snobbery that makes people think they can be happy without money.	Albert Camus
+It's amazing that the amount of news that happens in the world every day always just exactly fits the newspaper.	Jerry Seinfeld
+Sometimes a cigar is just a cigar.	Sigmund Freud
+Sometimes I think we're alone in the universe, and sometimes I think we're not. In either case the idea is quite staggering.	Arthur C. Clarke
+Religion... is the opium of the masses.	Karl Marx
+Sex appeal is 50% what you've got and 50% what people think you've got.	Sophia Loren
+There's a fine line between fishing and standing on the shore like an idiot.	Steven Wright
+There's never enough time to do all the nothing you want.	Bill Watterson - Calvin and Hobbes
+We are not retreating - we are advancing in another Direction.	Douglas MacArthur, General (1880-1964)
+Weaseling out of things is good. It's what separates us from the other animals....except weasels.	Homer Simpson
+When I'm working on a problem, I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong.	Richard Buckminster Fuller
+When you choose the lesser of two evils, always remember that it is still an evil.	Max Lerner
+While one person hesitates because he feels inferior, another is busy making mistakes and becoming superior.	Henry C. Link
+While we are postponing, life speeds by.	Seneca (3 B.C. - 65 A.D.)
+Why do we kill people who kill people to show that killing people is wrong.	Anonymous
+Women like silent men. They think they're listening.	Marcel Archard
+You don't fuck around with the infinite.	Mean Streets
+You will be able to appreciate the influence of such an Engine on the future progress of science. I live in a country which is incapable of estimating it.	Charles Babbage
+If god wanted people to believe in him, why'd he invent logic then?	David Feherty
+There are two things in the world that can never get together- religion & common sense.	George W Foote
+The absurdity of a religious practice may be clearly demonstrated without lessening the numbers of people who indulge in it.	Anatole France
+Religion has done love a great service by making it a sin   Anatole France
+The impotence of God is infinite.	Anatole France
+Religion is comparable to a childhood neurosis.	Sigmund Freud
+The right of holding slaves is clearly established in the Holy Scriptures, both by precept and example.	Reverend R. Furman
+The careful student of history will discover that Christianity has been of very little value in advancing civilization, but has done a great deal toward retarding it.	Matilda Gage
+In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual.	Galileo Galilei
+Organized Christianity has probably done more to retard the ideals that were its founder's than any other agency in the world	Richard Le Gallienne
+I like your Christ, I do not like your Christians, Your christians are so unlike your Christ.	Mahatma Gandhi
+The priest is the personification of falsehood.	Giuseppe Garibaldi
+If there is a God, atheism must strike Him as less of an insult than religion.	Edmond and Jules de Goncourt
+Don't take our word for it. Read the Bible itself. Read the statements of preachers. And you will understand that God is the most desperate character, the worst villain in all fiction.	E. Haldeman-Julius
+Life in Lubbock, Texas, taught me two things: One is that God loves you and you're going to burn in hell. The other is that sex is the most awful, filthy thing on earth and you should save it for someone you love.	Butch Hancock
+Dogs: 'They feed me, they give me a place to stay. They must be gods.' Cats: 'They feed me, they give me a place to stay. I must be God.'
+Christ rode on an ass, but now asses ride on Christ.	Heine
+In dark ages people are best guided by religion, as in pitch-black night a blind man is the best guide; he knows the roads and paths better than a man who can see. When daylight comes, however, it is foolish to use blind, old men as guides.	Heine
+Men rarely (if ever) manage to dream up a god superior to themselves. Most gods have the manners and morals of a spoiled child.	Heinlein
+God is omnipotent, omniscient, and omnibenevolent - it says so right here on the label. If you have a mind capable of believing all three of these attributes simultaneously, I have a wonderful bargain for you. No checks, please. Cash and in small bills.	Heinlein
+Of all the strange "crimes" that humanity has legislated out of nothing, "blasphemy" is the most amazing - with "obscenity" and "indecent exposure" fighting it out for second and third place.	Heinlein
+Anyone who can worship a trinity and insist that his religion is a monotheism can believe anything... just give him time to rationalize it.	Heinlein
+God split himself into a myriad parts that he might have friends.This may not be true, but it sounds good, and is no sillier than any other theology.	Heinlein
+...little children who have begun to live in their mothers' womb and have there died, or who, having just been born, have passed away from the world without the sacrament of holy baptism... must be punished by the eternal torture of undying fire.
+Being unable to reason is not a positive character trait outside religion.	Dewey Henize
+Organized Religion is like Organized Crime; it preys on peoples' weakness, generates huge profits for its operators, and is almost impossible to eradicate.	Mike Hermann 
+I believe today that I am acting in the sense of the Almighty Creator. By warding off the Jews I am fighting for the Lord's work.	Adolf Hitler, from a speech at the Reichstag 1936
+I believe today that my conduct is in accordance with the will of the Almighty Creator.	Adolf Hitler, Mein Kampf
+The whole Bible was written by slave owners, and for slave owners. There is no hint of criticism of slavery anywhere in that book. Jesus made no objection to mistreatment of slaves. He indicated that selling of debtors into slavery would be continued his forthcoming kingdom of heaven as well as masters having the right to beat their slaves and put them to torture.	Merrill Holste, "Slavery and the Bible", article in the May 1986 issue of American Atheist Magazine]
+Writing for a penny a word is ridiculous. If a man really wants to make a million dolars, the best way would be to start his own religion.	L. Ron Hubbard, founder of scientology
+The Christian religion not only was at first attended with miracles, but even at this day cannot be believed by any reasonable person without one.	David Hume
+The believer is happy; the doubter is wise.	Hungarian Proverb
+You never see animals going through the absurd and often horrible fooleries of magic and religion. Only man behaves with such gratuitous folly. It is the price he has to pay for being intelligent but not, as yet, quite intelligent enough.	Aldous Huxley
+The dogma of the infallibility of the Bible is no more self-evident than is that of the infallibility of the popes.	Thomas Huxley
+To hate man and worship god seems to be the sum of all the creeds.	Robert G. Ingersoll
+With soap, baptism is a good thing.	Robert G. Ingersoll
+A crime against god is a demonstrated impossibility.	Robert G. Ingersoll
+Orthodoxy cannot afford to put out the fires of hell.	Robert G. Ingersoll
+We are told in the Pentateuch, that god, the father of us all, gave thousands of maidens, after having killed their fathers, their mothers, and their brothers, to satisfy the brutal lusts of savage men. If there be a god, I pray him to write in his book, opposite my name, that I denied this lie for him.	Robert G. Ingersoll
+If Christ, in fact, said 'I came not to bring peace but a sword,' it is the only prophecy in the New Testament that has been literally fulfilled.	Robert G. Ingersoll
+Ministers say that they teach charity. That is natural. They live on hand-outs. All beggars teach that others should give.	Robert G. Ingersoll
+That church [Catholic] teaches us that we can make God happy by being miserable ourselves...	Ingersoll
+Suppose, however, that God did give this law to the Jews, and did tell them that whenever a man preached a heresy, or proposed to worship any other God that they should kill him; and suppose that afterward this same God took upon himself flesh, and came to this very chosen people and taught a different religion, and that thereupon the Jews crucified him; I ask you, did he not reap exactly what he had sown? What right would this god have to complain of a crucifixion suffered in accordance with his own command?	Ingersoll
+For ages, a deadly conflict has been waged between a few brave men and women of thought and genius upon the one side, and the great ignorant religious mass on the other. This is the war between Science and Faith. The few have appealed to reason, to honor, to law, to freedom, to the known, and to happiness here in this world. The many have appealed to prejudice, to fear, to miracle, to slavery, to the unknown, and to misery hereafter. The few have said, 'Think!' The many have said, 'Believe!'	Robert G. Ingersoll, "The Gods", 1872
+If the book [the Bible] and my brain are both the work of the same Infinite God, whose fault is it that the book and my brain do not agree? Robert G. Ingersoll
+It is a blessed thing that in every age some one has had individuality enough and courage enough to stand by his own convictions. I believe it was Magellan who said, 'The church says the earth is flat; but I have seen its shadow on the moon, and I have more confidence even in a shadow than in the Church.' On the prow of his ship were disobedience, defiance, scorn, and success.	Robert G. Ingersoll
+I learned long ago never to wrestle with a pig. You get dirty, and besides, the pig likes it.	Cyrus Ching
+Use against heretics the spiritual sword of excommunication, and if this does not prove effective, use the material sword.	Pope Innocent III (1161-1216)
+And he brought out the people that were in it, and cut them with saws, and with harrows of iron, and with axes. Even so dealt David with all the cities of the children of Ammon. And David and all the people returned to Jerusalem.	1 Chr 20:3
+And he brought forth the people that were therein, and put them under saws, and under harrows of iron, and under axes of iron, and made them pass through the brick-kiln: and thus did he unto all the cities of the children of Ammon. So David and all the people returned unto Jerusalem. 2 Sam 12:31
+And I will kill her children with death; and all the churches shall know that I am he which searcheth the reins and hearts: and I will give unto every one of you according to your works.	Rev 2:23
+And they utterly destroyed all that was in the city, both man and woman, young and old, and ox, and sheep, and ass, with the edge of the sword.	Jos 6:21
+And Joshua, and all Israel with him, took Achan the son of Zerah, and the silver, and the garment, and the wedge of gold, and his sons, and his daughters, and his oxen, and his asses, and his sheep, and his tent, and all that he had: and they brought them unto the valley of Achor. And Joshua said, Why hast thou troubled us? the LORD shall trouble thee this day. And all Israel stoned him with stones, and burned them with fire, after they had stoned them with stones.	Jos 7:24-25
+Then said they unto him, Say now Shibboleth: and he said Sibboleth: for he could not frame to pronounce it right. Then they took him, and slew him at the passages of Jordan: and there fell at that time of the Ephraimites forty and two thousand.	Jg 12:6
+And Samson went and caught three hundred foxes, and took firebrands, and turned tail to tail, and put a firebrand in the midst between two tails.	JG 15:4
+And the LORD smote Benjamin before Israel: and the children of Israel destroyed of the Benjamites that day twenty and five thousand and an hundred men: all these drew the sword.	Jg 20:35
+Thus saith the LORD of hosts, I remember that which Amalek did to Israel, how he laid wait for him in the way, when he came up from Egypt. Now go and smite Amalek, and utterly destroy all that they have, and spare them not; but slay both man and woman, infant and suckling, ox and sheep, camel and ass.	1 Sam 15:2-3
+Even in using rings on Giant Redwood trees to date trees is erroneous because when God made the trees they were made old
+everybody knows God exists..you just said 'God damn it!' You couldn't do that if there wasn't a god
+Even if you think (as the Netscape 6.0 engineers clearly do) that Alt+Left is not a good shortcut key for "Back", there are literally millions of people out there who will try to use Alt+Left to go back, and if you refuse to do it on some general religious principle that Bill Gates is the evil smurf arch-nemesis Gargamel, then you are just gratuitously ruining your program so that you can feel smug and self-satisfied, and your users will not thank you for it.	Joel Spolsky
+When you design user interfaces, it's a good idea to keep two principles in mind: 1. Users don't have the manual, and if they did, they wouldn't read it. 2. In fact, users can't read anything, and if they could, they wouldn't want to. 	Joel Spolsky
+Even as the prosecution's case against Joseph Amrine fell apart over the years, the state continued to seek his execution. Indeed, at a hearing on 4 February 2003 before the Missouri Supreme Court, a prosecutor from the state Attorney General's Office argued that the Court should block Joseph Amrine from having his case reopened. One of the Justices asked whether in the absence of the Court finding a constitutional violation, the state was suggesting that "even if we find Mr Amrine is actually innocent, he should be executed?" The assistant attorney general replied, "That's correct, your honour". 
+Mathematics are one of the fundamentaries of educationalizing our youths.	George W Bush
+Put every man his sword by his side, and go in and out from gate to gate throughout the camp, and slay every man his brother, and every man his companion, and every man his neighbor. And the children of Levi did according to the word of Moses: and there fell of the people that day about three thousand men.	Exodus 32:28
+And when the people complained, it displeased the LORD: and the LORD heard it; and his anger was kindled; and the fire of the LORD burnt among them, and consumed them that were in the uttermost parts of the camp.	Numbers 11:1
+Then Moses heard the people weep throughout their families...and the anger of the LORD was kindled greatly; Moses also was displeased...And there went forth a wind from the LORD, and brought quails from the sea, and let them fall by the camp...And while the flesh was yet between their teeth, ere it was chewed, the wrath of the LORD was kindled against the people, and the LORD smote the people with a very great plague.	Numbers 11:10-34
+And the LORD said unto Moses, Fear him not: for I have delivered him into thy hand, and all his people, and his land; and thou shalt do to him as thou didst unto Sihon king of the Amorites, which dwelt at Heshbon. So they smote him, and his sons, and all his people, until there was none left him alive: and they possessed his land.	Numbers 21:34-35
+And Moses said unto them, Have ye saved all the women alive?...Now therefore kill every male among the little ones, and kill every woman that hath known man by lying with him. But all the women children, that have not known a man by lying with him, keep alive for yourselves.	Numbers 31:15
+There are only two industries that refer to their customers as "users".	Edward Tufte
+Benchmarks are like assholes. Everyone's got one and they all stink.
+One of our greatest glories is closure of offending newspapers. Based on our assessments, by doing this, we have done the greatest service to the people. ... When you do a job for the sake of God, defeat is meaningless.	Abbas-Ali Alizadeh,  Head Of The Judiciary Administration In Teheran - commenting on the closure of over 50 newspapers in the last 20 months, 12 December 2001
+There is no such thing as the UN. There is an international community that can be led by the only real power left in the world, and that is the US, when it suits our interests and when we can get others to go along.	John Bolton, US State Department
+All the ills from which America suffers can be traced back to the teaching of evolution. It would be better to destroy every other book ever written, and save just the first three verses of Genesis.	William Jennings Bryan
+Rail as they will about 'discrimination,' women are simply not endowed by nature with the same measures of single-minded ambition and the will to succeed in the fiercely competitive world of Western capitalism.	Pat Buchanan
+In terms of the CO2 issue, I will explain as clearly as I can, today and every other chance I get, that we will not do anything that harms our economy. Because, first things first, are the people who live in America. That's my priority.	George Monkey Bush
+At the end of the Mesozoic, you begin to see evidence of a stunning moral decline. Bones of wives and children all alone, with the philandering husband's bones nowhere in sight. Heaps of fossilised species living together in unnatural defiance of biblical law. Researchers have even excavated entire orgies - hundreds of animals with their bones intertwined in lewd positions. Immorality was rampant.	Rev Jesse Colson
+I shall be telling the court that the Lord told me I didn't need insurance, and that that assurance is my divine protection. I have been licensed from heaven, and I will be giving the word of the Lord in court. 	Peter David, after having been stopped by police in South Wales who found he was driving with no insurance, MOT, or road tax, and had an unlicensed number plate of DEUT 818
+There's a lot of it that's truth, the way I see it. Who came to this country first - the white man, didn't he? That's who made this country great.	Don Davis, Republican senator from North Carolina, commenting on an email he forwarded to every member of the state House and Senate ("Two things made this country great: White men & Christianity. Every problem that has arrisen [sic] can be directly traced back to our departure from God's Law and the disenfranchisement of White men."), 22 August 2001
+Damn it, when you get married, you kind of expect you're going to get a little sex. 	Senator Jeremiah Denton Alabama - R, explaining his opposition to legislation to protect victims of rape within marriage, 1981
+If you're not a born-again Christian, you're a failure as a human being. 	Rev. Jerry Falwell
+It is absolutely infallible, without error in all matters pertaining to faith and practice, as well as in areas such as geography, science, history, etc.	Jerry Falwell, speaking about the bible...
+A secularist represents a danger to society and the nation that must be eliminated. It is the duty of the Government to kill him.	Sheik Mohammed al-Ghozali, 1993
+... a noble practice which does honour to women. 	Sheik Gad Al Haq Ali Gad Al Haq, explaining the removal of part or all of a girl's clitoris
+Nothing could be more anti-Biblical than letting women vote. 	Harper's editorial
+Capital punishment is our society's recognition of the sanctity of human life.	Senator Orrin Hatch, Republican Utah
+I am now as before a Catholic and will always remain so.	Adolph Hitler
+I believe today that I am acting in the sense of the Almighty Creator. By warding off the Jews I am fighting for the Lord's work.	Adolf Hitler
+The first proposition, that the sun is the center and does not revolve around the earth, is foolish, absurd, false in theology, and heretical, because expressly contrary to Holy Scripture. The second proposition, that the earth is not the center but revolves around the sun, is absurd, false in philosophy, and from a theological point of view at least, opposed to the true faith. 	The Inquisition's Judgement on Galileo
+See, God has got plans for His kids. He is going to fix it back like it used to be; you are going to be able to have your own pet dinosaur for 1000 years, fixed back like it used to be.	Kent Hovind
+They know that evolution is the only philosophy that can be used to justify their political agenda of: i. Communism. ii. Racism. iii. Abortion. iv. Nazism. v. Socialism. vi. Gay rights. vii. Women's liberation. viii. Extreme environmentalism. ix. Euthanasia. x. Pornography. xi. Humanism. xii. New Age Movement.	Kent Hovind
+It doesn't give me displeasure to hear of a virgin being raped. The lot of women is to be fornicated. 	Lafayette Ron Hubbard
+Vaccination is a direct violation of the everlasting covenant that God made with Noah after the flood ... Vaccination never saved human life. It does not prevent smallpox.	Jehovah's Witnesses
+I would shoot the bastards if I was allowed, because a woman can't represent Christ. Men and women are totally different, that's not my fault, and Jesus chose men for his disciples. ... Priestesses should be burnt at the stake because they are assuming powers they have no right to. In the medieval world that was called sorcery. The way of dealing with sorcerers was to burn them at the stake. It's illegal now but if I had my way that is what would happen to them. In medieval times, I would burn the bloody bitches. 	Rev Anthony Kennedy, on female priests.
+It should be made clear that in order to live a Christian life, any Christian must be able to discriminate and hate, because that's what the bible says.	Bernhard Kuiper, Colorado Springs Pastor
+The woman who is truly Spirit-filled will want to be totally submissive to her husband ... This is a truly liberated woman. Submission is God's design for women.	Beverly LaHaye
+We really have dinosaurs today, without any question. You just need the right weather conditions, as I see it, to get huge creatures. And in the ocean, of course, we have huge creatures ... This is where the pleisosauruses seem to be today, and perhaps also this fire-breathing dragon is still down there - very rare, but occasionally there.	Rev. Walter Lang, Founder Of The Bible-Science Association
+... the feasibility of maintaining an ark full of representative creatures for a year until the waters had sufficiently receded has been well documented.	Steven Layfield, head of (creationist) science at Emmanuel College, Gateshead
+Whoever wants to be a Christian should tear the eyes out of his Reason.	Martin Luther
+The word and works of God is quite clear, that women were made either to be wives or prostitutes.	Martin Luther
+This fool wishes to reverse the entire science of astronomy; but sacred scripture tells us that Joshua commanded the sun to stand still, and not the earth. 	Martin Luther, speaking of Copernicus
+There is on earth among all dangers no more dangerous thing than a richly endowed and adroit reason... Reason must be deluded, blinded, and destroyed.	Martin Luther
+Even though they grow weary and wear themselves out with child-bearing, it does not matter; let them go on bearing children till they die, that is what they are there for.	Martin Luther
+Faith must trample under foot all reason, sense, and understanding, and whatever it sees it must put out of sight, and wish to know nothing but the word of god.	Martin Luther
+Idiots, the lame, the blind, the dumb, are men in whom the devils have established themselves: and all the physicians who heal these infirmities, as though they proceeded from natural causes, are ignorant blockheads ...	Martin Luther
+Men have broad and large chests, and small narrow hips, and more understanding than women, who have but small and narrow breasts, and broad hips, to the end they should remain at home, sit still, keep house, and bear and bring up children.	Martin Luther
+The shedding of this man's [Salman Rushdie's] blood is obligatory. Any Muslim who hears an insult to the prophet must kill the person who commits the insult. It is better that those closest to that person try to kill him first. 	Morteza Moqtadie , Iranian Chief Prosecutor, 1998
+The long-term goal of Christians in politics should be to gain exclusive control over the franchise. Those who refuse to submit publicly to the eternal sanctions of God by submitting to His Church's public marks of the covenant - baptism and holy communion - must be denied citizenship, just as they were in ancient Israel.	Gary North
+If there be men on the other side of the earth, Christ must have gone there and suffered a second time to save them; and therefore there must have been, as necessary preliminaries to his coming, a duplicate Adam, Eden, serpent, and Deluge!	Father Procopius
+Mars is somewhat the same distance from the Sun, which is very important. We have seen pictures where there are canals, we believe, and water. If there is water, that means there is oxygen. If oxygen, that means we can breathe.	Dan Quayle, 1989
+Incest is a voluntary act on the woman's part.	From a pamphlet published by the American Life League
+My personal feeling is that oral sex is against nature.	Pat Robertson
+I know one man who was impotent who gave AIDS to his wife and the only thing they did was kiss.	Pat Robertson
+The feminist agenda is not about equal rights for women. It is about a socialist, anti-family political movement that encourages women to leave their husbands, kill their children, practice witchcraft, destroy capitalism and become lesbians.	Pat Robertson
+As you know, atheists and other non believers claim women are equal to men. However, when we turn to the Bible, we find that the Creator of all mankind says females are the weaker gender. Heathen reasoning erroneously concludes that the principle of inequality of women is injustice to women. However it is not injustice, but great wisdom.	Society For The Practical Establishment And Perpetuation Of The Ten Commandments
+The best way to understand the nature of atheism is to understand its author. satan is its author. ... Thus atheism is properly defined as a denial of the existence of God in the midst of full knowledge that God does indeed exist. ... Atheism is the ultimate of satanism. ... Atheism is therefore a doctrine of demons, and in many, if not all cases, atheists are demon-possessed. So it is quite possible that when you heard atheists speaking, all you heard was demons ranting against God.	Society For The Practical Establishment And Perpetuation Of The Ten Commandments
+... there is no life on other planets. If there were, the Bible would have mentioned it.	Jim Staal
+We ought to tell every other Muslim living in this nation that if you say one word, you're gone. 	Jimmy Swaggart
+I think it is very beautiful for the poor to accept their lot, to share it with the passion of Christ. I think the world is being much helped by the suffering of the poor people.	Mother Teresa
+I should not allow any child entrusted to my care to be adopted by a woman who has had an abortion or used contraception. Such a woman is incapable of love.	Mother Teresa
+Woman is a temple built over a sewer, the gateway to the devil. Women are the gate to hell.	Tertullian
+After Jesus Christ we have no need of speculation, after the Gospel no need of research. When we come to believe, we have no desire to believe anything else; for we begin by believing that there is nothing else which we have to believe.	Tertullian
+The world will note that the first atomic bomb was dropped on Hiroshima, a military base. That was because we wished in this first attack to avoid, insofar as possible, the killing of civilians.	Harry Truman
+We don't have to protect the environment, the Second Coming is at hand.	James Watt, US Secretary of the Interior
+Wife: Be content to be insigifigant. What loss would it be to God or man had you never been born? 	John Wesley
+But if you can't rape your wife, who can you rape? 	Senator Bob Wilson California - D
+Anyone who is not a true Christian, is by default, Satanic.	Steve Winter
+As I understand the Christian religion, it was, and is, a revelation. But how has it happened that millions of fables, tales, legends, have been blended with both Jewish and Christian revelation that have made them the most bloody religion that ever existed?	John Adams, 1816
+Do not suppose the statements of the prophets to be true. Men lived comfortably till they came and spoiled life. The "sacred books" are only such a set of idle tales as any age could have and indeed did actually produce.	Al Ma'Arri, Syrian poet
+Because we must. Because we have the call. Because it is nobler to fight for rationality without winning than to give up in the face of continued defeats. Because whatever true progress humanity makes is through the rationality of the occasional individual and because any one individual we may win for the cause may do more for humanity than a hundred thousand who hug superstition to their breasts. 	Isaac Asimov on why he opposed religion
+Truth is the daughter of time, not of authority.	Francis Bacon
+I mean if you can believe in the Christian religion you can believe in anything, you know it's so utterly preposterous. 	Tom Baker, who was raised a catholic and lived in a monastery for 7 years.
+If the answers to prayer are merely what God wills all along, then why pray?	Dan Barker
+You keep accusing me of blasphemy all of the time, But I cannot be convicted of a victimless crime.	Dan Barker
+Faith is a cop-out. It is intellectual bankruptcy. If the only way you can accept an assertion is by faith, then you are conceding that it can't be taken on its own merits	Dan Barker
+Freethinkers reject faith as a valid tool of knowledge. Faith is the opposite of reason because reason imposes very strict limits on what can be true, and faith has no limits at all. A Great Escape into faith is no retreat to safety. It is nothing less than surrender. 	Dan Barker
+To think that the ruler of the universe will run to my assistance and bend the laws of nature for me is the height of arrogance. That implies that everyone else (such as the opposing football team, driver, student, parent) is de-selected, unfavored by God, and that I am special, above it all. 	Dan Barker
+In matters of religion it is very easy to deceive a man, and very hard to undeceive him. 	Pierre Bayle, 1697
+It is proof of a base and low mind for one to wish to think with the masses or majority, merely because the majority is the majority. Truth does not change because it is, or is not, believed by a majority of the people. 	Giordano Bruno, 1548
+The idea that a good God would send people to a burning hell is utterly damnable to me. The ravings of insanity! Superstition gone to seed! I don't want to have anything to do with such a God.	Luther Burbank
+Atheism is no more a religion than abstinence is a form of drinking.	Marilyn Burge
+By simple common sense I don't believe in God, in none.	Charlie Chaplin
+For every credibility gap, there is a gullibility fill.	Richard Clopton
+I dream that someday the United States will be on the side of the peasants in some civil war. I dream that we will be the ones who will help the poor overthrow the rich, who will talk about land reform and education and health facilities for everyone, and that when the Red Cross or Amnesty International comes to count the bodies and take the testimony of women raped, that our side won't be the heavies.	Richard Cohen
+The belief in a supernatural source of evil is not necessary; men alone are quite capable of every wickedness.	Joseph Conrad
+The United States is the greatest purveyor of violence in the world today	Martin Luther King
+Terrorists hate America because America is a land of freedom and opportunity. We intend to attack the root causes of terrorism.
+Its the foolish cat that looks at the finger when it is pointing at the food
+Jonathan Goode (grade 7) applied findings from many fields of science to support his conclusion that God designed women for homemaking: physics shows that women have a lower center of gravity than men, making them more suited to carrying groceries and laundry baskets; biology shows that women were designed to carry un-born babies in their wombs and to feed born babies milk, making them the natural choice for child rearing; social sciences show that the wages for women workers are lower than for normal workers, meaning that they are unable to work as well and thus earn equal pay; and exegetics shows that God created Eve as a companion for Adam, not as a co-worker. 7th grader science project
+At this point I'd have to say the primary strength of C++ is performance. That's the only compelling reason to use it at this point, because the downsides are many -- the excessive complexity of the language and lack of garbage collection are the two biggest time-wasters. I still enjoy C++ as an intellectual puzzle; I keep learning from it. But I would be very reluctant to use it exclusively for a significant project, unless there was a constraint that required it.	Bruce Eckel, author of "Thinking In C++"
+I was incredibly skeptical about C# at first, for quite awhile. However, as time passed and I began to learn about the language, I started to see that it really is a better Java. 	Bruce Eckel, author of "Thinking in Java"
+C# is the best thing Microsoft has done in the language arena, very well thought-out and architected.	Bruce Eckel, author of various C++, Java and Python books.
+Do you know why they call it "PMS"? Because "Mad Cow Disease" was taken.
+Religion is a defense against the experience of God	Carl Jung
+I think they should have added a giant blue elephant to Christianity, it would've been cool for Jesus to ride that around.	s0meb0die
+A. Because it breaks the logical order of conversation. Q. Why is top posting bad?
+It is always a simple matter to drag the people along, whether it is a democracy, or a fascist dictatorship, or a parliament, or a communist dictatorship. Voice or no voice, the people can always be brought to the bidding of their leaders. That is easy. All you have to tell them is that they are being attacked and denounce the peacemakers for lack of patriotism and exposing the country to danger. It works the same in any country.	Hermann Göring
+I was reading about what was going on in Afghanistan--the way women were being oppressed, the destruction of religious statues. And when I heard that song [Raining Blood], I just imagined a huge juicy vagina coming out of the sky, raining blood over all those racist, misogynist fuckers.	Tori Amos
+I've had a lot of response from the fundamentalist Christians over here. God, I'm going to hell! In the southern states of America they won't play me at all. God was the No. 1 record on US alternative radio for four weeks and they wouldn't play it. It's really funny. I'm the Devil's Daughter down there and I have to chuckle because these guys are missing the point. This is about freedom. 	Tori Amos
+Get off the cross, we need the wood.	Tori Amos
+I find that being a minister's daughter was a great gift because I saw the dark side of Christianity.	Tori Amos
+Where I come from, a cockroach is a roach, and a cockerel is a rooster because they can't bring themselves to say cock.	Tori Amos
+I refuse to simply accept God's will. I receive a lot of letters from women who write that they've been raped by their father for years, from the time they were little children. Then don't start insulting those women, especially not while I'm around, by saying that it's God's will. And I don't need to hear that it's karma either.	Tori Amos
+The animus in me is raspberry swirl, I'm in love with my women friends, but I just don't eat pussy. But I'm in love with them. If I had a different sensibility, then you know I think I could, you know, really fulfill someone down there, where a lot of men in their lives don't. And eating pussy is a metaphor, too - it's about crawling in there, being with their juices, really being with them.	Tori Amos
+I don't want to be buried. My Grandmother was convinced I should be burned as a witch and I think that's probably right, that's how I should go. I think fire is cleansing and beautiful. So I definitely want to be cremated and not put in a confined space.	Tori Amos
+He's [Tori's father] taken a lot over the years. One song that upset him the most was Father Lucifer. He was very hurt about that. I said, `Dad, this is not about you. I took drugs, took a journey, a shamanic experience, and I had an affair with Lucifer'. I said this at the Sunday dinner table with the chicken. Everyone put their forks down and went, `Oh no'. but my Dad just went, `Oh. OK then'.	Tori Amos
+The truth is that anybody who exercises power, whether it is a partner, a government or a religion, only wishes that the others remain fools.	Tori Amos
+That's the greatest compliment I've received [Eminem fans hate her cover of '97 Bonnie & Clyde].	Tori Amos
+I'm known as that girl who has tea with the devil. I'm the thing that fundamentalist Christians cringe over. Mothers drag their daughters out of my shows. Because their daughters are going, 'hey, maybe I don't have to think about these things. Why am I worshipping some dead guy?’	Tori Amos
+On some of my darkest days, Lucifer's the one who comes and gives me an ice cream.	Tori Amos
+I get everyone except the paedophiles. I think Britney Spears gets all those.	Tori Amos
+... I used to get really pissed off that my life was so dictated by when this Jesus guy was born and when he was dying every year. I felt really resentful that I couldn't get on with my own life, because I was so busy with his. Of course the real energy of Jesus had nothing to do with it... There would be prayer meetings at our house, and I'd think, `How do I escape this?' My song Icicle has a lot to do with it. It's about how this girl masturbates just to survive!	Tori Amos
+Right. Then no man wants to fuck her anymore and also the urge of women to be just like her will dry up. Then Britney won't be of any use anymore, because she can't sing and she doesn't have anything to say either. And that's sad. Mainly for her, though, because it must be frickin' scary to be so dependent on your looks. I sincerely hope in music a new generation of women will stand up that have something to say. It's about time.	Tori Amos on Britney Spears
+Sometimes after the show children tell me they're in an incestuous situation. When they say it's God's will, I can cut the culprit's throat. Abuse isn't what God was talking about. Absolutely not. Fuck 'God's will'.	Tori Amos
+I took an aspirin and prayed to God, and my headache disappeared. So God cured me of the headache.
+Why should I allow that same God to tell me how to raise my kids, who had to drown His own?	Robert Ingersoll
+There is no harmony between religion and science. When science was a child, religion sought to strangle it in the cradle. Now that science has attained its youth, and superstition is in its dotage, the trembling, palsied wreck says to the athlete: 'Let us be friends.' It reminds me of the bargain the cock wished to make with the horse: 'Lut us agree not to step on each other's feet.'	Robert Ingersoll
+For ages, a deadly conflict has been waged between a few brave men and women of thought and genius upon the one side, and the great ignorant religious mass on the other. This is the war between Science and Faith. The few have appealed to reason, to honor, to law, to freedom, to the known, and to happiness here in this world. The many have appealed to prejudice, to fear, to miracle, to slavery, to the unknown, and to misery hereafter. The few have said, "Think!" The many have said, "Believe!	Robert Ingersoll
+'In God We Trust.' I don't believe it would sound any better if it were true.	Mark Twain
+Religion consists in a set of things which the average man thinks he believes and wishes he was certain of.	Mark Twain
+Religion is based . . . mainly on fear . . . fear of the mysterious, fear of defeat, fear of death. Fear is the parent of cruelty, and therefore it is no wonder if cruelty and religion have gone hand in hand	Bertrand Russell
+A man's ethical behavior should be based effectually on sympathy, education and social ties and needs; no religious basis is necessary. Man would indeed be in a poor way if he had to be restrained by fear of punishment and hope of reward after death.	Albert Einstein
+We must respect the other fellow's religion, but only in the same sense and to the same extent that we respect his theory that his wife is beautiful and his children smart.	HL Mencken
+Faith may be defined briefly as an illogical belief in the occurrence of the improbable. . . . A man full of faith is simply one who has lost (or never had) the capacity for clear and realistic thought. He is not a mere ass: he is actually ill.	HL Mencken
+God is the immemorial refuge of the incompetent, the helpless, the miserable. They find not only sanctuary in His arms, but also a kind of superiority, soothing to their macerated egos; He will set them above their betters.	HL Mencken
+He comes into the world God knows how, walks on the water, gets out of his grave and goes up off the Hill of Howth. What drivel is this?	James Joyce
+I confess that I do not see what good it does to fulminate against the English tyranny while the Roman tyranny occupies the palace of the soul.	James Joyce
+We should be agnostic about those things for which there is no evidence. We should not hold beliefs merely because they gratify our desires for afterlife, immortality, heaven, hell, etc.	Julian Huxley
+No country or people who are slaves to dogma and dogmatic mentality can progress.	Jawaharlal Nehru
+By simple common sense I don't believe in God, in none.	Charlie Chaplin
+You never see animals going through the absurd and often horrible fooleries of magic and religion. . . . Dogs do not ritually urinate in the hope of persuading heaven to do the same and send down rain. Asses do not bray a liturgy to cloudless skies. Nor do cats attempt, by abstinence from cat's meat, to wheedle the feline spirits into benevolence. Only man behaves with such gratuitous folly. It is the price he has to pay for being intelligent but not, as yet, quite intelligent enough.	Aldous Huxley
+History does not record anywhere or at any time a religion that has any rational basis. Religion is a crutch for people not strong enough to stand up to the unknown without help. But, like dandruff, most people do have a religion and spend time and money on it and seem to derive considerable pleasure from fiddling with it.	RAH
+If you want to get together in any exclusive situation and have people love you, fine -- but to hang all this desperate sociology on the idea of The Cloud-Guy who has The Big Book, who knows if you've been bad or good -- and CARES about any of it -- to hang it all on that, folks, is the chimpanzee part of the brain working.	Frank Zappa
+With enough eyes, all bugs are shallow, except for the bugs left over after all the shallow ones have been fixed.
+It may not be true that all Conservatives are stupid people, but it is certainly the case that all stupid people are Conservative.	John Stuart Mill
