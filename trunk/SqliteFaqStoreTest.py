@@ -12,6 +12,7 @@ class SqliteFaqStoreTest( unittest.TestCase ):
     def tearDown( self ):
         self.store.close()
         os.unlink( "test.db" )
+        
     
     def testStoreAndRetrieveNewFaq( self ):
         self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
@@ -63,6 +64,13 @@ class SqliteFaqStoreTest( unittest.TestCase ):
         #os.rename( "test.db", "test.bak.db" )
         self.assertEquals( faq.author, "Moon child" )
         self.assertEquals( faq.contents, "Not a test" )
+    
+    def testModifyTwice( self ):
+        self.store.newFaq( name="testfaq", author="Arild", contents="Test" )
+        self.store.modifyFaq( "testfaq", { "author" : "Moon child" } )
+        self.store.modifyFaq( "testfaq", { "author" : "Baby" } )
+        
+        
         
         
 

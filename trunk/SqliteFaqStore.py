@@ -89,6 +89,7 @@ class SqliteFaqStore:
         cur = self.__conn.cursor()
         cur.execute( "INSERT INTO FaqAliases (Alias, CanonicalName) VALUES( %s, %s )",
                     alias, canonicalName )
+        self.__conn.commit()
     
     def deleteFaq( self, name ):
         """Deletes a faq"""
@@ -125,6 +126,7 @@ class SqliteFaqStore:
                 fields.append( field )
             
         args.append( canonicalName )
+        args.append( canonicalName )
         
         #print "Args: %s" % (", ".join( [str(s) for s in args ]))
         #print "Fields: %s" % ", ".join( fields )        
@@ -132,9 +134,10 @@ class SqliteFaqStore:
         stmt = """INSERT INTO FaqVersions 
                      (Version, State, Created, Name, Contents, Author )                                          
                      SELECT
-                        (SELECT MAX(Version) FROM FaqVersions WHERE Name=%%s) + 1, 
+                        (SELECT LatestVersion.Version FROM LatestVersion WHERE LatestVersion.Name=%%s) + 1, 
                         %s 
-                     FROM FaqVersions WHERE Name=%%s""" % \
+                     FROM FaqVersions WHERE Name=%%s AND Version=
+                        (SELECT LatestVersion.Version FROM LatestVersion WHERE LatestVersion.Name=%%s)""" % \
                         ( ", ".join( fields ) )
 
         args = tuple(args)
