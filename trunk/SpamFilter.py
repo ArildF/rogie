@@ -12,15 +12,15 @@ class NoSuchUser:
 class SpamFilter:
     instance = None
     def __init__( self ):
-        self.hammie = spambayes.hammie.open( "T:\\spamdb", False, 'c' )
+        self.hammie = spambayes.hammie.open( "E:\\tmp\\spamdb", False, 'c' )
         self._statements = {}
-        if os.path.isfile( "T:\\spammers" ):
-            self._spammers = pickle.load( open("T:\\spammers") )
+        if os.path.isfile( "E:\\tmp\\spammers" ):
+            self._spammers = pickle.load( open("E:\\tmp\\spammers") )
         else:
             self._spammers = []
         
-        if os.path.isfile( "T:\hammers" ):
-            self._hammers = pickle.load( open("T:\\hammers") )
+        if os.path.isfile( "E:\\tmp\\hammers" ):
+            self._hammers = pickle.load( open("E:\\tmp\\hammers") )
         else:
             self._hammers=[]
         
@@ -46,8 +46,8 @@ class SpamFilter:
             self.hammie.store()
     
     def _dump(self):        
-        pickle.dump( self._hammers, open("T:\\hammers", "w") )
-        pickle.dump( self._spammers, open("T:\\spammers", "w") )
+        pickle.dump( self._hammers, open("E:\\tmp\\hammers", "w") )
+        pickle.dump( self._spammers, open("E:\\tmp\\spammers", "w") )
     
     def addHammer( self, nick ):
         if nick not in self._hammers:
