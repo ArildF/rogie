@@ -12,6 +12,9 @@ Global
 		{F5240F06-4DA5-496E-9C77-97EAFC9BDCC3}.Debug.ActiveCfg = Debug
 		{F5240F06-4DA5-496E-9C77-97EAFC9BDCC3}.Release.ActiveCfg = Release
 	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		create.sql = create.sql
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
 	GlobalSection(ExtensibilityAddIns) = postSolution
