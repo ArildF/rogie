@@ -14,3 +14,9 @@ CREATE TABLE FaqVersions
     Created TimeStamp Not Null,
     PRIMARY KEY( Name, Version )
 );
+
+CREATE TABLE LatestVersion
+(
+    Name Text Primary Key,
+    Version Int
+);

@@ -41,6 +41,9 @@ class SqliteFaqStore:
             # and the primary alias
             cur.execute( "INSERT INTO FaqAliases (Alias, CanonicalName) VALUES(%s, %s)", 
                         name, name )
+            
+            # and the latest version
+            cur.execute( "INSERT INTO LatestVersion (Name, Version) VALUES(%s, %s)", name, 1 )
             self.__conn.commit()
         except:
             self.__conn.rollback()
@@ -54,7 +57,7 @@ class SqliteFaqStore:
         
         # now the real faq
         cur.execute( """SELECT Author, Contents, Version, Created FROM FaqVersions WHERE Name=%s
-                     AND Version=(SELECT MAX(Version) FROM FaqVersions WHERE Name=%s)""", 
+                     AND Version=(SELECT Version FROM LatestVersion WHERE Name=%s)""", 
                      canonicalName, canonicalName )
         row = cur.fetchone()
         
@@ -124,14 +127,14 @@ class SqliteFaqStore:
         args.append( canonicalName )
         
         #print "Args: %s" % (", ".join( [str(s) for s in args ]))
-        #print "Fields: %s" % ", ".join( fields )
+        #print "Fields: %s" % ", ".join( fields )        
         
         stmt = """INSERT INTO FaqVersions 
                      (Version, State, Created, Name, Contents, Author )                                          
-                     SELECT 
-                     (
-                        SELECT MAX(Version) FROM FaqVersions WHERE Name=%%s
-                     ) + 1, %s FROM FaqVersions WHERE Name=%%s""" % \
+                     SELECT
+                        (SELECT MAX(Version) FROM FaqVersions WHERE Name=%%s) + 1, 
+                        %s 
+                     FROM FaqVersions WHERE Name=%%s""" % \
                         ( ", ".join( fields ) )
 
         args = tuple(args)
@@ -141,9 +144,20 @@ class SqliteFaqStore:
         print
         print"""
         
-        cur.execute( stmt, *args );
+        try:        
+            cur.execute( stmt, *args );
+            cur.execute( """UPDATE LatestVersion
+                            SET Version =
+                                (SELECT MAX(FaqVersions.Version) 
+                                    FROM FaqVersions 
+                                    WHERE FaqVersions.Name=%s)
+                            WHERE LatestVersion.Name=%s""",
+                        (canonicalName, canonicalName) )  
         
-        self.__conn.commit()
+            self.__conn.commit()
+        except:
+            self.__conn.rollback()
+            raise
         
             
     
