@@ -1,0 +1,166 @@
+"General"
+{
+}
+"Configurations"
+{
+    "Debug"
+    {
+    "LaunchArgs" = ""
+    "BuildCmdLine" = "main.py"
+    "BuildOutputs" = ""
+    "DebuggerName" = ""
+    "ScriptArgs" = ""
+    "RunInShell" = "T"
+    "ShowRedSquigglies" = "T"
+    "DontImplyImportSite" = "F"
+    "UnbufferedBinary" = "F"
+    "DisableClassBasedExceptions" = "F"
+    "Verbose" = "F"
+    "LaunchCmdLine" = "main.py"
+    }
+    "Release"
+    {
+    "LaunchArgs" = ""
+    "BuildCmdLine" = ""
+    "BuildOutputs" = ""
+    "DebuggerName" = ""
+    "ScriptArgs" = ""
+    "RunInShell" = "F"
+    "ShowRedSquigglies" = "T"
+    "DontImplyImportSite" = "F"
+    "UnbufferedBinary" = "F"
+    "DisableClassBasedExceptions" = "F"
+    "Verbose" = "F"
+    "LaunchCmdLine" = ""
+    }
+}
+"Files"
+{
+    "QuoteThread.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Room.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Uptime.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Acl.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "AdminCommand.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Command.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Config.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Display.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "FaqCommand.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "GoogleCommand.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "GoogleThread.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "main.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Quote.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg.txt"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Protocol.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\Ack.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\Header.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\Packet.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\YchtProtocol.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\login.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ycht\\__init__.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "QuoteCommand.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "SleepCommand.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\delim_ymsg.txt"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\Packet.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\password.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\YmsgProtocol.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\Header.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "Inbound.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "ymsg\\Ack.py"
+    {
+    "ProjRelPath" = "T"
+    }
+    "dispatch.py"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}

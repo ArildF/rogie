@@ -1,0 +1,25 @@
+These are the files that need to be changed/duplicated to accommodate a second protocol:
+
+- Ack.py
+- connect.py
+- Header.py
+- Inbound.py
+- main.py
+- Packet.py
+
+These should not need any substantial changes:
+
+- QuoteThread.py
+- Room.py
+- Uptime.py
+- Acl.py
+- AdminCommand.py
+- Command.py
+- Config.py
+- Display.py
+- FaqCommand.py
+- GoogleCommand.py
+- GoogleThread.py
+- Quote.py
+
+
