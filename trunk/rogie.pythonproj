@@ -250,6 +250,8 @@
                  ProjRelPath="T" />
             <file name="SqliteFaqStoreTest.py"
                  ProjRelPath="T" />
+            <file name="SqliteImport.py"
+                 ProjRelPath="T" />
         </files>
     </pythonproj>
 </VisualStudioProject>
