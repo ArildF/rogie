@@ -32,6 +32,7 @@ import Faq
 
 
 
+
 class FaqCommand( Command.Command ):
     """executes a command starting with the word faq
     theOriginator is the origin of a pm. If this is blank, the command is
@@ -44,6 +45,8 @@ class FaqCommand( Command.Command ):
         config = Config.getConfig()
         self.faqDir = config.getString( "faq", "faqdir" )
         self.faqExt = config.getString( "faq", "faqext" )
+        Faq.setFaqDir( self.faqDir )
+        Faq.setFaqExt( self.faqExt )
 
         # create the factory for doing version control operations
         self.verControl = VerControl.createVCObject(config.getString( "faq", "versionControl" ))
@@ -51,11 +54,15 @@ class FaqCommand( Command.Command ):
     def doExecute( self, sock, words ):
 
         #check if this is a command
-        command = words[ 1 ]
-        if command[ 0 ] == '-':
-            self.doCommand( sock, words[ 1: ] )
-        else:
-            self.readFaq( sock, words[ 1: ] )
+        try:
+            command = words[ 1 ]
+            if command[ 0 ] == '-':
+                self.doCommand( sock, words[ 1: ] )
+            else:
+                self.readFaq( sock, words[ 1: ] )
+        except Faq.FaqError, err:
+            raise Command.CommandError( err.msg )
+            
 
 
     def readFaq( self, sock, words ):
@@ -340,7 +347,7 @@ class FaqCommand( Command.Command ):
                 #get rid of .faq in filename to get faq name
                 faqname = filename[:-4]
                 contents = Faq.loadFaq( faqname )
-                owner = contents[ OWNER ]
+                owner = contents.getAuthor()
                 if ownerCount.has_key(owner):
                    ownerCount[owner] = ownerCount[owner] + 1
                 else:
@@ -369,7 +376,7 @@ class FaqCommand( Command.Command ):
         # map to keep usage stats for each faq
         faqUseCount = {}
         # load the faq Use Count file from disk into map
-        faqUseCount = loadFaqUseCount()
+        faqUseCount = self.loadFaqUseCount()
         # move to list of count/name tuples so can sort on count
         items = [(v, k) for k, v in faqUseCount.items()]
         items.sort()
