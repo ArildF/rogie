@@ -93,7 +93,7 @@ class QuoteCommand( Command.Command ):
     
     
 def formatQuote( quote ):
-    msg = '"%s" -- %s' % (quote.contents, quote.author and quote.author or "Anonymous")
+    msg = '"%s" -- %s' % (quote.contents, quote.author and quote.author or "Unknown")
     return msg
         
     
