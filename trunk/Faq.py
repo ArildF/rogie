@@ -4,16 +4,29 @@ import os.path
 
 CURRENT_VERSION = "0.3"
 
+faqdir = ""
+faqext = ""
+
+def setFaqDir( faqdir_ ):
+    global faqdir
+    faqdir = faqdir_
+
+def setFaqExt( faqext_ ):
+    global faqext 
+    faqext = faqext_
+
+class FaqError:
+    def __init__( self, msg ):
+        self.msg = msg
+
 def loadFaq( faq ):
     """pickles a faq from disk"""
     
-    config = Config.getConfig()
-    faqdir = config.getString( "faq", "faqdir" )
-    faqext = config.getString( "faq", "faqext" )
+    global faqdir, faqext
     
     faqfile = faqdir + faq + faqext
     if not os.path.exists( faqfile ):
-        raise Command.CommandError( "Faq does not exist" )
+        raise FaqError( "Faq does not exist" )
 
     #pickle in
     file = open( faqfile, "r" )
@@ -25,9 +38,7 @@ def loadFaq( faq ):
 def writeFaq( faqName, faq ):
     """writes a faq to disk - caller is responsible for checking that
     an existing faq isn't being overwritten"""
-    config = Config.getConfig()
-    faqdir = config.getString( "faq", "faqdir" )
-    faqext = config.getString( "faq", "faqext" )
+    global faqdir, faqext
 
     #try:
     faqfile = faqdir + faqName + faqext
@@ -91,14 +102,15 @@ class FaqProxy:
     def __ensureLoaded( self ):
         if hasattr( self, "target" ):
             return
-            
-        config = Config.getConfig()
-        faqdir = config.getString( "faq", "faqdir" )
-        faqext = config.getString( "faq", "faqext" )
         
-        faqfile = faqdir + self.__targetName + faqext
+        #config = Config.getConfig()
+        global faqdir, faqext
+        #faqdir = "E:\\rogie\\rogie\\faqs\\"#config.getString( "faq", "faqdir" )
+        #faqext = ".faq"#config.getString( "faq", "faqext" )
+        
+        faqfile = os.path.join( faqdir, self.__targetName ) + faqext
         if not os.path.exists( faqfile ):
-            raise Command.CommandError( "Faq does not exist" )
+            raise self.__targetName + " " + faqfile #Error( "Faq does not exist: " + faqfile )
 
         #pickle in
         file = open( faqfile, "r" )
