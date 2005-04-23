@@ -11,8 +11,14 @@ import Display
 
 
 DELIM = "\xc0\x80"
+PMLINE = "14"
+SPEECHLINE = "117"
+PMNICK= "4"
+NICK = "109"
+ROOMNAME = "104"
 
-class AckPacket( Packet.Packet ):
+
+class AckPacket:
 
     def __init__( self, aSocket, theRoom, theLength ):
         self.sock = aSocket
@@ -22,6 +28,17 @@ class AckPacket( Packet.Packet ):
 
     def receive( self ):
         self.msg = self.sock.recv( self.length )
+        items = self.msg.strip().split( DELIM )
+        #print items
+        self.data = {}
+        if len(items) % 2 != 0:
+            items.append("DUMMY")
+        for i in range(0, len(items), 2):
+            self.data[items[i]] = items[i+1]
+    
+    def __getitem__( self, key ):
+        return self.data[key]
+            
 
     def dispatch( self ):
         return
@@ -68,6 +85,7 @@ class LoginAckPacket( AckPacket ):
         #decode the packet
         items = string.split( self.msg, DELIM )
 
+        print self.data
         if len( items ) > 4:
             nick = items[ 1 ]
             challenge = items[ 3 ]
@@ -83,21 +101,14 @@ class SpeechAckPacket( SpeechAck ):
         SpeechAck.__init__( self, aSocket, theRoom, theLength )
 
     def dispatch( self ):
-        #decode the packet
-        items = string.split( self.msg, DELIM )
-        
-##        print "Speech Ack:"
-##        print items
-
-        if len( items ) > 4:
-            nick = items[ 3 ]
-            rawstatement = items[ 5 ]
-
-            #strip off garbage
-            line = self.stripLine( rawstatement )
+        try:
+            line = self.stripLine( self[SPEECHLINE] )
+            nick = self[NICK]            
 
             dispatch.execute( self.sock, nick, self.room, line )
             self.display.userSpeech( nick, line )
+        except KeyError, er:
+            print er
 
     def getIsPm( self ):
         return 0
@@ -113,26 +124,14 @@ class PmAckPacket( SpeechAck ):
         SpeechAck.__init__( self, aSocket, theRoom, theLength )
 
     def dispatch( self ):
-        #decode the packet
-        items = string.split( self.msg, DELIM )
-        
-        #print "Pm ACK:" 
-        #Packet.printPacket( self.msg )
-        #print items
-
-        rawstatement = ""
-        if len( items ) > 5:
-            nick = items[ 3 ]
-            if ( items[ 0 ] == '5' ):
-                rawstatement = items[ 5 ]
-            elif ( items[ 0 ] == '4' ):
-                rawstatement = items[ 7 ]
-
-            #strip off garbage
-            line = self.stripLine( rawstatement )
-
+        try:
+            line = self.stripLine( self[PMLINE] )
+            nick = self[PMNICK]
+                        
             self.display.userPm( nick, line )
             dispatch.execute( self.sock, nick, self.room, line, 1 )
+        except KeyError, err:
+            print err
 
 
 
@@ -146,33 +145,13 @@ class JoinAckPacket( AckPacket ):
         AckPacket.__init__( self, theSocket, theRoom, theLength )
 
     def dispatch( self ):
-        return
-        #decode the packet
-        """items = string.split( self.msg, DELIM )
-##        print "Joincvbcvbcvbcvbvcbcvb: "
-##        print items
-        
-        #print "JoinAck:" 
-        Packet.printPacket( self.msg )
-        #print items
-
-        #what kind of packet?
-        if len( items ) < 16:
-            #another user joined
-            print len(items)
-            user = items[ 7 ]
-            roomName = items[ 1 ] 
-            self.room.userJoin( user )
-            self.display.userJoin( roomName, user )
-#        else:
-#            #getting a user list upon entry
-#            list = string.split( items[ 4 ], "\x01" )
-#            userList = []
-#            for item in list:
-#                userList.append( self.nameStrip( item ) )
-
-#            self.room.setRoomInfo( roomName, roomDesc, userList )
-#            self.room.listUsers()"""
+        try:
+            nick = self[NICK]
+            room = self[ROOMNAME]
+            self.room.userJoin( nick )
+            self.display.userJoin( room, nick )
+        except KeyError, err:
+            print err        
 
     def nameStrip( self, name ):
         idx = string.find( name, "\x02" )
@@ -185,11 +164,10 @@ class LeaveAckPacket( AckPacket ):
         AckPacket.__init__( self, theSocket,  theRoom, theLength )
 
     def dispatch( self ):
-        #decode the packet
-        items = string.split( self.msg, DELIM )
-
-        roomName = items[ 1 ]
-        user = items[ 7 ]
-
-        self.room.userLeave( user )
-        self.display.userLeave(roomName, user )
+        try:
+            nick = self[NICK]
+            room = self[ROOMNAME]
+            self.room.userLeave( nick )
+            self.display.userLeave( room, nick )
+        except KeyError, err:
+            print err        
