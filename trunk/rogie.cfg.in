@@ -32,3 +32,7 @@ max_used_quotes=1000
 maxresults = 1
 maxresultssys = 3
 
+[playing]
+server = 10.0.0.4
+file = /songout.xml
+

@@ -7,6 +7,7 @@ import SleepCommand
 import QuoteCommand
 import RefCommand
 import BayesCommand
+import NowPlayingCommand
 import re
 
 import string
@@ -14,7 +15,8 @@ import string
 commands = { "faq" : FaqCommand.FaqCommand, "admin" : AdminCommand.AdminCommand,
             "sleep_bot" : SleepCommand.SleepCommand,
             "quote" : QuoteCommand.QuoteCommand, "ref" : RefCommand.RefCommand,
-            "bayes" : BayesCommand.BayesCommand }
+            "bayes" : BayesCommand.BayesCommand,
+            ".playing" : NowPlayingCommand.NowPlayingCommand }
 #"google" : GoogleCommand.GoogleCommand, 
 
 def execute( sock, nick, room, line, ispm = 0 ):

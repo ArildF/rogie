@@ -258,6 +258,8 @@
                  ProjRelPath="T" />
             <file name="SqliteQuoteImport.py"
                  ProjRelPath="T" />
+            <file name="NowPlayingCommand.py"
+                 ProjRelPath="T" />
         </files>
     </pythonproj>
 </VisualStudioProject>

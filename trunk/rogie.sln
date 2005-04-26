@@ -15,6 +15,7 @@ Global
 	GlobalSection(SolutionItems) = postSolution
 		create.sql = create.sql
 		rogie.cfg = rogie.cfg
+		rogie.cfg.in = rogie.cfg.in
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
