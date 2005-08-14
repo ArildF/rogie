@@ -53,6 +53,7 @@ class SpeechAck( AckPacket ):
         """strips HTML and other formatting from a string"""
 
         #first get rid of html tags
+        print line
         idxTagStart = string.find( line, "<" )
         while not idxTagStart == -1:
             idxTagEnd = string.find( line, ">", idxTagStart )

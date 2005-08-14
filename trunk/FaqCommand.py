@@ -127,6 +127,9 @@ class FaqCommand( Command.Command ):
 
         if ( len( words ) > 0 ):
             entry = string.join( words ) + ": " + entry
+            
+        while entry.count( "%u" ):
+            entry = entry.replace( "%u", self.nick )
 
         return entry
 
